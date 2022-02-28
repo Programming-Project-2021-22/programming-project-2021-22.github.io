@@ -7,7 +7,7 @@ subtitle: null
 chapter: 3
 section: 4
 previous: /git/shell
-next: /git/branches
+next: /git/gitignore
 date: "2021-01-28"
 ---
 Now, let's start using git!
@@ -145,7 +145,7 @@ $ git add .
 
 - Committing triggers git to record a snapshot of the sate of the repository
 
-- Git does NOT store a copy of all the files, only the changes
+- Git does NOT store a copy of all the files in a repository, only those that changed since the last commit
 
 - Commits are organized in a chain, with each commit pointing to one or more predecessors
 
@@ -166,12 +166,10 @@ $ git add .
 - To also add a commit description, use a second `-m`:
 
   ```command-line
-  $ git commit -m "The description of my commit."
+  $ git commit -m "The title of my commit." -m "The description of my commit."
   ```
 
-## Committing changes with `git commit`
-
-- The normal process will go through is
+- The normal process you will go through is:
 
   ```command-line
   # You create, edit or delete files
@@ -192,10 +190,19 @@ $ git add .
 
   The option `-a` will automatically commit all changes made to tracked files, including new, modified or deleted files.
 
-## A more complete example
+## Putting all of these commands together
+
+Here is an interaction in which we use all of the aforementioned commands.
+
+1. We create a directory.
 
 ```command-line
 $ mkdir ~/repos/file_state_repo
+```
+
+2. We initialize a Git repository.
+
+```command-line
 $ cd ~/repos/file_state_repo
 $ git init
 $ git status
@@ -204,6 +211,11 @@ $ git status
   No commits yet
 
   nothing to commit (create/copy files and use "git add" to track)
+```
+
+3. We add two files to the repository. Note how these files are created in the untracked state.
+
+```command-line
 $ echo "New data" > file.txt
 $ git status
   On branch master
@@ -217,7 +229,7 @@ $ git status
   nothing added to commit but untracked files present (use "git add" to track)
  
   Manually create an example junk file
-$ touch main.o
+$ touch data.csv
 $ git status
   On branch master
  
@@ -227,20 +239,13 @@ $ git status
     (use "git add <file>..." to include in what will be committed)
  
         file.txt
-        main.o
-$ echo main.o > .gitignore
-$ git status
-  On branch master
- 
-  No commits yet
- 
-  Untracked files:
-    (use "git add <file>..." to include in what will be committed)
- 
-        .gitignore
-        file.txt
- 
-$ git add .gitignore
+        data.csv
+```
+
+4. We start tracking one of the files.
+
+```command-line
+$ git add data.csv
 $ git status
   On branch master
  
@@ -249,12 +254,17 @@ $ git status
   Changes to be committed:
     (use "git rm --cached <file>..." to unstage)
  
-          new file:   .gitignore
+          new file:   data.csv
  
   Untracked files:
     (use "git add <file>..." to include in what will be committed)
  
           file.txt
+```
+
+5. We commit this newly tracked file.
+
+```command-line       
 $ git commit -m "Initial commit"
   [master (root-commit) 1bf2af7] Initial commit
    1 file changed, 1 insertion(+)
@@ -267,35 +277,31 @@ $ git status
           file.txt
  
   nothing added to commit but untracked files present (use "git add" to track)
-$ git ls-files
-  .gitignore
 ```
-
-
 
 ## Configuring the commit author
 
-- You can specify the author in every commit:
+1. You can specify the author in every commit:
 
   ```command-line
   $ git commit -m "Initial commit" --author "Tiago <tiago.princesales@unibz.it>"
   ```
 
-- Or set up the author in the project's configuration file
+2. You can set up the author in the project's configuration file:
 
   ```command-line
   $ git config user.name "Tiago Prince Sales"
   $ git config user.email "tiago.princesales@unibz.it"
   ```
 
-- To set it up globally, run:
+3. You can set it up globally:
 
   ```command-line
   $ git config --global user.name "Tiago Prince Sales"
   $ git config --global user.email "tiago.princesales@unibz.it"
   ```
 
-- To see all you current configurations, run:
+To see all you current configuration, run:
 
   ```command-line
   $ git config --list
@@ -321,7 +327,7 @@ $ git ls-files
   $ git commit --amend -m "My better title"
   ```
 
-## Removing files `git rm`
+## Removing files with `git rm`
 
 - To remove a single file, run:
 
@@ -387,179 +393,45 @@ $ git ls-files
   git reset
   ```
 
-When running the last two commands, your changes will not be lost.
+When running the last two commands, **your changes will not be lost.**
 
 ## Undoing a commit with `git reset`
 
-To undo the last commit and keep its changes staged, run:
 
-```command-line
-$ git reset --soft HEAD~1
-```
+- To undo the last commit and keep its changes unstaged, run:  
+  ```command-line
+  $ git reset --mixed HEAD~1
+  ```
 
-To undo the last commit and keep its changes unstaged, run:
+- To undo the last commit and keep its changes staged, run:  
+  ```command-line
+  $ git reset --soft HEAD~1
+  ```
 
-```command-line
-$ git reset --mixed HEAD~1
-```
+- To undo the last commit and throw away the changes, run:  
+    ```command-line
+    $ git reset --hard HEAD~1
+    ```
 
-To undo the last commit and throw away the changes, run:
-
-```command-line
-$ git reset --hard HEAD~1
-```
-
-- Note that HEAD refers to the latest commit on the active branch.
-- HEAD~1 refers to the second last commit on the active branch
+- Note that:
+  - `HEAD` refers to the latest commit on the active branch
+  - `HEAD~1` refers to the second last commit on the active branch
 
 ## Reversing a commit with `git revert`
 
-- Reverting doesn’t alter the existing history within a repository
+- Reverting doesn’t alter the existing history within a repository. Instead, it adds a new commit to its history.
 
-- It adds a new commit to the history
-
-To revert the last commit, run:
-
-```command-line
-$ git revert HEAD
-```
-
-To revert any commit, run:
-
-```command-line
-$ git revert 64c852bcb306bceeeec8f77708171c583d807408
-```
-
-<!-- ## `git reset` vs `git revert`
-
-A good answer on StackOverflow:
-[https://stackoverflow.com/questions/8358035/whats-the-difference-between-git-revert-checkout-and-reset](https://stackoverflow.com/questions/8358035/whats-the-difference-between-git-revert-checkout-and-reset)
-
-- **`git revert`**: this command creates a new commit that undoes the changes from a previous commit. It adds new history to the project (it doesn't modify existing history).
-
-- **`git checkout`**: this command checks-out content from the repository and puts it in your work tree. It can also have other effects, depending on how the command was invoked. For instance, it can also change which branch you are currently working on. This command doesn't make any changes to the history.
-
-- **`git reset`**: this command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
-
-## `git reset` vs `git revert` vs `git checkout` - cont.
-
-**Using these commands**
-
-- If a commit has been made somewhere in the project's history, and you later decide that the commit is wrong and should not have been done, then git revert is the tool for the job. It will undo the changes introduced by the bad commit, recording the "undo" in the history.
-
-- If you have modified a file in your working tree, but haven't committed the change, then you can use git checkout to checkout a fresh-from-repository copy of the file.
-
-- If you have made a commit, but haven't shared it with anyone else and you decide you don't want it, then you can use git reset to rewrite the history so that it looks as though you never made that commit.
-
-- These are just some of the possible usage scenarios. There are other commands that can be useful in some situations, and the above three commands have other uses as well.-->
-
-## Ignoring files with .gitignore
-
-- To inform which files git should ignore, we use the **.gitignore** file.
-
-- This is how you describe what git should ignore:
-
-  (from [https://git-scm.com/docs/gitignore](https://git-scm.com/docs/gitignore))
-
-  ```markdown
-  # A line starting with # is a comment
-
-  # The forward slash / is used as a directory separator.
-
-  # Separators may occur at the beginning, middle or end of a pattern.
-
-  target/classes
-
-  # If there is a separator at the beginning or middle (or both) of the pattern,
-
-  # then it is relative to the directory level of the .gitignore file itself.
-
-  /Main.class
-  target/Main.class
-
-  # Otherwise the pattern may also match at any level below the .gitignore level.
-
-  Main.class
-  main/
-
-  # If there is a separator at the end of the pattern,
-
-  # then the pattern will only match directories.
-
-  target/
-
-  # Otherwise the pattern can match both files and directories.
-
-  target
-
-  # For example, a pattern doc/frotz/ matches doc/frotz directory, but not a/doc/frotz directory;
-
-  # however frotz/ matches frotz and a/frotz that is a directory
-
-  # An asterisk "\*" matches anything except a "/"
-
-  \*.class
-
-  # A question mark "?" matches any one character except a "/"
-
-  ?.class
-
-  ## A leading "\*\*" followed by a slash means match in all directories.
-
-  \*\*/foo
-
-  # A trailing "/\*\*" matches everything inside
-
-  foo/\*\*
-
-  # A slash followed by two consecutive asterisks then a slash matches zero or more directories.
-
-  # For example, "a/\*\*/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
-
-  a/\*\*/b
+- To revert your last commit, run:  
+  ```command-line
+  $ git revert HEAD
   ```
 
-## .gitignore for a Java project
+- To revert any commit, run:  
+  ```command-line
+  $ git revert 64c852bcb306bceeeec8f77708171c583d807408
+  ```
 
-Adapted from: [https://github.com/github/gitignore/blob/master/Java.gitignore](https://github.com/github/gitignore/blob/master/Java.gitignore)
-
-```markdown
-# Compiled class file
-
-\*.class
-
-# Log file
-
-\*.log
-
-# Package Files
-
-_.jar
-_.war
-_.nar
-_.ear
-_.zip
-_.tar.gz
-\*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-
-hs_err_pid\*
-```
-
-## Exercise
-
-1. Create a Java project in your IDE of choice, with only a main class.
-
-2. Initialize a git repository to store your code.
-
-3. Write a .gitignore file to ignore all IDE files.
-
-. . .
-
-For solutions, find your IDE template at[https://github.com/github/gitignore/tree/master/Global](https://github.com/github/gitignore/tree/master/Global)
-
-## Viewing your old commits
+## Viewing your your repository's history
 
 - To retrieve the commit history, run:
 
@@ -588,32 +460,22 @@ For solutions, find your IDE template at[https://github.com/github/gitignore/tre
 - For a summary of the commits, run:
 
   ```command-line
-  $ git show-branch --more=10
+  $ git show-branch --more=10w
   ```
 
 ## Visualize Git
 
 - Let's make things more graphical with Visualize Git:
-
-  - Source: [https://github.com/git-school/visualizing-git](https://github.com/git-school/visualizing-git)
-
-  - Running instance: [http://git-school.github.io/visualizing-git](http://git-school.github.io/visualizing-git)
-
+    - [Source code](https://github.com/git-school/visualizing-git)
+    - [Running instance](http://git-school.github.io/visualizing-git)
 - Type `help` in the command box to see a list of supported operations
-
   - `pres()` = Turn on presenter mode<br>
-
   - `undo` = Undo the last git command<br>
-
   - `redo` = Redo the last undone git command<br>
-
   - `mode` = Change mode (`local` or `remote`)<br>
-
   - `clear` = Clear the history pane and reset the visualization
 
-## Visualize Git: Supported operations
-
-Git Commands:
+Supported Git commands:
 
 ```command-line
 git branch
@@ -632,4 +494,3 @@ git rev_parse
 git revert
 git tag
 ```
-

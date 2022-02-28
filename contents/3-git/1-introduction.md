@@ -11,7 +11,7 @@ next: /git/install
 date: "2021-01-28"
 ---
 
-![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png '#max-width=100%')
+![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png)
 
 In this module, we will learn:
 
