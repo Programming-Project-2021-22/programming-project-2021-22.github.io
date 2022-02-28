@@ -23,7 +23,7 @@ You don't have it installed yet, now is the time!
 
 ## IDE: Integrated development environment
 
-[![IDEs](https://1.bp.blogspot.com/-bDkr24hyJzU/XfrgSUB5dFI/AAAAAAAAFow/k7OY-A7tDckOlQ7bfANETW29ue7jl6z9wCLcBGAsYHQ/s1600/java-ides.jpg)](https://www.techgalery.com/2019/12/java-ide-options-for-beginner-and-pro.html '#width=300px')
+[![IDEs](https://1.bp.blogspot.com/-bDkr24hyJzU/XfrgSUB5dFI/AAAAAAAAFow/k7OY-A7tDckOlQ7bfANETW29ue7jl6z9wCLcBGAsYHQ/s1600/java-ides.jpg)](https://www.techgalery.com/2019/12/java-ide-options-for-beginner-and-pro.html)
 
 We will NOT force you to use a particular IDE in this course.
 
@@ -57,7 +57,7 @@ We will use Maven to install dependencies, build, package, and run your assignme
 
 In this course, we will use [Git](https://git-scm.com/), a free and open source distributed version control system.
 
-![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png)
+![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png '#width=300px')
 
 
 ## Git clients

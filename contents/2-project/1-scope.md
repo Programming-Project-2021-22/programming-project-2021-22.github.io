@@ -6,7 +6,7 @@ title: Scope
 subtitle: null
 chapter: 2
 section: 1
-previous: null
+previous: /introduction/agreements
 next: "/project/rules"
 date: "2021-01-28"
 ---

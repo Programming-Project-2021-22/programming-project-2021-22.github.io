@@ -7,19 +7,17 @@ subtitle: null
 chapter: 2
 section: 4
 previous: "/project/requirements"
-next: null
+next: /git/introduction
 date: "2021-01-28"
 ---
 
-## 4. Tips
-
-### 4.1. Planning
+### Planning
 
 After you form your group and choose your idea, plan your activities together. Create a [backlog](https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_backlog) for your project.
 
 You do not need to be rigid with your plan and you will certainly not think of everything you will need to do, but planning will increase your chances of successfully finishing your project in time!
 
-### 4.2. Git Tips
+### Git Tips
 
 If this is the first time you work with git, it may seem a little overwhelming. Don't worry, though. It is simpler than it may seem at first.
 

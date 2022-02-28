@@ -8,7 +8,7 @@ date: "2021-01-28"
 chapter: 1
 section: 8
 previous: "/introduction/evaluation"
-next: null
+next: "/project/scope"
 ---
  
 ## Attendance

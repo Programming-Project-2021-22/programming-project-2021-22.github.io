@@ -21,7 +21,8 @@
             },
           },
           `gatsby-remark-image-attributes`,
-          `gatsby-remark-autolink-headers`
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-prismjs`
         ],
       },
     },
