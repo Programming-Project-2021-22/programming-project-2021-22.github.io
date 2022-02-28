@@ -58,20 +58,3 @@ We will use Maven to install dependencies, build, package, and run your assignme
 In this course, we will use [Git](https://git-scm.com/), a free and open source distributed version control system.
 
 ![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png "#width=300px")
-
-## Git clients
-
-[![Git clients](https://cdn.acodez.in/wp-content/uploads/2019/05/Git-GUI-Clients.png)](https://acodez.in/git-gui-clients/)
-
-We will use Git intensively throughout this course, so you may want to install a Git client.
-
-However, if you are more of a "terminal person", you can use Git exclusively through the command line interface.
-
-Here are some Git client options for you to consider:
-
-1. [GitHub Desktop](https://desktop.github.com/)
-1. [Git Kraken](https://www.gitkraken.com/)
-1. [Sourcetree](https://www.sourcetreeapp.com/)
-1. [Git in IntelliJ IDEA](https://www.jetbrains.com/idea/guide/tutorials/creating-a-project-from-github/clone-from-github/)
-1. [Git in Visual Studio Code](https://docs.microsoft.com/en-us/learn/modules/introduction-to-github-visual-studio-code/)
-1. [Git in Eclipse](https://www.vogella.com/tutorials/EclipseGit/article.html)

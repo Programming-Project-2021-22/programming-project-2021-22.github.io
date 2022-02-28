@@ -7,9 +7,11 @@ subtitle: null
 chapter: 3
 section: 1
 previous: /project/tips
-next: /git/commands
+next: /git/install
 date: "2021-01-28"
 ---
+
+![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png '#max-width=100%')
 
 In this module, we will learn:
 
@@ -20,6 +22,8 @@ In this module, we will learn:
 - How to work with remote repositories
 
 ## Recommended readings
+
+The material in this module has been adapted from:
 
 1. Jon Loeliger, Matthew McCullough. [Version Control with Git](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260607810001241), 2nd Edition, 2012, O'Reilly Media, Inc., ISBN 9780596520120.
 
@@ -61,83 +65,123 @@ To avoid the disastrous situations implied by these questions, version control s
 
 ## VCS Types
 
-Multiple types of VCS have been developed over the years:
+### Local Version Control Systems
 
-- CVS
-- Apache Subversion (SVN)
-- **Git**
-- GNU Bazaar
-- Mercurial
+![lvcs](https://git-scm.com/book/en/v2/images/local.png)  
+Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+- **Main benefit**: 
+  - Being able to do version control
+- **Main drawback**: 
+  - No support for collaboration
+  - Single point of failure
+
+### Centralized Version Control Systems
+  
+![cvcs](https://git-scm.com/book/en/v2/images/centralized.png)  
+Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+- **Main benefits**: 
+  - Being able to do version control
+  - Supports collaboration
+- **Main drawback**: 
+  - Single point of failure
+  - Project history is only visible to the server
+
+### Distributed Version Control Systems
+
+![dvcs](https://git-scm.com/book/en/v2/images/distributed.png)  
+Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+
+- **Main benefits**: 
+  - Being able to do version control
+  - Supports collaboration
+  - Redundancy
+  - Availability
+
+## Version Control Systems
+
+Multiple VCS have been developed over the years:
+
+- [Concurrent Versions System (CVS)](https://en.wikipedia.org/wiki/Concurrent_Versions_System)
+  - First release: 1990
+  - Local
+- [Apache Subversion (SVN)](https://en.wikipedia.org/wiki/Apache_Subversion) 
+  - First release: 2000
+  - Centralized
+- [Git](https://en.wikipedia.org/wiki/Git) 
+  - First release: 2005
+  - Decentralized
+- [GNU Bazaar](https://en.wikipedia.org/wiki/GNU_Bazaar) 
+  - First release: 2005
+  - Decentralized
+- [Mercurial](https://en.wikipedia.org/wiki/Mercurial) 
+  - First release: 2005
+  - Decentralized
+
+Git overwhelmingly superseded the other systems became the *de facto* standard in the software industry. 
+
+Here is some data from OpenHub, a public directory of free and open-source software, on the **[adoption of version control systems](https://www.openhub.net/repositories/compare)**.
+
+And here is some data from **[Google Trends](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F05vqwg,%2Fm%2F012ct9,%2Fm%2F08441_)**.
 
 ## What is git?
 
 - A free and open-source version control system
-- Created by Linus Torvalds:
-  - [https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290)
-- Distributed
-- Full history repository
+- Created by [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)
+- See git's first commit [here](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290)
+- A distributed version control system
+- Provides full history repository
 - No network requirement
-- _De facto_ standard in the industry
 
-Let us check some statistics:
+## About Git
 
-- [`OpenHub VCS comparison`](https://www.openhub.net/repositories/compare)
-- [`Google Trends`](https://trends.google.com/trends/explore?date=all&q=%2Fm%2F05vqwg,%2Fm%2F012ct9,%2Fm%2F08441_)
+Before we get our hands dirty, let's take a whirlwind tour on how Git works.
 
-## Installing git
+### How Git stores data
 
-1. Open your terminal and type:
+Traditional VCS systems store data as a list of file-based changes, as in what is called **delta-based** version control:
 
-```
-git --version
-```
+![delta-vcs](https://git-scm.com/book/en/v2/images/deltas.png)
 
-2. If you see an output with your Git version, you are good to go.
+Git stores complete versions of each file, as in a **stream of snapshots**:
 
-```
-git version 2.24.3 (Apple Git-128)
-```
+![snapshot-vcs](https://git-scm.com/book/en/v2/images/snapshots.png)
 
-3. Otherwise, access [https://git-scm.com/download](https://git-scm.com/download)
+### Nearly every operation is local
 
-4. Choose your operating system
+Most operations in Git need only local files and resources to operate:
+- Browsing the history of a project
+- Comparing different file states
+- Creating branches of work
 
-5. Follow the installation instructions
+When you clone a Git repository, you get its full history!
 
-## Git tools
+### Git has integrity
 
-We learned how git works and how to use it through the command line.
+- Everything in Git is checksummed before it is stored and is then referred to by that checksum.
 
-You can also use git through a GUI git clients:
+- It's impossible to alter the contents of a file without Git knowing.
 
-- GitHub Desktop: [https://desktop.github.com/](https://desktop.github.com/)
+- Git uses SHA-1 hash for checksumming, a hashing algorithm that generates 40-character strings composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. 
 
-  - Multi-platform
-  - Free to use
-  - Github provides a Student Developer Pack:
+- A SHA-1 hash looks something like this:  
+    ```
+    24b9da6552252987aa493b52f8696cd6d3b00373
+    ```
 
-    [https://education.github.com/pack](https://education.github.com/pack)
+### Git generally only adds data
 
-- GitKraken: [https://desktop.github.com/](https://desktop.github.com/)
+- When you do actions in Git, nearly all of them only add data to the Git database. 
 
-  - Multi-platform
-  - Free version available for public repos only
-  - Pro version available in GitHub Student Developer Pack
+- You can lose or mess up changes you haven’t committed yet, but after you commit a snapshot into Git, it is very difficult to lose, especially if you regularly push your database to another repository.
 
-- SmartGit: [https://www.syntevo.com/smartgit/](https://www.syntevo.com/smartgit/)
-  - Multi-platform
-  - Free for non-commercial use
+- This makes using Git a joy because we know we can experiment without the danger of severely screwing things up.
 
-You may also use your IDE's embedded git client
+### File states
 
-## Git services
+- **modified**: you have changed the file but have not committed it to your database yet
+- **staged**: ou have marked a modified file in its current version to go into your next commit snapshot
+- **committed**: your data is safely stored in your local database
 
-To collaborate and safely backup your repositories, you need a Git repository hosting service:
-
-- GitHub: [http://github.com/](http://github.com/)
-- GitLab: [http://gitlab.com/](http://gitlab.com/)
-- BitBucket: [https://bitbucket.org/](https://bitbucket.org/)
-
-UNIBZ has a self-hosted Gitlab:
-
-- [https://gitlab.inf.unibz.it/](https://gitlab.inf.unibz.it/)
+![states](https://git-scm.com/book/en/v2/images/areas.png)

@@ -5,7 +5,7 @@ module: Git 101
 title: Remote repositories
 subtitle: null
 chapter: 3
-section: 4
+section: 6
 previous: /git/branches
 next: null
 date: "2021-01-28"

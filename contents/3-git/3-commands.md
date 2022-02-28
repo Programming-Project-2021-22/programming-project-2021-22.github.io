@@ -2,97 +2,54 @@
 slug: "/git/commands"
 course: Programming Project 2021/22
 module: Git 101
-title: Basic commands
+title: Git commands
 subtitle: null
 chapter: 3
-section: 2
-previous: /git/introduction
+section: 4
+previous: /git/shell
 next: /git/branches
 date: "2021-01-28"
 ---
+Now, let's start using git!
 
-## Some basic Unix shell commands
+## Command line interface
 
-```bash
-# changes the working directory
-$ cd ~/tmp
+Before we choose to use any Desktop client, let us learn how to interact with the command-line interface (CLI).
 
-# lists the contents of the working directory
-$ ls
+The `git` command:
 
-# creates a copy of the file
-$ cp file.txt copy-of-file.txt
-
-# moves the file (potentially renaming it)
-$ mv file.txt file2.txt
-
-# creates a new folder
-$ mkdir tmp
-
-# removes a file
-$ rm file.txt
-
-# removes a directory
-$ rm -r ~/tmp
-
-# writes to a file overriding its contents
-$ echo Hello world > file.txt
-
-# writes to a file appending to its contents
-$ echo Hello again world >> file.txt
-
-# prints the contents of the file on the terminal
-$ cat file.txt
-
-# displays the contents of the file on the terminal page-by-page
-$ less file.txt
-```
-
-## If you are using windows...
-
-- On Windows, many of these commands are different.
-
-- Check the link below for a list of Windows equivalent commands:
-  \newline
-
-  [https://www.geeksforgeeks.org/linux-vs-windows-commands/](https://www.geeksforgeeks.org/linux-vs-windows-commands/)
-
-## Git command line interface
-
-The git command:
-
-```bash
+```command-line
 $ git
 ```
 
-The git command accepts options:
+The `git` command accepts options:
 
-```bash
+```command-line
 $ git --version
 ```
 
-The git command accepts sub-commands:
+The `git` command accepts sub-commands:
 
-```bash
+```command-line
 $ git log
 ```
 
-Many git sub-commands also accept options:
+Many `git` sub-commands also accept options:
 
-```bash
-git log -p
+```command-line
+$ git log -p
 ```
 
 If you are not sure how to use a sub-command, run:
 
-```bash
+```command-line
 $ git help add
 $ git add --help
 ```
 
 Many options have short and long "versions":
 
-```bash
+```command-line
 $ git commit -m "Fixed a typo."
 $ git commit --message="Fixed a typo."
 ```
@@ -105,7 +62,7 @@ A repository retains a complete copy of the entire project throughout its lifeti
 
 Let us create a repository:
 
-```bash
+```command-line
 $ mkdir ~/tmp/myrepo
 $ cd ~/tmp/myrepo
 $ echo 'My website is alive!' > index.html
@@ -113,7 +70,7 @@ $ echo 'My website is alive!' > index.html
 
 To initialize a Git repository, run:
 
-```bash
+```command-line
 $ git init
 ```
 
@@ -121,13 +78,13 @@ $ git init
 
 To see the structure of the created `.git` directory, run:
 
-```bash
+```command-line
 $ find .
 ```
 
 or
 
-```bash
+```command-line
 $ tree .git
 ```
 
@@ -158,7 +115,7 @@ To install the `tree` command, you may use:
 
 To check the current status of the repository, run:
 
-```bash
+```command-line
 $ git status
 ```
 
@@ -174,19 +131,19 @@ This command will show you:
 
 To stage a single file, run:
 
-```bash
+```command-line
 $ git add file.txt
 ```
 
 To add multiple files, run:
 
-```bash
+```command-line
 $ git add file.txt file2.txt file3.txt
 ```
 
 To add all files in a directory, run:
 
-```bash
+```command-line
 $ git add .
 ```
 
@@ -202,7 +159,7 @@ $ git add .
 
 - To commit staged changes, run:
 
-  ```bash
+  ```command-line
   $ git commit
   ```
 
@@ -210,13 +167,13 @@ $ git add .
 
 - If you want to add your commit title, use the `-m` option:
 
-  ```bash
+  ```command-line
   $ git commit -m "The title of my commit."
   ```
 
 - To also add a commit description, use a second `-m`:
 
-  ```bash
+  ```command-line
   $ git commit -m "The description of my commit."
   ```
 
@@ -224,7 +181,7 @@ $ git add .
 
 - The normal process will go through is
 
-  ```bash
+  ```command-line
   # You create, edit or delete files
   $ echo 'Hello world' > file.txt
 
@@ -237,37 +194,118 @@ $ git add .
 
 - You can stage and commit changes all at once by running:
 
-  ```bash
+  ```command-line
   $ git commit -a -m "Stage and commit all changes."
   ```
 
   The option `-a` will automatically commit all changes made to tracked files, including new, modified or deleted files.
 
+## A more complete example
+
+```command-line
+$ mkdir ~/repos/file_state_repo
+$ cd ~/repos/file_state_repo
+$ git init
+$ git status
+  On branch master
+
+  No commits yet
+
+  nothing to commit (create/copy files and use "git add" to track)
+$ echo "New data" > file.txt
+$ git status
+  On branch master
+
+  No commits yet
+
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+ 
+        file.txt
+  nothing added to commit but untracked files present (use "git add" to track)
+ 
+  Manually create an example junk file
+$ touch main.o
+$ git status
+  On branch master
+ 
+  No commits yet
+ 
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+ 
+        file.txt
+        main.o
+$ echo main.o > .gitignore
+$ git status
+  On branch master
+ 
+  No commits yet
+ 
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+ 
+        .gitignore
+        file.txt
+ 
+$ git add .gitignore
+$ git status
+  On branch master
+ 
+  No commits yet
+ 
+  Changes to be committed:
+    (use "git rm --cached <file>..." to unstage)
+ 
+          new file:   .gitignore
+ 
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+ 
+          file.txt
+$ git commit -m "Initial commit"
+  [master (root-commit) 1bf2af7] Initial commit
+   1 file changed, 1 insertion(+)
+   create mode 100644 .gitignore
+$ git status
+  On branch master
+  Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+ 
+          file.txt
+ 
+  nothing added to commit but untracked files present (use "git add" to track)
+$ git ls-files
+  .gitignore
+```
+
+
+
 ## Configuring the commit author
 
 - You can specify the author in every commit:
 
-  ```bash
+  ```command-line
   $ git commit -m "Initial commit" --author "Tiago <tiago.princesales@unibz.it>"
   ```
 
 - Or set up the author in the project's configuration file
 
-  ```bash
+  ```command-line
   $ git config user.name "Tiago Prince Sales"
   $ git config user.email "tiago.princesales@unibz.it"
   ```
 
 - To set it up globally, run:
 
-  ```bash
+  ```command-line
   $ git config --global user.name "Tiago Prince Sales"
   $ git config --global user.email "tiago.princesales@unibz.it"
   ```
 
 - To see all you current configurations, run:
 
-  ```bash
+  ```command-line
   $ git config --list
   ```
 
@@ -280,14 +318,14 @@ $ git add .
 
 - In such occasions, you can run
 
-  ```bash
+  ```command-line
   $ git add unstagedFile.txt
   $ git commit --amend
   ```
 
 - If you simply want to change the commit title, run:
 
-  ```bash
+  ```command-line
   $ git commit --amend -m "My better title"
   ```
 
@@ -295,19 +333,19 @@ $ git add .
 
 - To remove a single file, run:
 
-  ```bash
+  ```command-line
   $ git rm file.txt
   ```
 
 - To remove multiple files, run:
 
-  ```bash
+  ```command-line
   $ git rm file.txt file2.txt file3.txt
   ```
 
 - You can also run:
 
-  ```bash
+  ```command-line
   $ rm file.txt
   $ rm file2.txt
   $ rm file3.text
@@ -316,7 +354,7 @@ $ git add .
 
 - To remove a file and keep it as unstaged, do
 
-  ```bash
+  ```command-line
   git rm --cached file.txt
   ```
 
@@ -324,13 +362,13 @@ $ git add .
 
 - To move or rename a single file, run:
 
-  ```bash
+  ```command-line
   $ git mv file.txt newFile.txt
   ```
 
 - or
 
-  ```bash
+  ```command-line
   $ mv file.txt newFile.txt
   $ git rm file.txt
   $ git add newFile.txt
@@ -338,7 +376,7 @@ $ git add .
 
 - or
 
-  ```bash
+  ```command-line
   $ mv file.txt newFile.txt
   $ git add .
   ```
@@ -347,13 +385,13 @@ $ git add .
 
 - To unstage a change to a file, run:
 
-  ```bash
+  ```command-line
   git reset nope.txt
   ```
 
 - To unstage all staged files, run:
 
-  ```bash
+  ```command-line
   git reset
   ```
 
@@ -363,19 +401,19 @@ When running the last two commands, your changes will not be lost.
 
 To undo the last commit and keep its changes staged, run:
 
-```bash
+```command-line
 $ git reset --soft HEAD~1
 ```
 
 To undo the last commit and keep its changes unstaged, run:
 
-```bash
+```command-line
 $ git reset --mixed HEAD~1
 ```
 
 To undo the last commit and throw away the changes, run:
 
-```bash
+```command-line
 $ git reset --hard HEAD~1
 ```
 
@@ -390,13 +428,13 @@ $ git reset --hard HEAD~1
 
 To revert the last commit, run:
 
-```bash
+```command-line
 $ git revert HEAD
 ```
 
 To revert any commit, run:
 
-```bash
+```command-line
 $ git revert 64c852bcb306bceeeec8f77708171c583d807408
 ```
 
@@ -533,31 +571,31 @@ For solutions, find your IDE template at[https://github.com/github/gitignore/tre
 
 - To retrieve the commit history, run:
 
-  ```bash
+  ```command-line
   $ git log
   ```
 
 - To include the changes introduced in each commit, run:
 
-  ```bash
+  ```command-line
   $ git log -p
   ```
 
 - For more details on the last commit, run:
 
-  ```bash
+  ```command-line
   $ git show
   ```
 
 - For more details on a particular commit, run:
 
-  ```bash
+  ```command-line
   $ git show d6e5980bb9390e853e29b293bc8ecf024b237260
   ```
 
 - For a summary of the commits, run:
 
-  ```bash
+  ```command-line
   $ git show-branch --more=10
   ```
 
@@ -585,7 +623,7 @@ For solutions, find your IDE template at[https://github.com/github/gitignore/tre
 
 Git Commands:
 
-```shell
+```command-line
 git branch
 git checkout
 git cherry_pick
@@ -603,99 +641,3 @@ git revert
 git tag
 ```
 
-## File management: file states
-
-- **Untracked**: a file in the repository directory that is neither tracked or ignored.
-
-  This is the state a file is in right after you create it.
-
-- **Tracked**: a file that is in the repository or is staged in the index.
-
-- **Ignored**: a file that explicitly declared as “invisible” or “ignored” in the repository, even though it may be present within your working directory.
-
-## File states in action
-
-```bash
-$ mkdir ~/repos/file_state_repo
-$ cd ~/repos/file_state_repo
-$ git init
-$ git status
-# On branch master
-#
-# No commits yet
-#
-# nothing to commit (create/copy files and use "git add" to track)
-$ echo "New data" > file.txt
-$ git status
-# On branch master
-#
-# No commits yet
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       file.txt
-#nothing added to commit but untracked files present (use "git add" to track)
-```
-
-## File states in action - cont.
-
-```bash
-# Manually create an example junk file
-$ touch main.o
-$ git status
-# On branch master
-#
-# No commits yet
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       file.txt
-#       main.o
-$ echo main.o > .gitignore
-$ git status
-# On branch master
-#
-# No commits yet
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       .gitignore
-#       file.txt
-```
-
-## File states in action - cont.
-
-```bash
-$ git add .gitignore
-$ git status
-# On branch master
-#
-# No commits yet
-#
-# Changes to be committed:
-#   (use "git rm --cached <file>..." to unstage)
-#
-#         new file:   .gitignore
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#         file.txt
-$ git commit -m "Initial commit"
-# [master (root-commit) 1bf2af7] Initial commit
-#  1 file changed, 1 insertion(+)
-#  create mode 100644 .gitignore
-$ git status
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#         file.txt
-#
-# nothing added to commit but untracked files present (use "git add" to track)
-$ git ls-files
-# .gitignore
-```

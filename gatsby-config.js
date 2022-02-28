@@ -22,7 +22,16 @@ module.exports = {
           },
           `gatsby-remark-image-attributes`,
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              prompt: { 
+                global: true,
+                user: 'user',
+                host: 'localhost'
+              }
+            }
+          }
         ],
       },
     },

@@ -1,11 +1,11 @@
 ---
 slug: "/project/requirements"
 course: Programming Project 2021/22
-module: Project Description
+module: Course Project
 title: Requirements
 subtitle: null
 chapter: 2
-section: 3
+section: 4
 previous: "/project/rules"
 next: "/project/tips"
 date: "2021-01-28"
@@ -118,7 +118,7 @@ Document your code using `javadoc`
 
 Configure the [Apache Maven Javadoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) for your project so that the documentation can be generated with the command:
 
-```shell
+```command-line
 mvn javadoc:javadoc
 ```
 

@@ -25,6 +25,26 @@ const IndexPage = ({ data }) => {
         of the <a href="http://unibz.it/">Free University of Bozen-Bolzano</a>.
         Here, you will find information about the course, course material,
         exercises, and more!
+        <h3>Important dates:</h3>
+        <ul>
+          <li>
+            <b>First exam session:</b>
+            <ul>
+              <li>Project submission: 17/06/2022</li>
+              <li>Project peer-review submission: 24/06/2022</li>
+              <li>Oral exam: 01/07/2022</li>
+            </ul>
+          </li>
+          <li>
+            <b>Second exam session:</b>
+            <ul>
+              <li>Project submission: 26/08/2022</li>
+              <li>Project peer-review submission: 02/09/2022</li>
+              <li>Oral exam: 09/09/2022</li>
+            </ul>
+          </li>
+        </ul>
+
         <h3>Relevant links:</h3>
         <ul>
           <li>
@@ -49,6 +69,12 @@ const IndexPage = ({ data }) => {
             Check when the next lecture will be in the{" "}
             <a href="https://www.unibz.it/en/timetable/?searchByKeywords=Programming+Project&sourceId=unibz&department=22&degree=13441%2C13584&studyPlan=17692%2C18234&fromDate=2022-03-01&toDate=2022-09-30">
               course timetable
+            </a>
+          </li>
+          <li>
+            Accept the course project invitation link on Github Classroom{" "}
+            <a href="https://classroom.github.com/a/KEbQ1JIO">
+              here
             </a>
           </li>
         </ul>

@@ -1,7 +1,7 @@
 ---
 slug: "/project/scope"
 course: Programming Project 2021/22
-module: Project Description
+module: Course Project
 title: Scope
 subtitle: null
 chapter: 2
@@ -15,19 +15,35 @@ In this course, you will work on an open-ended project. This means that you are 
 
 ## What you can do
 
-You can build a **management information system**, implemented as a desktop app, a command-line app, or a web app.
+You can build a **management information system**, implemented as a desktop app, a command-line app, or a web app. 
+
+Here are some past projects in this direction:
+
+* A JavaFX application for firefighters, in which one could manage emergencies, firefighter teams, and vehicles. 
+* A JavaFX application to teach people how to code using a simple self-designed programming language.
+* A collaborative web application for task managements built using the Spring Framework.
 
 Although Java is not the most popular language for games, you can build a **game** as your course project. After all, [Minecraft](https://en.wikipedia.org/wiki/Minecraft#:~:text=in%20the%20Java%20programming%20language.) was built in Java and so were [these](https://en.wikipedia.org/wiki/Category:Java_platform_games) other games!
 
 You may even want to learn an open-source game frameworks, like [libGDX](https://libgdx.com/) and [jMonkeyEngine](https://jmonkeyengine.org/).
 
+In past editions of this course, students created:
+
+* A multiplayer pictionary game.
+* A game to help people improve their typing speed.
+* An idle game about collecting resources playable through Telegram.
+
 You can also build a **library** for other programmers to use when they create their own applications. For inspiration, you can check out popular Java libraries like [Google Guava](https://github.com/google/guava) and [Apache HTTPComponents](https://hc.apache.org/).
+
+* In previous years, a group developed a Linear Algebra Library.
 
 Another good idea is a **data science** project, in which you create graphics and perform statistical analyses to discover interesting insights from a dataset.
 
 If you are into testing, a **browser automation** project might be right for you. In such a project you will program interactions with websites or web applications adn test if they behave as expected. To do that, you will likely need to learn something like the [Selenium WebDriver](https://www.selenium.dev/).
 
 If none of these ideas sounds interesting, you could do a **web crawling** project. In this case, your goal would be to automate the collection of data from one or more websites and showcase this data in an interesting way!
+
+* Last year, a group implemented an crawler to get NBA stats from websites and then exposed it via a web API.
 
 But as I said before, this is an open project. If you do not like any of the these ideas, feel free to explore your own and let your creativity flow!
 

@@ -1,11 +1,11 @@
 ---
 slug: "/project/tips"
 course: Programming Project 2021/22
-module: Project Description
+module: Course Project
 title: Tips
 subtitle: null
 chapter: 2
-section: 4
+section: 5
 previous: "/project/requirements"
 next: /git/introduction
 date: "2021-01-28"

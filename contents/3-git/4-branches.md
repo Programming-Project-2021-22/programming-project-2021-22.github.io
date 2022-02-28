@@ -5,7 +5,7 @@ module: Git 101
 title: Branches
 subtitle: null
 chapter: 3
-section: 3
+section: 5
 previous: /git/commands
 next: /git/remotes
 date: "2021-01-28"
