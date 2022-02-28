@@ -28,7 +28,7 @@ You don't have it installed yet, now is the time!
 We will NOT force you to use a particular IDE in this course.
 
 Instead, I would like you to:
-	
+
 1. Try out different IDEs
 1. Choose your favorite one
 1. Tell me why! I'll ask some of you about it in our next class
@@ -42,12 +42,12 @@ Here are some popular options:
 
 You can find many reviews and comparisons online, such as:
 
-1. [Choosing your Java IDE: Compare Eclipse, NetBeans, and IntelliJ IDEA for features, usability, and project size and type](https://www.infoworld.com/article/3114167/choosing-your-java-ide.html)   
-    By Martin Heller at InfoWorld
+1. [Choosing your Java IDE: Compare Eclipse, NetBeans, and IntelliJ IDEA for features, usability, and project size and type](https://www.infoworld.com/article/3114167/choosing-your-java-ide.html)  
+   By Martin Heller at InfoWorld
 1. [Visual Studio Code vs IntelliJ IDEA – Which is best for Java devs?](https://www.javacodegeeks.com/2019/11/visual-studio-code-vs-intellij-idea-which-is-best-for-java-devs.html)  
-    By Illana Brudo at Java Code Geeks
+   By Illana Brudo at Java Code Geeks
 1. [Java IDE Options For Beginner And Pro Java Programmers](https://www.techgalery.com/2019/12/java-ide-options-for-beginner-and-pro.html)  
-    By Adam Mudianto at Techgalery.com
+   By Adam Mudianto at Techgalery.com
 
 You are free to choose the IDE you enjoy coding on the most!
 
@@ -57,8 +57,7 @@ We will use Maven to install dependencies, build, package, and run your assignme
 
 In this course, we will use [Git](https://git-scm.com/), a free and open source distributed version control system.
 
-![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png '#width=300px')
-
+![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png "#width=300px")
 
 ## Git clients
 

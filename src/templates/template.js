@@ -8,16 +8,25 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark
 
   return (
-  <Layout previous={frontmatter.previous} next={frontmatter.next}>
-    <div className="body-content-module-title">
-      <div className="module">{frontmatter.chapter + '. ' + frontmatter.module}</div>
-      <div className="course">{frontmatter.course}</div>
-    </div>
-    <div className="body-content-data">
-      <h1>{frontmatter.chapter + '.' + frontmatter.section + '. ' + frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  </Layout>)
+    <Layout previous={frontmatter.previous} next={frontmatter.next}>
+      <div className="body-content-module-title">
+        <div className="module">
+          {frontmatter.chapter + ". " + frontmatter.module}
+        </div>
+        <div className="course">{frontmatter.course}</div>
+      </div>
+      <div className="body-content-data">
+        <h1>
+          {frontmatter.chapter +
+            "." +
+            frontmatter.section +
+            ". " +
+            frontmatter.title}
+        </h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+    </Layout>
+  )
 }
 
 // export default function Template({ data }) {
@@ -28,7 +37,7 @@ export default function Template({ data }) {
 
 //           <div className="header">
 //             <div className="header-navbar">
-//               <Link to="/">Home</Link>  
+//               <Link to="/">Home</Link>
 //             </div>
 //             <div className="header-content">
 //             { frontmatter.previous ?  <Link to={frontmatter.previous}>Previous</Link> : <span/>  }
@@ -67,36 +76,36 @@ export default function Template({ data }) {
 // }
 
 export const pageQuery = graphql`
-  query($slug: String!) {
-  markdownRemark(frontmatter: {slug: {eq: $slug}}) {
-    html
-    frontmatter {
-      slug
-      title
-      course
-      previous
-      next
-      chapter
-      section
-      module
+  query ($slug: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        slug
+        title
+        course
+        previous
+        next
+        chapter
+        section
+        module
+      }
     }
+    # allMarkdownRemark(
+    #   sort: {fields: [frontmatter___chapter, frontmatter___section]}
+    #   filter: {frontmatter: {chapter: {ne: 0}}}
+    #   ) {
+    #   group(field: frontmatter___module) {
+    #     nodes {
+    #       frontmatter {
+    #         chapter
+    #         course
+    #         module
+    #         slug
+    #         title
+    #         section
+    #       }
+    #     }
+    #   }
+    # }
   }
-  # allMarkdownRemark(
-  #   sort: {fields: [frontmatter___chapter, frontmatter___section]}
-  #   filter: {frontmatter: {chapter: {ne: 0}}}
-  #   ) {
-  #   group(field: frontmatter___module) {
-  #     nodes {
-  #       frontmatter {
-  #         chapter
-  #         course
-  #         module
-  #         slug
-  #         title
-  #         section
-  #       }
-  #     }
-  #   }
-  # }
-}
 `

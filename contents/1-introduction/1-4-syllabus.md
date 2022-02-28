@@ -18,10 +18,11 @@ In this course, we are going to cover the topics below, not necessarily in this 
 **Includes lab?** Yes
 
 Topics:
+
 - What is a version control system?
 - Creating and cloning repositories
 - Pushing and pulling
-- Working with multiple branches 
+- Working with multiple branches
 - Conflict resolution
 
 ### How Java works
@@ -29,6 +30,7 @@ Topics:
 **Includes lab?** No
 
 Topics:
+
 - Java Virtual Machine
 - Java shell commands (javac, java)
 - Java Memory Model
@@ -40,72 +42,79 @@ Topics:
 **Includes lab?** Yes
 
 Topics:
-  - What are exceptional occurrences in our programs
-  - `Throwable`, `Exception`, `RuntimeException`, and `Error`
-  - Declaring exceptions
-  - Handling exceptions
-  - `if` vs. `try-catch`
+
+- What are exceptional occurrences in our programs
+- `Throwable`, `Exception`, `RuntimeException`, and `Error`
+- Declaring exceptions
+- Handling exceptions
+- `if` vs. `try-catch`
 
 ### Advanced inheritance
 
 **Includes lab?** Yes
 
 Topics:
-  - Interfaces
-  - Abstract classes
-  - Final classes
-  - Polymorphism 
-  - Overriding
-  - Overloading
-  - Casting
+
+- Interfaces
+- Abstract classes
+- Final classes
+- Polymorphism
+- Overriding
+- Overloading
+- Casting
 
 ### Arrays
 
 **Includes lab?** Yes
 
 Topics:
-  - Working with arrays
-  - Unidimensional and multidimensional arrays
-  - The `Arrays` class
-  - Variable-length arguments
 
-### Collections 
+- Working with arrays
+- Unidimensional and multidimensional arrays
+- The `Arrays` class
+- Variable-length arguments
+
+### Collections
 
 **Includes lab?** Yes
 
 Topics:
-  - Java Collection: a native framework for common data structures
-  - Data structures:
-    - List
-    - Set
-    - Queue
-    - Map
+
+- Java Collection: a native framework for common data structures
+- Data structures:
+  - List
+  - Set
+  - Queue
+  - Map
 
 ### Generics
 
 **Includes lab?** Yes
 
-Topics: 
-  - Generic programming
-  - Generic methods
-  - Generic types
-  - Wildcards
+Topics:
+
+- Generic programming
+- Generic methods
+- Generic types
+- Wildcards
 
 ### Lambda expressions
 
 **Includes lab?** Yes
 
 Topics:
-  - Functional programming
-  - Functional interfaces
-	- Writing lambda expressions
-  - Writing methods that accept lambda expressions
+
+- Functional programming
+- Functional interfaces
+  - Writing lambda expressions
+- Writing methods that accept lambda expressions
 
 ### Streams
 
 **Includes lab?** Yes
 
 Topics:
+
 - What are Streams?
 - `IntStream` methods:
   - `forEach`
@@ -115,7 +124,7 @@ Topics:
   - `sum`
   - `average`
   - `reduce`
-  - `filter` 
+  - `filter`
   - `sorted`
 - General `Stream` methods:
   - `filter`
@@ -125,7 +134,7 @@ Topics:
   - `forEach`
   - `findFirst`
   - `distinct`
-  - `mapToDouble` 
+  - `mapToDouble`
   - `reduce`
 
 ### I/O
@@ -133,36 +142,40 @@ Topics:
 **Includes lab?** Yes
 
 Topics:
-  - Formatted output (`printf`)
-  - Encodings
-  - Reading and writing files
-  - File streams
+
+- Formatted output (`printf`)
+- Encodings
+- Reading and writing files
+- File streams
 
 ### Data serialization
 
 **Includes lab?** Yes
 
 Topics:
-  - CSV
-  - XML
-  - JSON
-  - YAML
-  - Java Libraries for JSON
+
+- CSV
+- XML
+- JSON
+- YAML
+- Java Libraries for JSON
 
 ### HTTP in Java
 
 **Includes lab?** No
 
 Topics:
-  - HTTP
-  - RESTful Web Services
-  - Making HTTP requests in Java
+
+- HTTP
+- RESTful Web Services
+- Making HTTP requests in Java
 
 ### Regular expressions
 
 **Includes lab?** Yes
 
 Topics:
+
 - Parsing strings
 - Writing regular expressions to
   - Find substrings
@@ -174,25 +187,28 @@ Topics:
 **Includes lab?** Yes
 
 Topics:
-  - Concurrent programming
-  - Working with threads
-  - Sharing resources
-  - Racing conditions
+
+- Concurrent programming
+- Working with threads
+- Sharing resources
+- Racing conditions
 
 ### Testing
 
 **Includes lab?** Yes
 
 Topics:
-  - Brief overview of testing
-  - JUnit 5
-  - Unit testing best practices
+
+- Brief overview of testing
+- JUnit 5
+- Unit testing best practices
 
 ### Java build tools
 
 **Includes lab?** Yes
 
 Topics:
+
 - What is Maven
 - How to create Maven projects
 - Writing `pom.xml` files
@@ -204,10 +220,10 @@ Topics:
 **Includes lab?** No
 
 Topics:
-  - What are design patterns?
-  - When and why to use them
-  - Gang of Four's Design Patterns
-    - Creational Patterns
-    - Structural Patterns
-    - Behavioral Patterns
 
+- What are design patterns?
+- When and why to use them
+- Gang of Four's Design Patterns
+  - Creational Patterns
+  - Structural Patterns
+  - Behavioral Patterns

@@ -25,7 +25,7 @@ You can also build a **library** for other programmers to use when they create t
 
 Another good idea is a **data science** project, in which you create graphics and perform statistical analyses to discover interesting insights from a dataset.
 
-If you are into testing, a **browser automation** project might be right for you. In such a project you will program interactions with websites or web applications adn test if they behave as expected. To do that, you will likely need to learn something like the [Selenium WebDriver](https://www.selenium.dev/). 
+If you are into testing, a **browser automation** project might be right for you. In such a project you will program interactions with websites or web applications adn test if they behave as expected. To do that, you will likely need to learn something like the [Selenium WebDriver](https://www.selenium.dev/).
 
 If none of these ideas sounds interesting, you could do a **web crawling** project. In this case, your goal would be to automate the collection of data from one or more websites and showcase this data in an interesting way!
 

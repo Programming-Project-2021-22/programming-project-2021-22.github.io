@@ -10,7 +10,7 @@ previous: /project/tips
 next: /git/commands
 date: "2021-01-28"
 ---
- 
+
 In this module, we will learn:
 
 - What is a version control system
@@ -21,17 +21,17 @@ In this module, we will learn:
 
 ## Recommended readings
 
-1. Jon Loeliger, Matthew McCullough. [Version Control with Git](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260607810001241), 2nd Edition, 2012, O'Reilly Media, Inc., ISBN 9780596520120.   
+1. Jon Loeliger, Matthew McCullough. [Version Control with Git](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260607810001241), 2nd Edition, 2012, O'Reilly Media, Inc., ISBN 9780596520120.
 
-    [![](https://images-na.ssl-images-amazon.com/images/I/51NrKTQmjgL._SX379_BO1,204,203,200_.jpg '#width=250px')](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260607810001241)
+   [![](https://images-na.ssl-images-amazon.com/images/I/51NrKTQmjgL._SX379_BO1,204,203,200_.jpg "#width=250px")](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260607810001241)
 
-2. Scott Chacon, Ben Straub. [Pro Git](https://git-scm.com/book/en/v2), 2nd Edition, 2014, Apress.  
-  
-    [![](https://git-scm.com/images/progit2.png '#width=250px')](https://git-scm.com/book/en/v2)
+2. Scott Chacon, Ben Straub. [Pro Git](https://git-scm.com/book/en/v2), 2nd Edition, 2014, Apress.
+
+   [![](https://git-scm.com/images/progit2.png "#width=250px")](https://git-scm.com/book/en/v2)
 
 ## How do you code now?
 
-Think about how you currently code. Do you just sit at your computer, open an IDE, and start coding? 
+Think about how you currently code. Do you just sit at your computer, open an IDE, and start coding?
 Were do you save your source files?
 
 Also, what would happen if:
@@ -39,11 +39,11 @@ Also, what would happen if:
 - You permanently delete a file by mistake?
 - You change your code a lot and then regret your decisions?
 - You need to work with other developers, but:
-   - You are each working on the same part of a system?
-   - You are in different places?
+  - You are each working on the same part of a system?
+  - You are in different places?
 - You want to publish your code for others to reuse?
 - Your hard-drive/ssd crashes?
- 
+
 To avoid the disastrous situations implied by these questions, version control systems were invented!
 
 ## VCS: Version Control System
@@ -63,7 +63,7 @@ To avoid the disastrous situations implied by these questions, version control s
 
 Multiple types of VCS have been developed over the years:
 
-- CVS 
+- CVS
 - Apache Subversion (SVN)
 - **Git**
 - GNU Bazaar
@@ -73,11 +73,11 @@ Multiple types of VCS have been developed over the years:
 
 - A free and open-source version control system
 - Created by Linus Torvalds:
-	- [https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290)
+  - [https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290](https://github.com/git/git/commit/e83c5163316f89bfbde7d9ab23ca2e25604af290)
 - Distributed
 - Full history repository
 - No network requirement
-- *De facto* standard in the industry
+- _De facto_ standard in the industry
 
 Let us check some statistics:
 
@@ -111,20 +111,22 @@ We learned how git works and how to use it through the command line.
 You can also use git through a GUI git clients:
 
 - GitHub Desktop: [https://desktop.github.com/](https://desktop.github.com/)
-	- Multi-platform
-	- Free to use
-	- Github provides a Student Developer Pack: 
-		
-		[https://education.github.com/pack](https://education.github.com/pack)
+
+  - Multi-platform
+  - Free to use
+  - Github provides a Student Developer Pack:
+
+    [https://education.github.com/pack](https://education.github.com/pack)
 
 - GitKraken: [https://desktop.github.com/](https://desktop.github.com/)
-	- Multi-platform
-	- Free version available for public repos only
-	- Pro version available in GitHub Student Developer Pack
+
+  - Multi-platform
+  - Free version available for public repos only
+  - Pro version available in GitHub Student Developer Pack
 
 - SmartGit: [https://www.syntevo.com/smartgit/](https://www.syntevo.com/smartgit/)
-	- Multi-platform
-	- Free for non-commercial use
+  - Multi-platform
+  - Free for non-commercial use
 
 You may also use your IDE's embedded git client
 
@@ -139,5 +141,3 @@ To collaborate and safely backup your repositories, you need a Git repository ho
 UNIBZ has a self-hosted Gitlab:
 
 - [https://gitlab.inf.unibz.it/](https://gitlab.inf.unibz.it/)
-
-

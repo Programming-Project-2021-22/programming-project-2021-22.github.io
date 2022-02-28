@@ -27,21 +27,21 @@ date: "2021-01-28"
 
 Why should we use branches?
 
-. . . 
+. . .
 
 - A branch often represents an individual customer release. If you want to start version 1.1 of your project but you know that some of your customers want to stick with version 1.0, keep the old version alive as a separate branch.
 
-. . . 
+. . .
 
 - A branch can encapsulate a development phase, such as the prototype, beta, stable, or bleeding-edge release. You can think of the version “1.1” release as a separate phase, too—the maintenance release.
 
-. . . 
+. . .
 
 - A branch can isolate the development of a single feature or research into a particularly complex bug. For example, you can introduce a branch for a well-defined and conceptually isolated task or to facilitate a merge of several branches prior to a release.
 
-	It may seem like overkill to create a new branch just to fix one bug, but Git’s branching system encourages such small-scale use.
+  It may seem like overkill to create a new branch just to fix one bug, but Git’s branching system encourages such small-scale use.
 
-. . . 
+. . .
 
 - An individual branch can represent the work of an individual contributor. Another branch—the “integration” branch—can be used specifically to unify efforts.
 
@@ -54,6 +54,7 @@ $ git branch development
 ```
 
 To create a branch from a particular commit, run:
+
 ```bash
 $ git branch development 56befbfbd06788dad7107cac7046b2e95b768ee2
 ```
@@ -101,9 +102,10 @@ $ git checkout development
 $ $ printf "I will not stage this change" > trackedFile.txt
 $ git checkout master
 ```
+
 . . .
 
-Untracked changes are **brought to the checked out branch** 
+Untracked changes are **brought to the checked out branch**
 
 ## What if...
 
@@ -144,7 +146,6 @@ $ git diff file.txt
 $ git show dev:file.txt
 ```
 
-
 ## What if...
 
 I have **committed** changes in my active branch while trying to checkout another branch?
@@ -156,7 +157,7 @@ $ git add stagedFile.txt
 $ git checkout master
 ```
 
-Committed changes **stay in the original branch** 
+Committed changes **stay in the original branch**
 
 ## Deleting branches with `git branch`
 
@@ -185,6 +186,7 @@ $ git branch -d development
 ```
 
 To delete the branch anyway, run:
+
 ```bash
 $ git branch -D development
 ```
@@ -199,7 +201,7 @@ $ git branch -D development
 
 - When modifications in one branch do not conflict with modifications found in another branch, Git computes a merge result and creates a new commit that represents the new, unified state.
 
-- When branches conflict, which occurs whenever changes compete to alter the same line of the same file, Git does not resolve the dispute. 
+- When branches conflict, which occurs whenever changes compete to alter the same line of the same file, Git does not resolve the dispute.
 
 ## Merging branches with `git merge`
 
@@ -214,7 +216,7 @@ $ git merge source
 
 [http://git-school.github.io/visualizing-git](http://git-school.github.io/visualizing-git)
 
-## Exercise 
+## Exercise
 
 1. Initialize a repository
 2. Create two branches
@@ -309,10 +311,12 @@ What happens inside a conflicting file?
 <<<<<<< HEAD
 This is a nice project!
 =======
+
 # This is a better title!
 
 ## And I'll throw in a header
->>>>>>> dev
+
+> > > > > > > dev
 ```
 
 We should manually assess the conflicts and change the files.
@@ -324,9 +328,6 @@ $ git add readme.md
 $ git commit -m "Merged 'dev'"
 ```
 
-
-
-
 ## Rebasing commits with `git rebase`
 
 Consider the following situation:
@@ -334,7 +335,6 @@ Consider the following situation:
 ![](./figures/before-rebase.png)
 
 How do I get the C, D, and E into my `topic` branch?
-
 
 ## Rebasing commits with `git rebase` - cont.
 
@@ -359,7 +359,6 @@ $ git rebase master topic
 
 [http://git-school.github.io/visualizing-git](http://git-school.github.io/visualizing-git)
 
-
 ## `git merge` vs `git rebase`
 
 ![](./figures/merge-rebase.png){width=80%}
@@ -368,7 +367,7 @@ From: https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333
 
 **Merge preserves history whereas rebase rewrites it.**
 
-<!-- 
+<!--
 ## Comparing commits with `git diff`
 
 To compare the state of the repository between two commits, run:
@@ -377,4 +376,3 @@ $ git diff d6e5980bb9390e853e29b293bc8ecf024b237260 1d1c4876beb0a570972b09218570
 ```
 
 The output of `git comparison` is organized per file. -->
-

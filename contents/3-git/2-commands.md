@@ -65,7 +65,7 @@ The git command:
 $ git
 ```
 
-The git command accepts options: 
+The git command accepts options:
 
 ```bash
 $ git --version
@@ -80,7 +80,7 @@ $ git log
 Many git sub-commands also accept options:
 
 ```bash
-git log -p 
+git log -p
 ```
 
 If you are not sure how to use a sub-command, run:
@@ -99,9 +99,9 @@ $ git commit --message="Fixed a typo."
 
 ## Creating an repository with `git init`
 
-A Git repository is a database containing all the information needed to retain and manage the revisions and history of a project. 
+A Git repository is a database containing all the information needed to retain and manage the revisions and history of a project.
 
-A repository retains a complete copy of the entire project throughout its lifetime. 
+A repository retains a complete copy of the entire project throughout its lifetime.
 
 Let us create a repository:
 
@@ -125,7 +125,7 @@ To see the structure of the created `.git` directory, run:
 $ find .
 ```
 
-or 
+or
 
 ```bash
 $ tree .git
@@ -135,7 +135,7 @@ To install the `tree` command, you may use:
 
 - `homebrew` on macOS
 - `apt-get` on Linux
--  on Windows, it should already be available*
+- on Windows, it should already be available\*
 
 ## File management: a two-stage process
 
@@ -144,19 +144,20 @@ To install the `tree` command, you may use:
 
 ## File management: file states
 
-- **Untracked**: a file in the repository directory that is neither tracked or ignored. 
+- **Untracked**: a file in the repository directory that is neither tracked or ignored.
 
   This is the state a file is in right after you create it.
 
-- **Tracked**: a file that is in the repository or is staged in the index. 
+- **Tracked**: a file that is in the repository or is staged in the index.
 
-- **Ignored**: a file that explicitly declared as “invisible” or “ignored” in the repository, even though it may be present within your working directory. 
+- **Ignored**: a file that explicitly declared as “invisible” or “ignored” in the repository, even though it may be present within your working directory.
 
   We use a `.gitignore` file do inform git about which other files it should ignore.
 
 ## Checking the state of the repository with `git status`
 
 To check the current status of the repository, run:
+
 ```bash
 $ git status
 ```
@@ -164,10 +165,10 @@ $ git status
 This command will show you:
 
 - Tracked and untracked files
-- What happened to your repository's files 
-	- Have they been **added**?
-	- Have they been **modified**?
-	- Have they been **deleted**?
+- What happened to your repository's files
+  - Have they been **added**?
+  - Have they been **modified**?
+  - Have they been **deleted**?
 
 ## Adding files with `git add`
 
@@ -218,7 +219,6 @@ $ git add .
   ```bash
   $ git commit -m "The description of my commit."
   ```
-
 
 ## Committing changes with `git commit`
 
@@ -274,6 +274,7 @@ $ git add .
 ## Amending your commits
 
 - Sometimes, we will make a commit and realize that:
+
   - we forgot to stage some changes
   - the commit message is not clear
 
@@ -290,7 +291,6 @@ $ git add .
   $ git commit --amend -m "My better title"
   ```
 
-
 ## Removing files `git rm`
 
 - To remove a single file, run:
@@ -305,7 +305,7 @@ $ git add .
   $ git rm file.txt file2.txt file3.txt
   ```
 
-- You can also run: 
+- You can also run:
 
   ```bash
   $ rm file.txt
@@ -362,16 +362,19 @@ When running the last two commands, your changes will not be lost.
 ## Undoing a commit with `git reset`
 
 To undo the last commit and keep its changes staged, run:
+
 ```bash
 $ git reset --soft HEAD~1
 ```
 
 To undo the last commit and keep its changes unstaged, run:
+
 ```bash
 $ git reset --mixed HEAD~1
 ```
 
 To undo the last commit and throw away the changes, run:
+
 ```bash
 $ git reset --hard HEAD~1
 ```
@@ -386,18 +389,20 @@ $ git reset --hard HEAD~1
 - It adds a new commit to the history
 
 To revert the last commit, run:
+
 ```bash
 $ git revert HEAD
 ```
 
 To revert any commit, run:
+
 ```bash
 $ git revert 64c852bcb306bceeeec8f77708171c583d807408
 ```
 
 <!-- ## `git reset` vs `git revert`
 
-A good answer on StackOverflow: 
+A good answer on StackOverflow:
 [https://stackoverflow.com/questions/8358035/whats-the-difference-between-git-revert-checkout-and-reset](https://stackoverflow.com/questions/8358035/whats-the-difference-between-git-revert-checkout-and-reset)
 
 - **`git revert`**: this command creates a new commit that undoes the changes from a previous commit. It adds new history to the project (it doesn't modify existing history).
@@ -406,7 +411,7 @@ A good answer on StackOverflow:
 
 - **`git reset`**: this command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
 
-## `git reset` vs `git revert` vs `git checkout` - cont. 
+## `git reset` vs `git revert` vs `git checkout` - cont.
 
 **Using these commands**
 
@@ -428,45 +433,60 @@ A good answer on StackOverflow:
 
   ```markdown
   # A line starting with # is a comment
-  
-  # The forward slash / is used as a directory separator. 
+
+  # The forward slash / is used as a directory separator.
+
   # Separators may occur at the beginning, middle or end of a pattern.
+
   target/classes
 
-  # If there is a separator at the beginning or middle (or both) of the pattern, 
-  # then it is relative to the directory level of the .gitignore file itself. 
+  # If there is a separator at the beginning or middle (or both) of the pattern,
+
+  # then it is relative to the directory level of the .gitignore file itself.
+
   /Main.class
   target/Main.class
-  
+
   # Otherwise the pattern may also match at any level below the .gitignore level.
+
   Main.class
   main/
 
-  # If there is a separator at the end of the pattern, 
+  # If there is a separator at the end of the pattern,
+
   # then the pattern will only match directories.
+
   target/
-  
+
   # Otherwise the pattern can match both files and directories.
+
   target
 
-  # For example, a pattern doc/frotz/ matches doc/frotz directory, but not a/doc/frotz directory; 
+  # For example, a pattern doc/frotz/ matches doc/frotz directory, but not a/doc/frotz directory;
+
   # however frotz/ matches frotz and a/frotz that is a directory
 
-  # An asterisk "*" matches anything except a "/"
-  *.class
+  # An asterisk "\*" matches anything except a "/"
+
+  \*.class
 
   # A question mark "?" matches any one character except a "/"
+
   ?.class
 
-  ## A leading "**" followed by a slash means match in all directories.
-  **/foo
+  ## A leading "\*\*" followed by a slash means match in all directories.
 
-  # A trailing "/**" matches everything inside
-  foo/**
+  \*\*/foo
 
-  # A slash followed by two consecutive asterisks then a slash matches zero or more directories. 
-  # For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
-  a/**/b
+  # A trailing "/\*\*" matches everything inside
+
+  foo/\*\*
+
+  # A slash followed by two consecutive asterisks then a slash matches zero or more directories.
+
+  # For example, "a/\*\*/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
+
+  a/\*\*/b
   ```
 
 ## .gitignore for a Java project
@@ -475,23 +495,28 @@ Adapted from: [https://github.com/github/gitignore/blob/master/Java.gitignore](h
 
 ```markdown
 # Compiled class file
-*.class
+
+\*.class
 
 # Log file
-*.log
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+\*.log
+
+# Package Files
+
+_.jar
+_.war
+_.nar
+_.ear
+_.zip
+_.tar.gz
+\*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+
+hs_err_pid\*
 ```
+
 ## Exercise
 
 1. Create a Java project in your IDE of choice, with only a main class.
@@ -500,7 +525,7 @@ hs_err_pid*
 
 3. Write a .gitignore file to ignore all IDE files.
 
-. . . 
+. . .
 
 For solutions, find your IDE template at[https://github.com/github/gitignore/tree/master/Global](https://github.com/github/gitignore/tree/master/Global)
 
@@ -560,35 +585,34 @@ For solutions, find your IDE template at[https://github.com/github/gitignore/tre
 
 Git Commands:
 
-  ```shell
-  git branch
-  git checkout
-  git cherry_pick
-  git commit
-  git fetch
-  git log
-  git merge
-  git pull
-  git push
-  git rebase
-  git reflog
-  git reset
-  git rev_parse
-  git revert
-  git tag
-  ```
+```shell
+git branch
+git checkout
+git cherry_pick
+git commit
+git fetch
+git log
+git merge
+git pull
+git push
+git rebase
+git reflog
+git reset
+git rev_parse
+git revert
+git tag
+```
 
 ## File management: file states
 
-- **Untracked**: a file in the repository directory that is neither tracked or ignored. 
+- **Untracked**: a file in the repository directory that is neither tracked or ignored.
 
   This is the state a file is in right after you create it.
 
-- **Tracked**: a file that is in the repository or is staged in the index. 
+- **Tracked**: a file that is in the repository or is staged in the index.
 
-- **Ignored**: a file that explicitly declared as “invisible” or “ignored” in the repository, even though it may be present within your working directory. 
+- **Ignored**: a file that explicitly declared as “invisible” or “ignored” in the repository, even though it may be present within your working directory.
 
-  
 ## File states in action
 
 ```bash
@@ -668,12 +692,10 @@ $ git status
 # On branch master
 # Untracked files:
 #   (use "git add <file>..." to include in what will be committed)
-# 
+#
 #         file.txt
-# 
+#
 # nothing added to commit but untracked files present (use "git add" to track)
 $ git ls-files
 # .gitignore
 ```
-
-

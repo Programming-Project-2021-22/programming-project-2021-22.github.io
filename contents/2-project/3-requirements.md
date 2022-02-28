@@ -15,7 +15,7 @@ Although you are free to choose what to do, your project should satisfy all the 
 
 ## Programming techniques
 
-Your project must use at least 10 of the programming techniques listed below: 
+Your project must use at least 10 of the programming techniques listed below:
 
 1. Interfaces
 2. Abstract classes
@@ -52,7 +52,7 @@ Artificial usage of techniques just to meet the quota will not be accepted.
 
 You should add and configure a **`.gitignore`** file on the root of your git repository such that it instructs git to ignore files we do not want to be tracked.
 
-Because of that, we expected your repository to be completely clean and only contain relevant files. 
+Because of that, we expected your repository to be completely clean and only contain relevant files.
 
 We do not want to see in your repository any:
 
@@ -66,7 +66,7 @@ We do not want to see in your repository any:
 
 Create a **`README.md`** on the root of your git repository, containing:
 
-- Your group members 
+- Your group members
 - A description of your project
 - How to build and run your project
 - How to use your project
@@ -78,10 +78,10 @@ Create a **`README.md`** on the root of your git repository, containing:
   - How you used Git
   - The main challenges you faced (at least one per member)
 
-Add any additional information to your `README.md` you think is relevant. 
+Add any additional information to your `README.md` you think is relevant.
 
 If you are not sure what should go in your `README.md`, check out [this](https://www.makeareadme.com/) and [this](https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3) websites.
-  
+
 Remember that `README.md` files are written using [Markdown](https://docs.gitlab.com/ee/user/markdown.html).
 
 ## Set up Maven
@@ -106,9 +106,9 @@ mvn test
 
 Your test suite will be evaluated regarding:
 
-- *coverage*: how much of my code is tested?
-- *correctness*: are my tests useful?
-- *understandability*: can people understand the expected behavior of my functions via my tests?
+- _coverage_: how much of my code is tested?
+- _correctness_: are my tests useful?
+- _understandability_: can people understand the expected behavior of my functions via my tests?
 
 **Each group member should write tests for her own methods. Other group members may (and should) review it.**
 
@@ -124,8 +124,8 @@ mvn javadoc:javadoc
 
 Your documentation will be evaluated regarding:
 
-  - *utility*: how useful is the documentation to a developer that is trying to understand my code (or how to use my code)?
-  - *understandability*: can people understand the classes and methods that I documented?
+- _utility_: how useful is the documentation to a developer that is trying to understand my code (or how to use my code)?
+- _understandability_: can people understand the classes and methods that I documented?
 
 **Each group member should document her own code. Other group members may (and should) review the documentation of others.**
 
@@ -138,4 +138,3 @@ Record a 5-minute video presenting your project, in which you:
 - Highlight interesting aspects of your project
 
 Add a link to the recording in your **`README.md`** file.
-

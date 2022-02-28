@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
- module.exports = {
+module.exports = {
   plugins: [
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sharp`,
@@ -22,7 +22,7 @@
           },
           `gatsby-remark-image-attributes`,
           `gatsby-remark-autolink-headers`,
-          `gatsby-remark-prismjs`
+          `gatsby-remark-prismjs`,
         ],
       },
     },
@@ -39,6 +39,6 @@
         name: `markdown-pages`,
         path: `${__dirname}/contents`,
       },
-    }
+    },
   ],
 }

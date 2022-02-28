@@ -10,7 +10,7 @@ previous: /git/branches
 next: null
 date: "2021-01-28"
 ---
- 
+
 ## Remote Repositories
 
 - So far, we have only worked with one local repository.
@@ -19,24 +19,23 @@ date: "2021-01-28"
 
 - Essentially, separate repositories are useful:
 
-	- Whenever a developer works autonomously.
+  - Whenever a developer works autonomously.
 
-	- Whenever developers are separated by a wide area network. A cluster of developers in the same location may share a local repository to amass localized changes.
+  - Whenever developers are separated by a wide area network. A cluster of developers in the same location may share a local repository to amass localized changes.
 
-	- Whenever a project is expected to diverge significantly along separate development paths. Although the regular branching and merging mechanism demonstrated in previous chapters can handle any amount of separate development, the resulting complexity may become more trouble than it’s worth. Instead, separate development paths can use separate repositories, to be merged again whenever appropriate.
+  - Whenever a project is expected to diverge significantly along separate development paths. Although the regular branching and merging mechanism demonstrated in previous chapters can handle any amount of separate development, the resulting complexity may become more trouble than it’s worth. Instead, separate development paths can use separate repositories, to be merged again whenever appropriate.
 
 ## Clones
 
-- A **clone** is a copy of a repository. 
+- A **clone** is a copy of a repository.
 
-- A clone contains all the objects from the original; as a result, each clone is an independent and autonomous repository and a true, symmetric peer of the original. 
+- A clone contains all the objects from the original; as a result, each clone is an independent and autonomous repository and a true, symmetric peer of the original.
 
 - A clone allows each developer to work locally and independently without centralization, polls, or locks. Ultimately, it’s cloning that allows Git to scale to projects that are large and dispersed.
 
 - Cloning a repository is just the first step in sharing code. You must also relate one repository to another to establish paths for data exchange. Git establishes these repository connections through remotes.
 
 - A remote is a reference, or handle, to another repository. You use a remote as a shorthand name for an otherwise lengthy and complicated Git URL. You can define any number of remotes in a repository, thus creating elaborate networks of repository sharing.
-
 
 ## Cloning a remote repository with `git clone`
 
@@ -50,8 +49,7 @@ Note that the recently cloned repo:
 
 - has the same files as the original repo
 - inherits the commit history from the original repo
-- is independent from the original repo*
-
+- is independent from the original repo\*
 
 ## Interacting with a remote repository
 
@@ -95,11 +93,11 @@ $ git checkout -b dev
 
 $ git push -u origin dev
 # Total 0 (delta 0), reused 0 (delta 0)
-# remote: 
+# remote:
 # remote: To create a merge request for dev, visit:
 # remote:   https://gitlab.inf.unibz.it/Tiago.PrinceSales/my-awesome-project/-/merge_requests/ne
 # w?merge_request%5Bsource_branch%5D=dev
-# remote: 
+# remote:
 # To https://gitlab.inf.unibz.it/Tiago.PrinceSales/my-awesome-project.git
 #  * [new branch]      dev -> dev
 # Branch 'dev' set up to track remote branch 'dev' from 'origin'.
@@ -146,5 +144,3 @@ Let us make one now?
 - Project documentation: help others learn and reuse your project
 
   Learn more at [https://guides.github.com/features/wikis/](https://guides.github.com/features/wikis/)
-
-

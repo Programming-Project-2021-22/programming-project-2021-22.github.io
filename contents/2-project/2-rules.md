@@ -28,13 +28,13 @@ date: "2021-01-28"
 
 This is a group project, in which self-organized groups can have up to 3 members.
 
-We strongly discourage you from working on this project by yourself, as collaborating with other developers is part of the learning experience we designed for this course. If, however, you really want to work on a project on your own or could no find suitable partners, 1-person groups are accepted. 
+We strongly discourage you from working on this project by yourself, as collaborating with other developers is part of the learning experience we designed for this course. If, however, you really want to work on a project on your own or could no find suitable partners, 1-person groups are accepted.
 
 We encourage you to evenly split responsibilities for this project, including design, coding, testing, and documentation.
 
 ## Delivering your project
 
-Your project must be delivered via Git. 
+Your project must be delivered via Git.
 
 **Click [here]() to accept the corresponding Github Classroom assignment and automatically create your repository.**
 
@@ -55,8 +55,9 @@ Reviews should be posted as issues on the Github repository of the reviewed proj
 Your **project is worth 60% of your final grade** for this course. 18 out of 30 points.
 
 Your project grade will be given by the lecturers, but it will be based on:
-  - your peers' reviews, and
-  - our own review
+
+- your peers' reviews, and
+- our own review
 
 Note that **everybody in a group will get the same grade**.
 

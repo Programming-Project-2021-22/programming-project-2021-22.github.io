@@ -31,7 +31,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       path: node.frontmatter.slug,
       component: template,
       context: {
-        slug: node.frontmatter.slug
+        slug: node.frontmatter.slug,
       },
     })
   })
