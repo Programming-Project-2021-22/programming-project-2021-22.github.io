@@ -179,9 +179,12 @@ When you clone a Git repository, you get its full history!
 - This makes using Git a joy because we know we can experiment without the danger of severely screwing things up.
 
 ### File states
+- **tracked**: Git is aware of the file
+  - **modified**: you have changed the file but have not committed it to your database yet
+  - **staged**: ou have marked a modified file in its current version to go into your next commit snapshot
+  - **committed**: your data is safely stored in your local database
+- **untracked**: Git is not "watching" the file
 
-- **modified**: you have changed the file but have not committed it to your database yet
-- **staged**: ou have marked a modified file in its current version to go into your next commit snapshot
-- **committed**: your data is safely stored in your local database
-
-![states](https://git-scm.com/book/en/v2/images/areas.png)
+![](https://i.stack.imgur.com/kslSd.png)  
+From [this](https://stackoverflow.com/questions/55877484/is-committed-and-unmodified-the-same) StackOverflow question.
+<!-- ![states](https://git-scm.com/book/en/v2/images/areas.png) -->

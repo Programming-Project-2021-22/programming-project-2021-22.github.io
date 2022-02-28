@@ -92,24 +92,16 @@ To install the `tree` command, you may use:
 
 - `homebrew` on macOS
 - `apt-get` on Linux
-- on Windows, it should already be available\*
+- on Windows, it should already be available
 
 ## File management: a two-stage process
 
 1. Stage incremental changes
 2. Commit blocks of change
 
-## File management: file states
+## File states
 
-- **Untracked**: a file in the repository directory that is neither tracked or ignored.
-
-  This is the state a file is in right after you create it.
-
-- **Tracked**: a file that is in the repository or is staged in the index.
-
-- **Ignored**: a file that explicitly declared as “invisible” or “ignored” in the repository, even though it may be present within your working directory.
-
-  We use a `.gitignore` file do inform git about which other files it should ignore.
+![](https://i.stack.imgur.com/kslSd.png)
 
 ## Checking the state of the repository with `git status`
 
