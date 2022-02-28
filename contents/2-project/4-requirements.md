@@ -6,7 +6,7 @@ title: Requirements
 subtitle: null
 chapter: 2
 section: 4
-previous: "/project/rules"
+previous: "/project/dates"
 next: "/project/tips"
 date: "2021-01-28"
 ---
