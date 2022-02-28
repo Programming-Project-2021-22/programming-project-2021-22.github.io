@@ -48,117 +48,97 @@
         }
       }
     })
-  </script><link as="script" rel="preload" href="/webpack-runtime-6eb3d76378fd312bb766.js"/><link as="script" rel="preload" href="/framework-d56718bb68ef348a9585.js"/><link as="script" rel="preload" href="/app-c6943692378225dcddf6.js"/><link as="script" rel="preload" href="/component---src-templates-template-js-9df5c4b29f910c964482.js"/><link as="fetch" rel="preload" href="/page-data/git/branches/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/800307450.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="container"><div class="header"><div class="header-navbar"><a href="/">Home</a></div><div class="header-content"><a href="/git/commands">Previous</a><a href="/git/remotes">Next</a></div></div><div class="body"><div class="body-navbar"><div class="body-navbar-inner"><div class="navbar-module-container"><span class="module-link">1. Introduction</span><a class="section-link" href="/introduction/structure">1.1. Course Structure</a><a class="section-link" href="/introduction/goals">1.2. Learning Goals</a><a class="section-link" href="/introduction/lecturers">1.3. Course Lecturers</a><a class="section-link" href="/introduction/syllabus">1.4. Topics</a><a class="section-link" href="/introduction/bibliography">1.5. Bibliography</a><a class="section-link" href="/introduction/tools">1.6. Tools</a><a class="section-link" href="/introduction/evaluation">1.7. Evaluation</a><a class="section-link" href="/introduction/agreements">1.8. Agreements</a></div><div class="navbar-module-container"><span class="module-link">2. Course Project</span><a class="section-link" href="/project/scope">2.1. Scope</a><a class="section-link" href="/project/rules">2.2. Rules of the Game</a><a class="section-link" href="/project/dates">2.3. Important Dates</a><a class="section-link" href="/project/requirements">2.4. Requirements</a><a class="section-link" href="/project/tips">2.5. Tips</a></div><div class="navbar-module-container"><span class="module-link">3. Git 101</span><a class="section-link" href="/git/introduction">3.1. Introduction</a><a class="section-link" href="/git/install">3.2. Installing Git</a><a class="section-link" href="/git/shell">3.3. Basic shell commands</a><a class="section-link" href="/git/commands">3.4. Git commands</a><a aria-current="page" class="section-link active-section-link" href="/git/branches">3.5. Branches</a><a class="section-link" href="/git/remotes">3.6. Remote repositories</a></div></div></div><div class="body-content"><div class="body-content-module-title"><div class="module">3. Git 101</div><div class="course">Programming Project 2021/22</div></div><div class="body-content-data"><h1>3.5. Branches</h1><div><h2 id="branches" style="position:relative;"><a href="#branches" aria-label="branches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Branches</h2>
+  </script><link as="script" rel="preload" href="/webpack-runtime-6eb3d76378fd312bb766.js"/><link as="script" rel="preload" href="/framework-d56718bb68ef348a9585.js"/><link as="script" rel="preload" href="/app-c6943692378225dcddf6.js"/><link as="script" rel="preload" href="/component---src-templates-template-js-9df5c4b29f910c964482.js"/><link as="fetch" rel="preload" href="/page-data/git/branches/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/800307450.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="container"><div class="header"><div class="header-navbar"><a href="/">Home</a></div><div class="header-content"><a href="/git/gitignore">Previous</a><a href="/git/remotes">Next</a></div></div><div class="body"><div class="body-navbar"><div class="body-navbar-inner"><div class="navbar-module-container"><span class="module-link">1. Introduction</span><a class="section-link" href="/introduction/structure">1.1. Course Structure</a><a class="section-link" href="/introduction/goals">1.2. Learning Goals</a><a class="section-link" href="/introduction/lecturers">1.3. Course Lecturers</a><a class="section-link" href="/introduction/syllabus">1.4. Topics</a><a class="section-link" href="/introduction/bibliography">1.5. Bibliography</a><a class="section-link" href="/introduction/tools">1.6. Tools</a><a class="section-link" href="/introduction/evaluation">1.7. Evaluation</a><a class="section-link" href="/introduction/agreements">1.8. Agreements</a></div><div class="navbar-module-container"><span class="module-link">2. Course Project</span><a class="section-link" href="/project/scope">2.1. Scope</a><a class="section-link" href="/project/rules">2.2. Rules of the Game</a><a class="section-link" href="/project/dates">2.3. Important Dates</a><a class="section-link" href="/project/requirements">2.4. Requirements</a><a class="section-link" href="/project/tips">2.5. Tips</a></div><div class="navbar-module-container"><span class="module-link">3. Git 101</span><a class="section-link" href="/git/introduction">3.1. Introduction</a><a class="section-link" href="/git/install">3.2. Installing Git</a><a class="section-link" href="/git/shell">3.3. Basic shell commands</a><a class="section-link" href="/git/commands">3.4. Git commands</a><a class="section-link" href="/git/gitignore">3.5. Ignoring files</a><a aria-current="page" class="section-link active-section-link" href="/git/branches">3.6. Branches</a><a class="section-link" href="/git/remotes">3.7. Remote repositories</a></div></div></div><div class="body-content"><div class="body-content-module-title"><div class="module">3. Git 101</div><div class="course">Programming Project 2021/22</div></div><div class="body-content-data"><h1>3.6. Branches</h1><div><h2 id="branches" style="position:relative;"><a href="#branches" aria-label="branches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Branches</h2>
 <ul>
-<li>
-<p>A branch is the fundamental means of launching a separate line of development within a software project</p>
-</li>
-<li>
-<p>A branch is a split from line of development, which allows it to continue in multiple directions simultaneously and, potentially, to produce different versions of a project</p>
-</li>
-<li>
-<p>Branches are often reconciled and merged with other branches to reunite disparate efforts</p>
-</li>
-<li>
-<p>Git allows many branches within a repository</p>
-</li>
-<li>
-<p>Git users make routine use of branches</p>
-</li>
+<li>A branch is the fundamental means of launching a separate line of development within a software project</li>
+<li>A branch is a split from line of development, which allows it to continue in multiple directions simultaneously and, potentially, to produce different versions of a project</li>
+<li>Branches are often reconciled and merged with other branches to reunite disparate efforts</li>
+<li>Git allows many branches within a repository</li>
+<li>Git users make routine use of branches</li>
 </ul>
-<h2 id="branches---cont" style="position:relative;"><a href="#branches---cont" aria-label="branches   cont permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Branches - cont.</h2>
-<p>Why should we use branches?</p>
-<p>. . .</p>
+<p><img src="https://wac-cdn.atlassian.com/dam/jcr:389059a7-214c-46a3-bc52-7781b4730301/hero.svg?cdnVersion=234" alt=""></p>
+<h2 id="why-should-we-use-branches" style="position:relative;"><a href="#why-should-we-use-branches" aria-label="why should we use branches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why should we use branches?</h2>
 <ul>
-<li>A branch often represents an individual customer release. If you want to start version 1.1 of your project but you know that some of your customers want to stick with version 1.0, keep the old version alive as a separate branch.</li>
+<li><strong>A branch often represents an individual customer release</strong>. If you want to start version 1.1 of your project but you know that some of your customers want to stick with version 1.0, keep the old version alive as a separate branch.</li>
+<li><strong>A branch can encapsulate a development phase</strong>, such as the prototype, beta, stable, or bleeding-edge release. You can think of the version “1.1” release as a separate phase, too—the maintenance release.</li>
+<li><strong>A branch can isolate the development of a single feature</strong> or research into a particularly complex bug. For example, you can introduce a branch for a well-defined and conceptually isolated task or to facilitate a merge of several branches prior to a release. It may seem like overkill to create a new branch just to fix one bug, but Git’s branching system encourages such small-scale use.</li>
+<li><strong>An individual branch can represent the work of an individual contributor</strong>. Another branch—the “integration” branch—can be used specifically to unify efforts.</li>
 </ul>
-<p>. . .</p>
-<ul>
-<li>A branch can encapsulate a development phase, such as the prototype, beta, stable, or bleeding-edge release. You can think of the version “1.1” release as a separate phase, too—the maintenance release.</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>
-<p>A branch can isolate the development of a single feature or research into a particularly complex bug. For example, you can introduce a branch for a well-defined and conceptually isolated task or to facilitate a merge of several branches prior to a release.</p>
-<p>It may seem like overkill to create a new branch just to fix one bug, but Git’s branching system encourages such small-scale use.</p>
-</li>
-</ul>
-<p>. . .</p>
-<ul>
-<li>An individual branch can represent the work of an individual contributor. Another branch—the “integration” branch—can be used specifically to unify efforts.</li>
-</ul>
+<p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--MMMIh0N1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eev37hwxalgf019j42a9.png" class="gatsby-img-attributes" style="max-width: 100%;" alt="" title=""/></p>
 <h2 id="creating-branches-using-git-branch" style="position:relative;"><a href="#creating-branches-using-git-branch" aria-label="creating branches using git branch permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating branches using <code class="language-text">git branch</code></h2>
 <p>To create a branch, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> branch development</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch development</code></pre></div>
 <p>To create a branch from a particular commit, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> branch development 56befbfbd06788dad7107cac7046b2e95b768ee2</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch development 56befbfbd06788dad7107cac7046b2e95b768ee2</code></pre></div>
 <p>The last option is the commit hash code from which to branch.</p>
 <h2 id="listing-and-selecting-branches" style="position:relative;"><a href="#listing-and-selecting-branches" aria-label="listing and selecting branches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing and selecting branches</h2>
 <p>To list all branches, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> branch</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch</code></pre></div>
 <p>To select a branch to work with, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout development</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout development</code></pre></div>
 <p>To create and checkout a branch, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout -b feature1</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout -b feature1</code></pre></div>
 <p>Note that <code class="language-text">git checkout</code> may also be used to revert changes on a file to the last committed changes.</p>
 <h2 id="what-if" style="position:relative;"><a href="#what-if" aria-label="what if permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What if...</h2>
-<p>I have <strong>untracked changes</strong> in my active branch while trying to checkout another branch?</p>
+<ol>
+<li>
+<p>What if I have <strong>untracked changes</strong> in my active branch while trying to checkout another branch?</p>
 <p>A may have created a new file...</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout development
-$ <span class="token builtin class-name">printf</span> <span class="token string">"I will not stage this new file"</span> <span class="token operator">></span> unstagedFile.txt
-$ <span class="token function">git</span> checkout master</code></pre></div>
-<p>Or edited an existing file...</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout development
-$ $ <span class="token builtin class-name">printf</span> <span class="token string">"I will not stage this change"</span> <span class="token operator">></span> trackedFile.txt
-$ <span class="token function">git</span> checkout master</code></pre></div>
-<p>. . .</p>
-<p>Untracked changes are <strong>brought to the checked out branch</strong></p>
-<h2 id="what-if-1" style="position:relative;"><a href="#what-if-1" aria-label="what if 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What if...</h2>
-<p>I have <strong>staged changes</strong> in my active branch while trying to checkout another branch?</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout development
-$ $ <span class="token builtin class-name">printf</span> <span class="token string">"I will not stage this change"</span> <span class="token operator">></span> file.txt
-$ <span class="token function">git</span> <span class="token function">add</span> file.txt
-$ <span class="token function">git</span> checkout master</code></pre></div>
-<p>. . .</p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout development
+$ printf &quot;I will not stage this new file&quot; &gt; unstagedFile.txt
+$ git checkout master</code></pre></div>
+<p>Or edited an existing file.</p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout development
+$ printf &quot;I will not stage this change&quot; &gt; trackedFile.txt
+$ git checkout master</code></pre></div>
+<p>Untracked changes are <strong>brought to the checked out branch</strong>.</p>
+</li>
+<li>
+<p>What if I have <strong>staged changes</strong> in my active branch while trying to checkout another branch?</p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout development
+$ printf &quot;I will not stage this change&quot; &gt; file.txt
+$ git add file.txt
+$ git checkout master</code></pre></div>
 <p>Staged changes are <strong>brought to the checked out branch ONLY if they do not cause conflict</strong>.</p>
 <p>Otherwise, you will see a message like this:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout development
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout development
 
-<span class="token comment"># error: Your local changes to the following files would be overwritten by checkout:</span>
-<span class="token comment">#         file.txt</span>
-<span class="token comment"># Please commit your changes or stash them before you switch branches.</span>
-<span class="token comment"># Aborting</span></code></pre></div>
-<h2 id="how-to-inspect-what-is-going-on" style="position:relative;"><a href="#how-to-inspect-what-is-going-on" aria-label="how to inspect what is going on permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to inspect what is going on?</h2>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span><span class="token comment"># To see the content of the file who is causing the conflict</span>
-$ <span class="token function">cat</span> file.txt
-
-<span class="token comment"># To compare the content of the files</span>
-$ <span class="token function">git</span> <span class="token function">diff</span> file.txt
-
-<span class="token comment"># To see the content of the file in another branch</span>
-$ <span class="token function">git</span> show dev:file.txt</code></pre></div>
-<h2 id="what-if-2" style="position:relative;"><a href="#what-if-2" aria-label="what if 2 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What if...</h2>
-<p>I have <strong>committed</strong> changes in my active branch while trying to checkout another branch?</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout development
-$ $ <span class="token builtin class-name">printf</span> <span class="token string">"I will not stage this change"</span> <span class="token operator">></span> stagedFile.txt
-$ <span class="token function">git</span> <span class="token function">add</span> stagedFile.txt
-$ <span class="token function">git</span> checkout master</code></pre></div>
+  error: Your local changes to the following files would be overwritten by checkout:
+          file.txt
+  Please commit your changes or stash them before you switch branches.
+  Aborting</code></pre></div>
+</li>
+<li>
+<p>What if I have <strong>committed</strong> changes in my active branch while trying to checkout another branch?</p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout development
+$ printf &quot;I will not stage this change&quot; &gt; stagedFile.txt
+$ git add stagedFile.txt
+$ git checkout master</code></pre></div>
 <p>Committed changes <strong>stay in the original branch</strong></p>
+</li>
+</ol>
+<h2 id="how-to-inspect-what-is-going-on" style="position:relative;"><a href="#how-to-inspect-what-is-going-on" aria-label="how to inspect what is going on permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to inspect what is going on?</h2>
+<p>To see the content of the file that is causing the conflict:</p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ cat file.txt</code></pre></div>
+<p>To compare the content of the files:</p>
+<div class="gatsby-highlight" data-language="command-linen"><pre class="language-command-linen"><code class="language-command-linen">$ git diff file.txt</code></pre></div>
+<p>To see the content of the file in another branch:</p>
+<div class="gatsby-highlight" data-language="command-linen"><pre class="language-command-linen"><code class="language-command-linen">$ git show dev:file.txt</code></pre></div>
 <h2 id="deleting-branches-with-git-branch" style="position:relative;"><a href="#deleting-branches-with-git-branch" aria-label="deleting branches with git branch permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleting branches with <code class="language-text">git branch</code></h2>
 <p>To delete a branch, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> branch -d development</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch -d development</code></pre></div>
 <p>If the branch you are trying to delete is currently checked out, you the command will fail:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> branch -d development
-<span class="token comment"># error: Cannot delete branch 'development' checked out at '~/repos/file_state_repo'</span></code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch -d development
+  error: Cannot delete branch &#39;development&#39; checked out at &#39;~/repos/file_state_repo&#39;</code></pre></div>
 <p>Git will also "complain" if the branch to be deleted has changes that have not been merged into the current branch:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout master
-<span class="token comment"># Switched to branch 'master'</span>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout master
+  Switched to branch &#39;master&#39;
 
-$ <span class="token function">git</span> branch -d development
-<span class="token comment"># error: The branch 'development' is not fully merged.</span>
-<span class="token comment"># If you are sure you want to delete it, run 'git branch -D development'.</span></code></pre></div>
+$ git branch -d development
+  error: The branch &#39;development&#39; is not fully merged.
+  If you are sure you want to delete it, run &#39;git branch -D development&#39;.</code></pre></div>
 <p>To delete the branch anyway, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> branch -D development</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch -D development</code></pre></div>
 <h2 id="merging-branches" style="position:relative;"><a href="#merging-branches" aria-label="merging branches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Merging branches</h2>
 <ul>
 <li>
@@ -179,10 +159,10 @@ $ <span class="token function">git</span> branch -d development
 </ul>
 <h2 id="merging-branches-with-git-merge" style="position:relative;"><a href="#merging-branches-with-git-merge" aria-label="merging branches with git merge permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Merging branches with <code class="language-text">git merge</code></h2>
 <p>To merge branch <code class="language-text">source</code> into branch <code class="language-text">target</code>, you must:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout target
-$ <span class="token function">git</span> merge <span class="token builtin class-name">source</span></code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout target
+$ git merge source</code></pre></div>
 <h2 id="visualizing-branches" style="position:relative;"><a href="#visualizing-branches" aria-label="visualizing branches permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visualizing branches</h2>
-<p><a href="http://git-school.github.io/visualizing-git">http://git-school.github.io/visualizing-git</a></p>
+<p>Let's open the <a href="http://git-school.github.io/visualizing-git">Visualizing Git App</a> and play with branches.</p>
 <h2 id="exercise" style="position:relative;"><a href="#exercise" aria-label="exercise permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exercise</h2>
 <ol>
 <li>Initialize a repository</li>
@@ -192,105 +172,173 @@ $ <span class="token function">git</span> merge <span class="token builtin class
 <li>Delete the merged branch</li>
 </ol>
 <h2 id="solution" style="position:relative;"><a href="#solution" aria-label="solution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solution</h2>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">mkdir</span> my_repo
-
-$ <span class="token builtin class-name">cd</span> my_repo
-
-$ <span class="token function">git</span> init
-<span class="token comment"># Initialized empty Git repository in ~/my_repo/.git/</span>
-
-$ <span class="token function">touch</span> readme.md
-$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"First commit"</span>
-<span class="token comment"># [master (root-commit) ec593d5] First commit</span>
-<span class="token comment">#  1 file changed, 0 insertions(+), 0 deletions(-)</span>
-<span class="token comment">#  create mode 100644 readme.md</span>
-
-$ <span class="token function">git</span> branch dev
-$ <span class="token function">git</span> checkout dev
-<span class="token comment"># Switched to branch 'dev'</span>
-
-$ <span class="token builtin class-name">printf</span> <span class="token string">".DS_Store"</span> <span class="token operator">></span> .gitignore
-$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"Added basic .gitignore"</span>
-<span class="token comment"># [dev 72cf4fc] Added basic .gitignore</span>
-<span class="token comment">#  1 file changed, 1 insertion(+)</span>
-<span class="token comment">#  create mode 100644 .gitignore</span></code></pre></div>
-<h2 id="solution-1" style="position:relative;"><a href="#solution-1" aria-label="solution 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Solution</h2>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout master
-<span class="token comment"># Switched to branch 'master'</span>
-
-$ <span class="token function">git</span> merge dev
-<span class="token comment"># Updating ec593d5..72cf4fc</span>
-<span class="token comment"># Fast-forward</span>
-<span class="token comment">#  .gitignore | 1 +</span>
-<span class="token comment">#  1 file changed, 1 insertion(+)</span>
-<span class="token comment">#  create mode 100644 .gitignore</span>
-
-$ <span class="token function">git</span> branch -d dev
-<span class="token comment"># Deleted branch dev (was 72cf4fc).</span></code></pre></div>
+<ol>
+<li>Initializing the repository:
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ mkdir my_repo
+$ cd my_repo
+$ git init
+$ touch readme.md
+$ git add .
+$ git commit -m &quot;First commit&quot;</code></pre></div>
+</li>
+<li>Creating two branches, <code class="language-text">b1</code> and <code class="language-text">b2</code>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch b1
+$ git branch b2</code></pre></div>
+</li>
+<li>Adding different files to each branch:
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout b1
+$ printf &quot;.DS_Store&quot; &gt; .gitignore
+$ git add .
+$ git commit -m &quot;Add basic .gitignore&quot;
+$ git checkout b2
+$ printf &quot;Hello&quot; &gt; README.md
+$ git add .
+$ git commit -m &quot;Add README.md&quot;</code></pre></div>
+</li>
+<li>Merging <code class="language-text">b2</code> into <code class="language-text">b1</code>:
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout b1
+$ git merge b2</code></pre></div>
+</li>
+<li>Deleting branch <code class="language-text">b2</code>:
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git branch -d b1</code></pre></div>
+</li>
+</ol>
 <h2 id="merging-with-conflicts" style="position:relative;"><a href="#merging-with-conflicts" aria-label="merging with conflicts permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Merging with conflicts</h2>
-<p>Consider the following case:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> init
-$ <span class="token function">touch</span> readme.md
-$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"First commit"</span>
+<p>Consider the following case. What will happen when the last command is invoked?</p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git init
+$ touch readme.md
+$ git add .
+$ git commit -m &quot;First commit&quot;
 
-$ <span class="token function">git</span> branch dev
+$ git branch dev
 
-$ <span class="token builtin class-name">printf</span> <span class="token string">"# My title"</span> <span class="token operator">></span> readme.md
-$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"Added title"</span>
+$ printf &quot;# My title&quot; &gt; readme.md
+$ git add .
+$ git commit -m &quot;Added title&quot;
 
-$ <span class="token function">git</span> checkout dev
-$ <span class="token builtin class-name">printf</span> <span class="token string">"# A much better title<span class="token entity" title="\n">\n</span><span class="token entity" title="\n">\n</span> ## With a header below it"</span> <span class="token operator">></span> readme.md
-$ <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-$ <span class="token function">git</span> commit -m <span class="token string">"Added a nice title and header"</span>
+$ git checkout dev
+$ printf &quot;# A much better title\n\n ## With a header below it&quot; &gt; readme.md
+$ git add .
+$ git commit -m &quot;Added a nice title and header&quot;
 
-$ <span class="token function">git</span> checkout master
-$ <span class="token function">git</span> merge dev</code></pre></div>
-<p><strong>What will happen?</strong></p>
-<h2 id="merging-with-conflicts---cont" style="position:relative;"><a href="#merging-with-conflicts---cont" aria-label="merging with conflicts   cont permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Merging with conflicts - cont.</h2>
+$ git checkout master
+$ git merge dev</code></pre></div>
 <p>To find the conflicting files, run:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> status</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git status</code></pre></div>
 <p>What happens inside a conflicting file?</p>
-<div class="gatsby-highlight" data-language="markdown"><pre class="language-markdown"><code class="language-markdown">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<span class="token title important">This is a nice project!
-<span class="token punctuation">=======</span></span>
+<div class="gatsby-highlight" data-language="diff"><pre class="language-diff"><code class="language-diff"><span class="token deleted-arrow deleted"><span class="token prefix deleted"><</span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</span>This is a nice project!
+=======
 
-<span class="token title important"><span class="token punctuation">#</span> This is a better title!</span>
+# This is a better title!
 
-<span class="token title important"><span class="token punctuation">##</span> And I'll throw in a header</span>
+## And I'll throw in a header
 
-<span class="token blockquote punctuation">> > > > > > ></span> dev</code></pre></div>
+<span class="token inserted-arrow inserted"><span class="token prefix inserted">></span> > > > > > > dev</span></code></pre></div>
 <p>We should manually assess the conflicts and change the files.</p>
 <p>Then stage and commit the changes:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> <span class="token function">add</span> readme.md
-$ <span class="token function">git</span> commit -m <span class="token string">"Merged 'dev'"</span></code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git add readme.md
+$ git commit -m &quot;Merged &#39;dev&#39;&quot;</code></pre></div>
 <h2 id="rebasing-commits-with-git-rebase" style="position:relative;"><a href="#rebasing-commits-with-git-rebase" aria-label="rebasing commits with git rebase permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rebasing commits with <code class="language-text">git rebase</code></h2>
 <p>Consider the following situation:</p>
-<p><img src="./figures/before-rebase.png" alt=""></p>
+<p><span class="gatsby-img-attributes" style="display:block; max-width: 100%;"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 404px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a72f4b9e8b393f161929c54f5d4eb913/494f9/before-rebase.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 28.500000000000004%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAABcSAAAXEgFnn9JSAAABGElEQVQY002OQW+CQBSE+f//gFIDiyg9GPVgk9KIVFFjE3utF/ahWSBZAiYEWNwDvMaSms5hMnnJN28U235J03SxeB0M9CzLlkuXkGGSJN7KU1UtiePtdqdpz0mcIGLbtogo6poxFsexMp3Oz2HoOO+WNb5cLq7rTSZTGgSe9zEa2TQINr4/HtuMsQdc1zUARIwpRVEg4q1pzuFZCCGlzPMcEaWU1+u1D3med12HiL0/pDxObdsCQA9UVZVl2X2hEClPEbFpGs55/7lX13XK/8rZbP6kakCp6650g1BK1+uNaVqn79N+tydkCACIWJYlDai8SeWv5u7Om2PohHO+8X3DuIfD4dM0LcbY8fil6ySKol+4AgAp5Q8OrDrnFJ3fWAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="before rebase"
+        title=""
+        src="/static/a72f4b9e8b393f161929c54f5d4eb913/494f9/before-rebase.png"
+        srcset="/static/a72f4b9e8b393f161929c54f5d4eb913/772e8/before-rebase.png 200w,
+/static/a72f4b9e8b393f161929c54f5d4eb913/e17e5/before-rebase.png 400w,
+/static/a72f4b9e8b393f161929c54f5d4eb913/494f9/before-rebase.png 404w"
+        sizes="(max-width: 404px) 100vw, 404px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      / >
+  </a>
+    </span></span></p>
 <p>How do I get the C, D, and E into my <code class="language-text">topic</code> branch?</p>
-<h2 id="rebasing-commits-with-git-rebase---cont" style="position:relative;"><a href="#rebasing-commits-with-git-rebase---cont" aria-label="rebasing commits with git rebase   cont permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rebasing commits with <code class="language-text">git rebase</code> - cont.</h2>
 <p>I can rebase these commits and get the following situation:</p>
-<p><img src="./figures/after-rebase.png" alt=""></p>
+<p><span class="gatsby-img-attributes" style="display:block; max-width: 100%;"><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 582px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/8933860aa264e60e462e5a0dc24c4a07/7c1cd/after-rebase.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 20%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAABcSAAAXEgFnn9JSAAAApUlEQVQI122OsQqDMBRF8/9/0VYKVh0SpD9gsaRbFDWxk5C4mBgnB+HldSgtUnqGO91zueR4ODVNE0Xnuq7TNKtEFccXIUSSZJ1UiAgAIQRE3Kf3fjSGtG3n3CyltNb1/dNap1RvrZVSaa2/7R+2bVvXleA/3sIwDFprP/vRjN57Y8yyLPtFEj7sjwEAIhbFjbG8LO+UMs55nl85f1DKAGCaJufcCyJd2lgssO5pAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="after rebase"
+        title=""
+        src="/static/8933860aa264e60e462e5a0dc24c4a07/7c1cd/after-rebase.png"
+        srcset="/static/8933860aa264e60e462e5a0dc24c4a07/772e8/after-rebase.png 200w,
+/static/8933860aa264e60e462e5a0dc24c4a07/e17e5/after-rebase.png 400w,
+/static/8933860aa264e60e462e5a0dc24c4a07/7c1cd/after-rebase.png 582w"
+        sizes="(max-width: 582px) 100vw, 582px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      / >
+  </a>
+    </span></span></p>
 <p>By running the commands:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> checkout topic
-$ <span class="token function">git</span> rebase master</code></pre></div>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git checkout topic
+$ git rebase master</code></pre></div>
 <p>or:</p>
-<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="command-line-prompt"><span data-user=user data-host=localhost></span></span>$ <span class="token function">git</span> rebase master topic</code></pre></div>
-<h2 id="visualizing-rebasing" style="position:relative;"><a href="#visualizing-rebasing" aria-label="visualizing rebasing permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Visualizing rebasing</h2>
-<p><a href="http://git-school.github.io/visualizing-git">http://git-school.github.io/visualizing-git</a></p>
+<div class="gatsby-highlight" data-language="command-line"><pre class="language-command-line"><code class="language-command-line">$ git rebase master topic</code></pre></div>
 <h2 id="git-merge-vs-git-rebase" style="position:relative;"><a href="#git-merge-vs-git-rebase" aria-label="git merge vs git rebase permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code class="language-text">git merge</code> vs <code class="language-text">git rebase</code></h2>
-<p><img src="./figures/merge-rebase.png" alt="">{width=80%}</p>
-<p>From: <a href="https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333">https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333</a></p>
-<p><strong>Merge preserves history whereas rebase rewrites it.</strong></p>
-<!--
-## Comparing commits with `git diff`
-
-To compare the state of the repository between two commits, run:
-```bash
-$ git diff d6e5980bb9390e853e29b293bc8ecf024b237260 1d1c4876beb0a570972b09218570eda145159c75
-```
-
-The output of `git comparison` is organized per file. --></div></div></div></div><div class="footer"><div class="footer-navbar"></div><div class="footer-content"><a href="/git/commands">Previous</a><a href="/git/remotes">Next</a></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/git/branches";window.___webpackCompilationHash="4a01aa35d90705d33ed4";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-82df740e7cad994d0af0.js"],"app":["/app-c6943692378225dcddf6.js"],"component---src-pages-index-js":["/component---src-pages-index-js-57f37468be0ea41b6bab.js"],"component---src-templates-template-js":["/component---src-templates-template-js-9df5c4b29f910c964482.js"]};/*]]>*/</script><script src="/polyfill-82df740e7cad994d0af0.js" nomodule=""></script><script src="/component---src-templates-template-js-9df5c4b29f910c964482.js" async=""></script><script src="/app-c6943692378225dcddf6.js" async=""></script><script src="/framework-d56718bb68ef348a9585.js" async=""></script><script src="/webpack-runtime-6eb3d76378fd312bb766.js" async=""></script></body></html>
+<p>Merge preserves history whereas rebase rewrites it.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/20f10bc7ab4046475595c5c1dc2da218/77800/merge-rebase.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 71.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsTAAALEwEAmpwYAAABaUlEQVQoz52SW5OcIBCF+f9/MFNb2aloVsHLyCCDDUj3SdTE2dqqednz0MWlPw4cVRBBZ/D+jq7DZ+WMtzfU9TYWedZhwOWC+x2AstY2TQOg1/oYAGAurdaJyN1uWms5MMBaa9oWXH5X1TRNKjzCpD8gJa1MFI8mAXTzsaaYCnvvT9jN82QtgNl7IlK4O/y8wFZweqfwr1a/MFzh/79l58UYmW6QfEzVGiPNM4DVDXEJZ1/qemFm26bgn3Dfy9YskklEFHtf2hZAWRy77uyL4ygAZ0oPt6/tiyFQ2Ay4FGFWxbm8R8qPKY6fsr1etxomPPojw622LfY3Y43gohYivx+Wcr7v9z90M1oEJdHY6dN56bq4f6SSE5ei8EKlrpFJhmtJ9IRjImuQQ5EtEHVufFGsax4rZHrmfygF6B/ww5b2K2fd9zmvX0mRw8mNXVjoJfxSsiVXbMs0fwPenNk28g34uLYx5u+//QfxWDOdbqOTqQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="merge rebase"
+        title="merge rebase"
+        src="/static/20f10bc7ab4046475595c5c1dc2da218/5a190/merge-rebase.png"
+        srcset="/static/20f10bc7ab4046475595c5c1dc2da218/772e8/merge-rebase.png 200w,
+/static/20f10bc7ab4046475595c5c1dc2da218/e17e5/merge-rebase.png 400w,
+/static/20f10bc7ab4046475595c5c1dc2da218/5a190/merge-rebase.png 800w,
+/static/20f10bc7ab4046475595c5c1dc2da218/77800/merge-rebase.png 855w"
+        sizes="(max-width: 800px) 100vw, 800px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+  </a>
+    </span></p>
+<p>Figure from <a href="https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333">hackernoon.com</a></p></div></div></div></div><div class="footer"><div class="footer-navbar"></div><div class="footer-content"><a href="/git/gitignore">Previous</a><a href="/git/remotes">Next</a></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/git/branches";window.___webpackCompilationHash="4a01aa35d90705d33ed4";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-82df740e7cad994d0af0.js"],"app":["/app-c6943692378225dcddf6.js"],"component---src-pages-index-js":["/component---src-pages-index-js-57f37468be0ea41b6bab.js"],"component---src-templates-template-js":["/component---src-templates-template-js-9df5c4b29f910c964482.js"]};/*]]>*/</script><script src="/polyfill-82df740e7cad994d0af0.js" nomodule=""></script><script src="/component---src-templates-template-js-9df5c4b29f910c964482.js" async=""></script><script src="/app-c6943692378225dcddf6.js" async=""></script><script src="/framework-d56718bb68ef348a9585.js" async=""></script><script src="/webpack-runtime-6eb3d76378fd312bb766.js" async=""></script></body></html>
