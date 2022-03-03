@@ -17,7 +17,7 @@ In this module, you will learn about:
 
 1. How Java programs are executed
 2. What is the JVM and its main components
-3. What is the classpath
+3. What is the classpath 
 4. How Java passes parameters
 5. What is the Java Memory Model
 

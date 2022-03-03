@@ -35,3 +35,7 @@ It does not matter if an object was created and assigned to a local variable, or
 If an object is not referenced by any reference variable, it becomes garbage!
 
 From time to time, the JVM will trigger the garbage collector to remove these unused objects from memory.
+
+## Demo
+
+Here is a step-by-step demo of how the stack and the heap are used when executing a Java program: [video](/stack-heap-demo.m4v)
