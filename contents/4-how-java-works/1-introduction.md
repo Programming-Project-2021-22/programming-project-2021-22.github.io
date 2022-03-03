@@ -13,11 +13,13 @@ banner: https://upload.wikimedia.org/wikipedia/commons/f/fc/Javalogo.png
 
 ## Learning goals
 
-In this module, you will learn:
+In this module, you will learn about:
 
-1. asd
-2. asd
-3. asd
+1. How Java programs are executed
+2. What is the JVM and its main components
+3. What is the classpath
+4. How Java passes parameters
+5. What is the Java Memory Model
 
 ## Sources
 
