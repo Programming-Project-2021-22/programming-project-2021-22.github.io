@@ -13,34 +13,34 @@ date: "2021-01-28"
 
 ## How to install Git
 
-1. Open your terminal and type:  
-    ```command-line
-    $ git --version
-    ```
-2. If you see an output with your Git version like the one below, you are good to go.  
-    ```command-line
-    git version 2.24.3 (Apple Git-128)
-    ```
+1. Open your terminal and type:
+   ```command-line
+   $ git --version
+   ```
+2. If you see an output with your Git version like the one below, you are good to go.
+   ```command-line
+   git version 2.24.3 (Apple Git-128)
+   ```
 3. Otherwise, access [this](https://git-scm.com/download) page
 4. Choose your operating system
 5. Follow the installation instructions
 
 ## Git clients
 
-We will use Git intensively throughout this course, so you may want to install a Git client. 
+We will use Git intensively throughout this course, so you may want to install a Git client.
 
 Here are some Git client options for you to consider:
 
 1. [GitHub Desktop](https://desktop.github.com/)
-    - Multi-platform
-    - Free to use
+   - Multi-platform
+   - Free to use
 1. [Git Kraken](https://www.gitkraken.com/)
-    - Multi-platform
-    - Free version available for public repos only
-    - Pro version available in the GitHub Student Developer Pack
+   - Multi-platform
+   - Free version available for public repos only
+   - Pro version available in the GitHub Student Developer Pack
 1. [Sourcetree](https://www.sourcetreeapp.com/)
-    - For macOS and Windows
-    - Free to use
+   - For macOS and Windows
+   - Free to use
 
 You may also use your IDE's embedded git client
 
@@ -57,7 +57,7 @@ If you are more of a "hardcore developer", don't worry, you can use Git exclusiv
 To collaborate and safely backup your repositories, you need a Git repository hosting service:
 
 - [GitHub](http://github.com/):
-    - Github provides a [Student Developer Pack](https://education.github.com/pack)
+  - Github provides a [Student Developer Pack](https://education.github.com/pack)
 - [GitLab](http://gitlab.com/):
 - [BitBucket](https://bitbucket.org/):
 

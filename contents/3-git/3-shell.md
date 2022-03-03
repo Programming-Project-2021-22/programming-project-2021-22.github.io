@@ -21,7 +21,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Unix_shell):
 
 If that does not mean much to you, this is what a terminal and shell commands look like:
 
-![ohmyzsh](https://ohmyz.sh/img/themes/nebirhos.jpg '#max-width=800px')  
+![ohmyzsh](https://ohmyz.sh/img/themes/nebirhos.jpg "#max-width=800px")  
 Figure from [Oh My Zsh](https://ohmyz.sh/).
 
 ## Some basic Unix shell commands
@@ -103,26 +103,26 @@ $ less file.txt
 On Windows, many of these commands are different.
 
 Check the table below for a list of Windows equivalent commands:
-  
-| Windows                       | Linux                        | Description                             |
-|-------------------------------|------------------------------|-----------------------------------------|
-| `dir`                           | `ls -l`                   | Directory listing                       |
-| `copy`                          | `cp`                           | Copies a file                          |
-| `ren`                           | `mv`                           | Renames a file                           |
-| `move`                          | `mv`                           | Moves a file                           |
-| `cls`                           | `clear`                        | Clears the screen                            |
-| `del`                           | `rm`                           | Deletes files                           |
-| `fc`                            | `diff`                         | Compares contents of files               |
-| `find`                          | `grep`                         | Searches for a string in a file         |
-| `cd`                            | `cd`                           | Changes the current directory           |
-| `chdir`                         | `pwd`                          | Returns your current directory location |
-| `md`                            | `mkdir`                        | Creates a new directory/folder          |
-| `echo`                          | `echo`                         | Prints something on the screen          |
-| `edit`                          | `vim` (depends on editor)      | Writes into files                       |
-| `exit`                          | `exit`                         | Leaves the terminal/command window      |
-| `rmdir`                         | `rm -rf` / `rmdir`             | Deletes a directory                     |
-| `tree`                          | `ls -R`                        | Lists a directory recursively           |
-| `type`                          | `cat`                          | Prints the contents of a file.          |
+
+| Windows | Linux                     | Description                             |
+| ------- | ------------------------- | --------------------------------------- |
+| `dir`   | `ls -l`                   | Directory listing                       |
+| `copy`  | `cp`                      | Copies a file                           |
+| `ren`   | `mv`                      | Renames a file                          |
+| `move`  | `mv`                      | Moves a file                            |
+| `cls`   | `clear`                   | Clears the screen                       |
+| `del`   | `rm`                      | Deletes files                           |
+| `fc`    | `diff`                    | Compares contents of files              |
+| `find`  | `grep`                    | Searches for a string in a file         |
+| `cd`    | `cd`                      | Changes the current directory           |
+| `chdir` | `pwd`                     | Returns your current directory location |
+| `md`    | `mkdir`                   | Creates a new directory/folder          |
+| `echo`  | `echo`                    | Prints something on the screen          |
+| `edit`  | `vim` (depends on editor) | Writes into files                       |
+| `exit`  | `exit`                    | Leaves the terminal/command window      |
+| `rmdir` | `rm -rf` / `rmdir`        | Deletes a directory                     |
+| `tree`  | `ls -R`                   | Lists a directory recursively           |
+| `type`  | `cat`                     | Prints the contents of a file.          |
 
 This table was adapted from [this](https://www.geeksforgeeks.org/linux-vs-windows-commands/) source.
 

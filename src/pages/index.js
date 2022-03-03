@@ -44,7 +44,6 @@ const IndexPage = ({ data }) => {
             </ul>
           </li>
         </ul>
-
         <h3>Relevant links:</h3>
         <ul>
           <li>
@@ -73,9 +72,7 @@ const IndexPage = ({ data }) => {
           </li>
           <li>
             Accept the course project invitation link on Github Classroom{" "}
-            <a href="https://classroom.github.com/a/KEbQ1JIO">
-              here
-            </a>
+            <a href="https://classroom.github.com/a/KEbQ1JIO">here</a>
           </li>
         </ul>
       </div>

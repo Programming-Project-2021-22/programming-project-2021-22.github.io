@@ -10,6 +10,7 @@ previous: /git/shell
 next: /git/gitignore
 date: "2021-01-28"
 ---
+
 Now, let's start using git!
 
 ## Command line interface
@@ -224,20 +225,20 @@ $ git status
 
   Untracked files:
     (use "git add <file>..." to include in what will be committed)
- 
+
         file.txt
   nothing added to commit but untracked files present (use "git add" to track)
- 
+
   Manually create an example junk file
 $ touch data.csv
 $ git status
   On branch master
- 
+
   No commits yet
- 
+
   Untracked files:
     (use "git add <file>..." to include in what will be committed)
- 
+
         file.txt
         data.csv
 ```
@@ -248,23 +249,23 @@ $ git status
 $ git add data.csv
 $ git status
   On branch master
- 
+
   No commits yet
- 
+
   Changes to be committed:
     (use "git rm --cached <file>..." to unstage)
- 
+
           new file:   data.csv
- 
+
   Untracked files:
     (use "git add <file>..." to include in what will be committed)
- 
+
           file.txt
 ```
 
 5. We commit this newly tracked file.
 
-```command-line       
+```command-line
 $ git commit -m "Initial commit"
   [master (root-commit) 1bf2af7] Initial commit
    1 file changed, 1 insertion(+)
@@ -273,9 +274,9 @@ $ git status
   On branch master
   Untracked files:
     (use "git add <file>..." to include in what will be committed)
- 
+
           file.txt
- 
+
   nothing added to commit but untracked files present (use "git add" to track)
 ```
 
@@ -283,29 +284,29 @@ $ git status
 
 1. You can specify the author in every commit:
 
-  ```command-line
-  $ git commit -m "Initial commit" --author "Tiago <tiago.princesales@unibz.it>"
-  ```
+```command-line
+$ git commit -m "Initial commit" --author "Tiago <tiago.princesales@unibz.it>"
+```
 
 2. You can set up the author in the project's configuration file:
 
-  ```command-line
-  $ git config user.name "Tiago Prince Sales"
-  $ git config user.email "tiago.princesales@unibz.it"
-  ```
+```command-line
+$ git config user.name "Tiago Prince Sales"
+$ git config user.email "tiago.princesales@unibz.it"
+```
 
 3. You can set it up globally:
 
-  ```command-line
-  $ git config --global user.name "Tiago Prince Sales"
-  $ git config --global user.email "tiago.princesales@unibz.it"
-  ```
+```command-line
+$ git config --global user.name "Tiago Prince Sales"
+$ git config --global user.email "tiago.princesales@unibz.it"
+```
 
 To see all you current configuration, run:
 
-  ```command-line
-  $ git config --list
-  ```
+```command-line
+$ git config --list
+```
 
 ## Amending your commits
 
@@ -397,21 +398,23 @@ When running the last two commands, **your changes will not be lost.**
 
 ## Undoing a commit with `git reset`
 
+- To undo the last commit and keep its changes unstaged, run:
 
-- To undo the last commit and keep its changes unstaged, run:  
   ```command-line
   $ git reset --mixed HEAD~1
   ```
 
-- To undo the last commit and keep its changes staged, run:  
+- To undo the last commit and keep its changes staged, run:
+
   ```command-line
   $ git reset --soft HEAD~1
   ```
 
-- To undo the last commit and throw away the changes, run:  
-    ```command-line
-    $ git reset --hard HEAD~1
-    ```
+- To undo the last commit and throw away the changes, run:
+
+  ```command-line
+  $ git reset --hard HEAD~1
+  ```
 
 - Note that:
   - `HEAD` refers to the latest commit on the active branch
@@ -421,12 +424,13 @@ When running the last two commands, **your changes will not be lost.**
 
 - Reverting doesn’t alter the existing history within a repository. Instead, it adds a new commit to its history.
 
-- To revert your last commit, run:  
+- To revert your last commit, run:
+
   ```command-line
   $ git revert HEAD
   ```
 
-- To revert any commit, run:  
+- To revert any commit, run:
   ```command-line
   $ git revert 64c852bcb306bceeeec8f77708171c583d807408
   ```
@@ -466,8 +470,8 @@ When running the last two commands, **your changes will not be lost.**
 ## Visualize Git
 
 - Let's make things more graphical with Visualize Git:
-    - [Source code](https://github.com/git-school/visualizing-git)
-    - [Running instance](http://git-school.github.io/visualizing-git)
+  - [Source code](https://github.com/git-school/visualizing-git)
+  - [Running instance](http://git-school.github.io/visualizing-git)
 - Type `help` in the command box to see a list of supported operations
   - `pres()` = Turn on presenter mode<br>
   - `undo` = Undo the last git command<br>

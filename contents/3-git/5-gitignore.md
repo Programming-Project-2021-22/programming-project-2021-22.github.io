@@ -11,7 +11,7 @@ next: /git/branches
 date: "2021-01-28"
 ---
 
-We do not want to keep track of all files we eventually add in your repository. Think of your compile classes (`*.class`), for instance. Would there a a reason to add those to your repository? 
+We do not want to keep track of all files we eventually add in your repository. Think of your compile classes (`*.class`), for instance. Would there a a reason to add those to your repository?
 
 To avoid adding those by accident, the `.gitignore` was invented.
 
@@ -19,62 +19,62 @@ To avoid adding those by accident, the `.gitignore` was invented.
 
 This is how you describe what git should ignore ([source](https://git-scm.com/docs/gitignore)):
 
-  ```gitignore
-  # A line starting with # is a comment
+```gitignore
+# A line starting with # is a comment
 
-  # The forward slash / is used as a directory separator.
-  # Separators may occur at the beginning, middle or end of a pattern.
+# The forward slash / is used as a directory separator.
+# Separators may occur at the beginning, middle or end of a pattern.
 
-  target/classes
+target/classes
 
-  # If there is a separator at the beginning or middle (or both) of the pattern,
-  # then it is relative to the directory level of the .gitignore file itself.
+# If there is a separator at the beginning or middle (or both) of the pattern,
+# then it is relative to the directory level of the .gitignore file itself.
 
-  /Main.class
-  target/Main.class
+/Main.class
+target/Main.class
 
-  # Otherwise the pattern may also match at any level below the .gitignore level.
+# Otherwise the pattern may also match at any level below the .gitignore level.
 
-  Main.class
-  main/
+Main.class
+main/
 
-  # If there is a separator at the end of the pattern,
-  # then the pattern will only match directories.
+# If there is a separator at the end of the pattern,
+# then the pattern will only match directories.
 
-  target/
+target/
 
-  # Otherwise the pattern can match both files and directories.
+# Otherwise the pattern can match both files and directories.
 
-  target
+target
 
-  # For example, a pattern doc/frotz/ matches doc/frotz directory, but not a/doc/frotz directory;
-  # however frotz/ matches frotz and a/frotz that is a directory
-  
-  # An asterisk "*" matches anything except a "/"
+# For example, a pattern doc/frotz/ matches doc/frotz directory, but not a/doc/frotz directory;
+# however frotz/ matches frotz and a/frotz that is a directory
 
-  *.class
+# An asterisk "*" matches anything except a "/"
 
-  # A question mark "?" matches any one character except a "/"
+*.class
 
-  ?.class
+# A question mark "?" matches any one character except a "/"
 
-  # A leading "**" followed by a slash means match in all directories.
+?.class
 
-  **/foo
+# A leading "**" followed by a slash means match in all directories.
 
-  # A trailing "**" matches everything inside
+**/foo
 
-  foo/**
+# A trailing "**" matches everything inside
 
-  # A slash followed by two consecutive asterisks then a slash matches zero or more directories.
-  # For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
+foo/**
 
-  a/**/b
-  ```
+# A slash followed by two consecutive asterisks then a slash matches zero or more directories.
+# For example, "a/**/b" matches "a/b", "a/x/b", "a/x/y/b" and so on.
+
+a/**/b
+```
 
 ## An example of `.gitignore` for a Java repository
 
-Adapted from [GitHub’s collection](https://github.com/github/gitignore/blob/master/Java.gitignore)  of `.gitignore` file templates.
+Adapted from [GitHub’s collection](https://github.com/github/gitignore/blob/master/Java.gitignore) of `.gitignore` file templates.
 
 ```gitignore
 # Compiled class file

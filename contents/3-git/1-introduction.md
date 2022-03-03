@@ -8,10 +8,10 @@ chapter: 3
 section: 1
 previous: /project/tips
 next: /git/install
-date: "2021-01-28"
+banner: https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png
 ---
 
-![git](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png)
+## Learning goals
 
 In this module, we will learn:
 
@@ -21,7 +21,7 @@ In this module, we will learn:
 - How to work with branches
 - How to work with remote repositories
 
-## Recommended readings
+## Sources
 
 The material in this module has been adapted from:
 
@@ -70,21 +70,21 @@ To avoid the disastrous situations implied by these questions, version control s
 ![lvcs](https://git-scm.com/book/en/v2/images/local.png)  
 Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
-- **Main benefit**: 
+- **Main benefit**:
   - Being able to do version control
-- **Main drawback**: 
+- **Main drawback**:
   - No support for collaboration
   - Single point of failure
 
 ### Centralized Version Control Systems
-  
+
 ![cvcs](https://git-scm.com/book/en/v2/images/centralized.png)  
 Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
-- **Main benefits**: 
+- **Main benefits**:
   - Being able to do version control
   - Supports collaboration
-- **Main drawback**: 
+- **Main drawback**:
   - Single point of failure
   - Project history is only visible to the server
 
@@ -93,7 +93,7 @@ Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Starte
 ![dvcs](https://git-scm.com/book/en/v2/images/distributed.png)  
 Figure from [https://git-scm.com/](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
-- **Main benefits**: 
+- **Main benefits**:
   - Being able to do version control
   - Supports collaboration
   - Redundancy
@@ -106,20 +106,20 @@ Multiple VCS have been developed over the years:
 - [Concurrent Versions System (CVS)](https://en.wikipedia.org/wiki/Concurrent_Versions_System)
   - First release: 1990
   - Local
-- [Apache Subversion (SVN)](https://en.wikipedia.org/wiki/Apache_Subversion) 
+- [Apache Subversion (SVN)](https://en.wikipedia.org/wiki/Apache_Subversion)
   - First release: 2000
   - Centralized
-- [Git](https://en.wikipedia.org/wiki/Git) 
+- [Git](https://en.wikipedia.org/wiki/Git)
   - First release: 2005
   - Decentralized
-- [GNU Bazaar](https://en.wikipedia.org/wiki/GNU_Bazaar) 
+- [GNU Bazaar](https://en.wikipedia.org/wiki/GNU_Bazaar)
   - First release: 2005
   - Decentralized
-- [Mercurial](https://en.wikipedia.org/wiki/Mercurial) 
+- [Mercurial](https://en.wikipedia.org/wiki/Mercurial)
   - First release: 2005
   - Decentralized
 
-Git overwhelmingly superseded the other systems became the *de facto* standard in the software industry. 
+Git overwhelmingly superseded the other systems became the _de facto_ standard in the software industry.
 
 Here is some data from OpenHub, a public directory of free and open-source software, on the **[adoption of version control systems](https://www.openhub.net/repositories/compare)**.
 
@@ -151,6 +151,7 @@ Git stores complete versions of each file, as in a **stream of snapshots**:
 ### Nearly every operation is local
 
 Most operations in Git need only local files and resources to operate:
+
 - Browsing the history of a project
 - Comparing different file states
 - Creating branches of work
@@ -163,22 +164,23 @@ When you clone a Git repository, you get its full history!
 
 - It's impossible to alter the contents of a file without Git knowing.
 
-- Git uses SHA-1 hash for checksumming, a hashing algorithm that generates 40-character strings composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. 
+- Git uses SHA-1 hash for checksumming, a hashing algorithm that generates 40-character strings composed of hexadecimal characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git.
 
-- A SHA-1 hash looks something like this:  
-    ```
-    24b9da6552252987aa493b52f8696cd6d3b00373
-    ```
+- A SHA-1 hash looks something like this:
+  ```
+  24b9da6552252987aa493b52f8696cd6d3b00373
+  ```
 
 ### Git generally only adds data
 
-- When you do actions in Git, nearly all of them only add data to the Git database. 
+- When you do actions in Git, nearly all of them only add data to the Git database.
 
 - You can lose or mess up changes you haven’t committed yet, but after you commit a snapshot into Git, it is very difficult to lose, especially if you regularly push your database to another repository.
 
 - This makes using Git a joy because we know we can experiment without the danger of severely screwing things up.
 
 ### File states
+
 - **tracked**: Git is aware of the file
   - **modified**: you have changed the file but have not committed it to your database yet
   - **staged**: ou have marked a modified file in its current version to go into your next commit snapshot
@@ -187,4 +189,5 @@ When you clone a Git repository, you get its full history!
 
 ![](https://i.stack.imgur.com/kslSd.png)  
 From [this](https://stackoverflow.com/questions/55877484/is-committed-and-unmodified-the-same) StackOverflow question.
+
 <!-- ![states](https://git-scm.com/book/en/v2/images/areas.png) -->

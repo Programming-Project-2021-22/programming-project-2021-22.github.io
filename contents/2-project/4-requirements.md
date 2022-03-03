@@ -45,6 +45,7 @@ Your project must use at least 10 of the programming techniques listed below:
 26. Logging
 27. Casting
 28. Graphical user interface (e.g. JavaFX)
+29. Optionals
 
 Artificial usage of techniques just to meet the quota will not be accepted.
 

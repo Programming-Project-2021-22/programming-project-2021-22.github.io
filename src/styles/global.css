@@ -13,6 +13,12 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid hsla(210,18%,87%,1);
 }
 
+.page-banner-container {
+  /* border-bottom: 1px solid hsla(210,18%,87%,1); */
+  padding-bottom: 33px;
+  margin-bottom: 24px;
+}
+
 h1 {
   margin: 24px 0px;
   font-size: 1.9em;

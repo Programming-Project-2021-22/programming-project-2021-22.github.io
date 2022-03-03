@@ -7,6 +7,7 @@
 module.exports = {
   plugins: [
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -25,13 +26,13 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              prompt: { 
+              prompt: {
                 global: true,
-                user: 'user',
-                host: 'localhost'
-              }
-            }
-          }
+                user: "user",
+                host: "localhost",
+              },
+            },
+          },
         ],
       },
     },

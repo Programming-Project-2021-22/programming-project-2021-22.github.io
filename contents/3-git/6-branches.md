@@ -28,7 +28,7 @@ date: "2021-01-28"
 - **A branch can isolate the development of a single feature** or research into a particularly complex bug. For example, you can introduce a branch for a well-defined and conceptually isolated task or to facilitate a merge of several branches prior to a release. It may seem like overkill to create a new branch just to fix one bug, but Git’s branching system encourages such small-scale use.
 - **An individual branch can represent the work of an individual contributor**. Another branch—the “integration” branch—can be used specifically to unify efforts.
 
-![](https://res.cloudinary.com/practicaldev/image/fetch/s--MMMIh0N1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eev37hwxalgf019j42a9.png '#max-width=100%')
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--MMMIh0N1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/eev37hwxalgf019j42a9.png "#max-width=100%")
 
 ## Creating branches using `git branch`
 
@@ -70,58 +70,58 @@ Note that `git checkout` may also be used to revert changes on a file to the las
 
 ## What if...
 
-1. What if I have **untracked changes** in my active branch while trying to checkout another branch?  
-    
-    A may have created a new file...  
-    
-    ```command-line
-    $ git checkout development
-    $ printf "I will not stage this new file" > unstagedFile.txt
-    $ git checkout master
-    ```
+1. What if I have **untracked changes** in my active branch while trying to checkout another branch?
 
-    Or edited an existing file.
+   A may have created a new file...
 
-    ```command-line
-    $ git checkout development
-    $ printf "I will not stage this change" > trackedFile.txt
-    $ git checkout master
-    ```
+   ```command-line
+   $ git checkout development
+   $ printf "I will not stage this new file" > unstagedFile.txt
+   $ git checkout master
+   ```
 
-    Untracked changes are **brought to the checked out branch**.
+   Or edited an existing file.
 
-2. What if I have **staged changes** in my active branch while trying to checkout another branch?  
+   ```command-line
+   $ git checkout development
+   $ printf "I will not stage this change" > trackedFile.txt
+   $ git checkout master
+   ```
 
-    ```command-line
-    $ git checkout development
-    $ printf "I will not stage this change" > file.txt
-    $ git add file.txt
-    $ git checkout master
-    ```
+   Untracked changes are **brought to the checked out branch**.
 
-    Staged changes are **brought to the checked out branch ONLY if they do not cause conflict**.
+2. What if I have **staged changes** in my active branch while trying to checkout another branch?
 
-    Otherwise, you will see a message like this:
+   ```command-line
+   $ git checkout development
+   $ printf "I will not stage this change" > file.txt
+   $ git add file.txt
+   $ git checkout master
+   ```
 
-    ```command-line
-    $ git checkout development
+   Staged changes are **brought to the checked out branch ONLY if they do not cause conflict**.
 
-      error: Your local changes to the following files would be overwritten by checkout:
-              file.txt
-      Please commit your changes or stash them before you switch branches.
-      Aborting
-    ```
+   Otherwise, you will see a message like this:
+
+   ```command-line
+   $ git checkout development
+
+     error: Your local changes to the following files would be overwritten by checkout:
+             file.txt
+     Please commit your changes or stash them before you switch branches.
+     Aborting
+   ```
 
 3. What if I have **committed** changes in my active branch while trying to checkout another branch?
 
-    ```command-line
-    $ git checkout development
-    $ printf "I will not stage this change" > stagedFile.txt
-    $ git add stagedFile.txt
-    $ git checkout master
-    ```
+   ```command-line
+   $ git checkout development
+   $ printf "I will not stage this change" > stagedFile.txt
+   $ git add stagedFile.txt
+   $ git checkout master
+   ```
 
-    Committed changes **stay in the original branch**
+   Committed changes **stay in the original branch**
 
 ## How to inspect what is going on?
 
@@ -210,40 +210,40 @@ Let's open the [Visualizing Git App](http://git-school.github.io/visualizing-git
 
 ## Solution
 
-1. Initializing the repository:  
-    ```command-line
-    $ mkdir my_repo
-    $ cd my_repo
-    $ git init
-    $ touch readme.md
-    $ git add .
-    $ git commit -m "First commit"
-    ```
-2. Creating two branches, `b1` and `b2`   
-    ```command-line
-    $ git branch b1
-    $ git branch b2
-    ```
-3. Adding different files to each branch:  
-    ```command-line
-    $ git checkout b1
-    $ printf ".DS_Store" > .gitignore
-    $ git add .
-    $ git commit -m "Add basic .gitignore"
-    $ git checkout b2
-    $ printf "Hello" > README.md
-    $ git add .
-    $ git commit -m "Add README.md"
-    ```
-4. Merging `b2` into `b1`:  
-    ```command-line
-    $ git checkout b1
-    $ git merge b2
-    ```
-5. Deleting branch `b2`: 
-    ```command-line
-    $ git branch -d b1
-    ```
+1. Initializing the repository:
+   ```command-line
+   $ mkdir my_repo
+   $ cd my_repo
+   $ git init
+   $ touch readme.md
+   $ git add .
+   $ git commit -m "First commit"
+   ```
+2. Creating two branches, `b1` and `b2`
+   ```command-line
+   $ git branch b1
+   $ git branch b2
+   ```
+3. Adding different files to each branch:
+   ```command-line
+   $ git checkout b1
+   $ printf ".DS_Store" > .gitignore
+   $ git add .
+   $ git commit -m "Add basic .gitignore"
+   $ git checkout b2
+   $ printf "Hello" > README.md
+   $ git add .
+   $ git commit -m "Add README.md"
+   ```
+4. Merging `b2` into `b1`:
+   ```command-line
+   $ git checkout b1
+   $ git merge b2
+   ```
+5. Deleting branch `b2`:
+   ```command-line
+   $ git branch -d b1
+   ```
 
 ## Merging with conflicts
 
@@ -303,13 +303,13 @@ $ git commit -m "Merged 'dev'"
 
 Consider the following situation:
 
-![](../../figures/before-rebase.png '#max-width=100%')
+![](../../figures/before-rebase.png "#max-width=100%")
 
 How do I get the C, D, and E into my `topic` branch?
 
 I can rebase these commits and get the following situation:
 
-![](../../figures/after-rebase.png '#max-width=100%')
+![](../../figures/after-rebase.png "#max-width=100%")
 
 By running the commands:
 

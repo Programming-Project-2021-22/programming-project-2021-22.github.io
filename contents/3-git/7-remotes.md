@@ -7,7 +7,7 @@ subtitle: null
 chapter: 3
 section: 7
 previous: /git/branches
-next: null
+next: /java/introduction
 date: "2021-01-28"
 ---
 
@@ -37,6 +37,7 @@ $ git clone https://gitlab.inf.unibz.it/Tiago.PrinceSales/my-awesome-project.git
 ```
 
 Note that the recently cloned repository:
+
 - has the same files as the original repo
 - inherits the commit history from the original repo
 - is independent from the original repo
@@ -44,6 +45,7 @@ Note that the recently cloned repository:
 ## Interacting with a remote repository
 
 We can interact with a remote repository in the following ways:
+
 - **git fetch**: retrieves objects and their related metadata from a remote repository.
 - **git pull**: like git fetch, but also merges changes into a corresponding branch
 - **git push**: transfers objects and their related metadata to a remote repository
@@ -92,7 +94,7 @@ $ git push -u origin dev
 
 ## Exercise
 
-1. Log in to GitLab or GitHub
+1. Log in to GitHub
 2. Create a repository
 3. Clone it in your computer
 4. Create a local branch and publish in the remote repo
