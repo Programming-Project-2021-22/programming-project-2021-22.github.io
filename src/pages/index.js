@@ -44,18 +44,22 @@ const IndexPage = ({ data }) => {
             </ul>
           </li>
         </ul>
+        <h3>Labs</h3>
+        <p>Click on the links below to accept the assignments on Github Classroom.</p>
+        <ul>
+          <li><a href="https://classroom.github.com/a/v0IH4i39">Lab 1: Git</a></li>
+        </ul>
+        <h3>Course Project</h3>
+        <p>Click on the link below to accept the assignment for the course project on Github Classroom.</p>
+        <ul>
+          <li><a href="https://classroom.github.com/a/KEbQ1JIO">Course Project</a></li>
+        </ul>
         <h3>Relevant links:</h3>
         <ul>
           <li>
             Enrol in our{" "}
             <a href="https://ole.unibz.it/course/view.php?id=9650">
               OLE course
-            </a>
-          </li>
-          <li>
-            Accept and deliver assignments via{" "}
-            <a href="https://ole.unibz.it/course/view.php?id=9650">
-              Github Classroom
             </a>
           </li>
           <li>
@@ -69,10 +73,6 @@ const IndexPage = ({ data }) => {
             <a href="https://www.unibz.it/en/timetable/?searchByKeywords=Programming+Project&sourceId=unibz&department=22&degree=13441%2C13584&studyPlan=17692%2C18234&fromDate=2022-03-01&toDate=2022-09-30">
               course timetable
             </a>
-          </li>
-          <li>
-            Accept the course project invitation link on Github Classroom{" "}
-            <a href="https://classroom.github.com/a/KEbQ1JIO">here</a>
           </li>
         </ul>
       </div>
