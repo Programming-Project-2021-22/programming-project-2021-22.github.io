@@ -242,7 +242,7 @@ Let's open the [Visualizing Git App](http://git-school.github.io/visualizing-git
    ```
 5. Deleting branch `b2`:
    ```command-line
-   $ git branch -d b1
+   $ git branch -d b2
    ```
 
 ## Merging with conflicts

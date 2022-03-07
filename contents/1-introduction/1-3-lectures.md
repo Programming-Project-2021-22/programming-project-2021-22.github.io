@@ -26,7 +26,7 @@ His research focuses are Ontology-driven Conceptual Modeling, Enterprise Modelin
 
 He will teach the lectures and lab A.
 
-**Office hours:** Tuesday, 08:30 - 10:30, _by prior email appointment_
+**Office hours:** Friday, 15:30 - 17:30, _by prior email appointment_
 
 ## Davide Lanti
 
