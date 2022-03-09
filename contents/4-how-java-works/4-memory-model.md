@@ -7,7 +7,7 @@ subtitle: null
 chapter: 4
 section: 4
 previous: /java/variables-parameters
-next: null
+next: /exceptions/exceptions
 ---
 
 ## JVM's Memory Area

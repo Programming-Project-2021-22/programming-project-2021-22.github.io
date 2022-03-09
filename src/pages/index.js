@@ -48,6 +48,7 @@ const IndexPage = ({ data }) => {
         <p>Click on the links below to accept the assignments on Github Classroom.</p>
         <ul>
           <li><a href="https://classroom.github.com/a/v0IH4i39">Lab 1: Git</a></li>
+          <li><a href="https://classroom.github.com/a/O801GQYH">Lab 2: Exceptions</a></li>
         </ul>
         <h3>Course Project</h3>
         <p>Click on the link below to accept the assignment for the course project on Github Classroom.</p>
