@@ -7,7 +7,7 @@ subtitle: null
 chapter: 4
 section: 2
 previous: /java/introduction
-next: /java/memory-model
+next: /java/variables-parameters
 ---
 
 ## Compilation and interpretation in Java
