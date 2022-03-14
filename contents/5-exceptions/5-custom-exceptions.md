@@ -6,7 +6,7 @@ title: Custom Exceptions
 subtitle: null
 chapter: 5
 section: 5
-previous: /exceptions/throwables
+previous: /exceptions/throwing
 next: /exceptions/stack-trace
 ---
 

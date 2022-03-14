@@ -258,3 +258,7 @@ table, th, td  {
 th, td {
   padding: 6px 13px;
 }
+
+a code[class*="language-"] {
+  color:#007be4;
+}

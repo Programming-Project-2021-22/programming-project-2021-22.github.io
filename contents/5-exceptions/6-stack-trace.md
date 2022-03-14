@@ -7,7 +7,7 @@ subtitle: null
 chapter: 5
 section: 6
 previous: /exceptions/custom
-next: null
+next: /inheritance/introduction
 ---
 
 When we catch exceptions, we can access the stack trace.
