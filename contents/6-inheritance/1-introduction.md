@@ -348,10 +348,10 @@ new amount after withdrawal: 23000
 
 1. Write a `public` class named `Vehicle`
     - Add a private `licensePlate` field
-    - And getter/setter methods for `licensePlate`
+    - And protected getter/setter methods for `licensePlate`
 2. Extend `Vehicle` with the `public` class `Car`
     - Add a package private `numberOfSeats` field
-    - Add a setter for `licensePlate` on `Car`.
+    - Add protected getter/setter metehods for `numberOfSeats`.
 3. Write a `Runner` class where you create a Vehicle and a Car and invoke all its accessible members.
 
 ## Final classes
