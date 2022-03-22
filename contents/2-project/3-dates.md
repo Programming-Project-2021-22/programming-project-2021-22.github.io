@@ -8,14 +8,13 @@ chapter: 2
 section: 3
 previous: "/project/rules"
 next: "/project/requirements"
-date: "2021-01-28"
 ---
 
 Pay attention to the dates below:
 
-- Project progress report 1: 05/04/2022 (Lab)
-- Project progress report 2: 10/05/2021 (Lab)
-- Project progress report 3: TBD (Lab in the beginning of June 2022)
+- Project lab 1: 22/03/2022 (Lab)
+- Project lab 2: 10/05/2022 (Lab)
+- Project lab 3: TBD (Lab in the beginning of June 2022)
 - 1st exam session:
   - Project submission: 17/06/2022
   - Project peer-review submission: 24/06/2022

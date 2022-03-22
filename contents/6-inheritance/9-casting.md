@@ -7,7 +7,7 @@ subtitle: null
 chapter: 6
 section: 9
 previous: /inheritance/object
-next: null
+next: /generics/introduction
 ---
 
 The Java type system is made up of two kinds of types: 
