@@ -25,7 +25,6 @@ Your project must use at least 10 of the programming techniques listed below:
 6. Collections
 7. Custom exceptions
 8. Try-catch blocks handling
-9. Custom exceptions
 10. Method overriding
 11. Method overloading
 12. Lambda expressions

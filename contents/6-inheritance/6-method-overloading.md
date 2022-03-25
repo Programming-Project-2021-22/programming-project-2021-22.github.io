@@ -201,11 +201,11 @@ public class Quiz4 {
 
 Write a `Calculator` class that has a method to calculate displacement during uniform acceleration `double calculateDisplacement(double time, double acceleration, double initialVelocity)`
 
-  Remember the `d = (v0 * t) + (a * t^2)/2` where:
-      - `d`: distance  
-      - `v0`: initial velocity  
-      - `a`: acceleration  
-      - `t`: time  
+Remember that `d = (v0 * t) + (a * t^2)/2` where:
+  - `d`: distance  
+  - `v0`: initial velocity  
+  - `a`: acceleration  
+  - `t`: time  
 
 Overload `calculateDisplacement` with two new versions:
 - `double calculateDisplacement(double time, double acceleration)` assuming `initialVelocity = 1`
