@@ -155,7 +155,7 @@ Animal animal = new Cat();
 Cat cat = (Cat) animal;
 ```
 
-## Exercise
+## Exercise 11
 
 1. Write class A:
     - Add methodA()
@@ -278,113 +278,17 @@ Through `a` we have access only to the method (of the object of type `B`)
 - `whoAmI()`
 
 
-## Exercise
+## Exercise 12
 
-1. Create an interface `Sortable`
-	- `isBiggerThan((Sortable) obj)`
+1. Create an interface `Sortable` that contains
+	- a method `boolean isBiggerThan(Sortable obj)`
 1. Create class `Building implements Sortable`
-	- height + getter/setter
+	- a field `int height` with a corresponding getter and setter
 1. Create class `Land implements Sortable`
-	- width, length + getters/setters
+	- a field `int width` with a corresponding getter and setter
+  - a field `length` with a corresponding getter and setter
 1. Create a class `Runner` with a `main` method that:
 	- Creates three `Building` objects with heights 20, 80, and 60 meters
 	- Creates three `Land` objects of the sizes 20x30, 10x5, and 25x25 square meters
 	- Find the tallest building
 	- Find the largest land
-
-<!-- ## Solution
-
-```java
-public interface Sortable {
-	int isBiggerThan(Sortable obj);
-}
-```
-
-```java
-public class Building implements Sortable {
-	
-	private int height = 0;
-
-	public int getHeight() {
-		return height;
-	}
-
-	public void setHeight(int height) {
-		this.height = height;
-	}
-
-	@Override
-	public int isBiggerThan(Sortable obj) {
-		Building otherBuilding = (Building) obj;
-		if (this.getHeight() > otherBuilding.getHeight())
-			return 1;
-		else
-			return 0;
-	}
-
-	public Building(int height) {
-		super();
-		this.height = height;
-	}
-
-}
-```
-
-```java
-public class Land implements Sortable {
-	private int width = 0;
-	private int length = 0;
-
-	public int getWidth() { return width; 	}
-
-	public void setWidth(int width) { this.width = width; 	}
-
-	public int getLength() { return length; }
-
-	public void setLength(int length) { this.length = length; }
-	
-	public int getArea() { return this.getLength() * this.getWidth(); }
-
-	@Override
-	public int isBiggerThan(Sortable obj) {
-		Land otherLand = (Land) obj;
-		if (this.getArea() > otherLand.getArea())
-			return 1;
-		else
-			return 0;
-	}
-
-	public Land(int width, int length) {
-		super();
-		this.width = width;
-		this.length = length;
-	}
-}
-```
-
-```java
-public class Runner {
-
-	public static void main(String[] args) {
-		Building b1 = new Building(20);
-		Building b2 = new Building(80);
-		Building b3 = new Building(60);
-		Building tallestBuilding = b1;
-		if (b2.isBiggerThan(tallestBuilding) > 0)
-			tallestBuilding = b2;
-		if (b3.isBiggerThan(tallestBuilding) > 0)
-			tallestBuilding = b3;
-		System.out.println("The tallest building is "+tallestBuilding.getHeight() + " m high");
-		
-		Land l1 = new Land(20, 30);
-		Land l2 = new Land(10, 5);
-		Land l3 = new Land(25, 25);
-		Land biggestLand = l1;
-		if (l2.isBiggerThan(biggestLand) > 0)
-			biggestLand = l2;
-		if (l3.isBiggerThan(biggestLand) > 0)
-			biggestLand = l3;
-		System.out.println("The biggest land is " + biggestLand.getLength()+"x"+biggestLand.getWidth());;
-	}
-}
-``` -->
