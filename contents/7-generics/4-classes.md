@@ -7,7 +7,7 @@ subtitle: null
 chapter: 7
 section: 4
 previous: /generics/type-parameters
-next: null
+next: /arrays/one-dimensional
 ---
 
 ## What is a generic type?
@@ -157,7 +157,7 @@ public interface Pair<K, V> {
 public class OrderedPair<K, V> implements Pair<K, V> {
     private K key;
     private V value;
-s
+    
     public OrderedPair(K key, V value) {
       this.key = key;
       this.value = value;
@@ -167,7 +167,7 @@ s
     public V getValue() { return value; }
 }
 ```
-s
+
 The following statements create two instantiations of the `OrderedPair` class:
 
 ```java
@@ -311,7 +311,7 @@ public class Exercise3 {
 
 <!-- ## References
 
-\footnotesize
+
 
 Part of the material has been taken from the following sources. The usage of the referenced copyrighted work is in line with fair use since it is for nonprofit educational purposes.
 

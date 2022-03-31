@@ -88,14 +88,14 @@ Consider the code below. What do you expect to be the printed on the screen?
 
   This?
 
-  ```ini
+  ```output
   changeMe: 5
   main: 10
   ```
 
   Or this?
 
-  ```ini
+  ```output
   changeMe: 5
   main: 5
   ```
@@ -127,14 +127,14 @@ public class ModifyingObjectParameter {
 
 This?
 
-```ini
+```output
 changeMe: Morty
 main: Rick
 ```
 
 Or this?
 
-```ini
+```output
 changeMe: Morty
 main: Morty
 ```
@@ -167,14 +167,14 @@ public class ReplacingObjectParameter {
 
 This?
 
-```ini
+```output
 changeMe: Morty 603742814
 main: Rick 424058530
 ```
 
 Or this?
 
-```ini
+```output
 changeMe: Rick 424058530
 main: Rick 424058530
 ```

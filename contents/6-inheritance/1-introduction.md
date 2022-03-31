@@ -130,7 +130,7 @@ class BicycleDemo {
 
 The output of this test prints the ending pedal cadence, speed, and gear for the two bicycles:
 
-```ini
+```output
 cadence:50 speed:10 gear:2
 cadence:40 speed:20 gear:3
 ```
@@ -333,7 +333,7 @@ class Runner {
 }
 ```
 
-```ini
+```output
 account name: savings
 initial amount: 10000
 new amount after deposit: 15000

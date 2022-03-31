@@ -40,7 +40,7 @@ System.out.println("Long value "+l);
 System.out.println("Float value "+f);
 ```
 
-```ini
+```output
 Int value 100
 Long value 100
 Float value 100.0
@@ -63,7 +63,7 @@ System.out.println("Int value "+i);
 }
 ```
 
-```ini
+```output
 Double value 100.04
 Long value 100
 Int value 100
@@ -81,7 +81,7 @@ System.out.println("Long value "+l);
 System.out.println("Int value "+i);
 ```
 
-```ini
+```output
 Double value 1.0837465834756005E14
 Long value 108374658347560
 Int value -251432408
@@ -260,7 +260,7 @@ Which version of `whoAmI()` is going to be called in each line?
 
 The answer is **always the overrided one**:
 
-```ini
+```output
 I am B.
 I am B.
 ```

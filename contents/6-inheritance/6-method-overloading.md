@@ -225,7 +225,7 @@ public class Calculator {
 }
 ```
 
-```ini
+```output
 Distance: 60.0
 Distance: 60.0
 Distance: 60.0

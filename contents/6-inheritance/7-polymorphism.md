@@ -91,7 +91,7 @@ public class Polymorphism {
 }
 ```
 
-```ini
+```output
 Did this!
 Did that!
 Did something!

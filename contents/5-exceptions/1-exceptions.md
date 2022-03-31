@@ -100,7 +100,7 @@ The **call stack** is the ordered list of methods that had been called to get to
 
 Here is a couple of console outputs that show us the call stack from exceptions thrown by our program above.
 
-```ini
+```output
 Please enter an integer numerator: 100
 Please enter an integer denominator: 0
 Exception in thread "main" java.lang.ArithmeticException: / by zero
@@ -108,7 +108,7 @@ Exception in thread "main" java.lang.ArithmeticException: / by zero
 	at DivideByZeroNoExceptionHandling.main(DivideByZeroNoExceptionHandling.java:19)
 ```
 
-```ini
+```output
 Please enter an integer numerator: a
 Exception in thread "main" java.util.InputMismatchException
 	at java.util.Scanner.throwFor(Scanner.java:864)

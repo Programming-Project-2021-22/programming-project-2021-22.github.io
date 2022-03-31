@@ -143,7 +143,7 @@ public class ThisSuper {
 }
 ```
 
-```ini
+```output
 I am an animal
 ---
 I am a Fish

@@ -242,7 +242,7 @@ public class Runner {
 
 ```
 
-```ini
+```output
 s1=10
 s3=10
 s1=30
@@ -357,7 +357,7 @@ public class Equals {
 }
 ```
 
-```ini
+```output
 Is e1 equals to e1: true
 Is e1 equals to e2: true
 Is e2 equals to e1: true
@@ -438,7 +438,7 @@ By default, `toString()` return a value in the format `classname@hashcode`, wher
 Employee me = new Employee("Tiago", 30);
 System.out.println(me);
 ```
-```ini
+```output
 Employee@424058530
 ```
 
@@ -472,7 +472,7 @@ public class Employee {
 }
 ```
 
-```ini
+```output
 Employee{name='Tiago', age=30}
 ```
 
