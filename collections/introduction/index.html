@@ -107,22 +107,19 @@
 <h2 id="collections" style="position:relative;"><a href="#collections" aria-label="collections permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Collections</h2>
 <p>For each data structure, the framework provides:</p>
 <ol>
-<li>
-<p><strong>Interfaces</strong>:</p>
+<li><strong>Interfaces</strong>:
 <ul>
 <li>Abstract data structures</li>
 <li>Allow collections to be manipulated independently of the details of their implementation</li>
 </ul>
 </li>
-<li>
-<p><strong>Implementations</strong>:</p>
+<li><strong>Implementations</strong>:
 <ul>
 <li>Reusable data structures</li>
 <li>Concrete implementations of a collection interface(s)</li>
 </ul>
 </li>
-<li>
-<p><strong>Algorithms</strong>:</p>
+<li><strong>Algorithms</strong>:
 <ul>
 <li>Methods that perform useful computations on these data structures:
 <ul>
@@ -135,10 +132,9 @@
 </li>
 </ol>
 <p>Here are two examples:</p>
-<ol>
-<li><strong><a href="https://en.wikipedia.org/wiki/List_(abstract_data_type)">List</a></strong>
+<h3 id="list" style="position:relative;"><a href="#list" aria-label="list permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List</h3>
+<p>A countable number of ordered values, where the same value may occur more than once (from <a href="https://en.wikipedia.org/wiki/List_(abstract_data_type)">Wikipedia</a>).</p>
 <ul>
-<li>A countable number of ordered values, where the same value may occur more than once</li>
 <li>Interface: <code class="language-text">List</code></li>
 <li>Implementation: <code class="language-text">ArrayList&lt;E></code> class</li>
 <li>Algorithms and methods:
@@ -150,10 +146,9 @@
 </ul>
 </li>
 </ul>
-</li>
-<li><strong><a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)">Queue</a></strong>
+<h3 id="queue" style="position:relative;"><a href="#queue" aria-label="queue permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Queue</h3>
+<p>A sequence of values that be modified by additions at one end and removals on the other (from <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type)">Wikipedia</a>)</p>
 <ul>
-<li>A sequence of values that be modified by additions at one end and removals on the other</li>
 <li>A <strong>first-in-first-out</strong> data structure</li>
 <li>Interface: <code class="language-text">Queue</code></li>
 <li>Implementation: <code class="language-text">PriorityQueue</code> class</li>
@@ -165,9 +160,7 @@
 </ul>
 </li>
 </ul>
-</li>
-</ol>
-<h2 id="using-the-list-data-structure" style="position:relative;"><a href="#using-the-list-data-structure" aria-label="using the list data structure permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the <code class="language-text">List</code> data structure</h2>
+<h2 id="quick-demo" style="position:relative;"><a href="#quick-demo" aria-label="quick demo permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quick demo</h2>
 <div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
 
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Runner</span> <span class="token punctuation">{</span>

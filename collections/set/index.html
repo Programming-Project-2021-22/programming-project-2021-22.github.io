@@ -81,12 +81,11 @@
 <h2 id="interface-sete" style="position:relative;"><a href="#interface-sete" aria-label="interface sete permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interface: <code class="language-text">Set&lt;E></code></h2>
 <p>Set is an <strong>abstract data structure</strong> that:</p>
 <ul>
-<li>Stores a collection of values</li>
-<li>Stores values in <strong>no particular order</strong></li>
+<li>Stores a collection of values in <strong>no particular order</strong></li>
 <li>Prohibits <strong>repeated values</strong></li>
 </ul>
 <p>It is an implementation of the mathematical concept of a finite set, which is typically used to <strong>test a value for membership</strong>.</p>
-<p>Set, as a <strong>Java interface</strong>:</p>
+<p>Set, as a Java interface:</p>
 <ul>
 <li>Inherits methods from <code class="language-text">Collection</code></li>
 <li>Prohibits duplicate elements</li>
@@ -276,4 +275,65 @@ TreeSet (natural order maintained): [Chandler, Joey, Monica, Rachel]</code></pre
 Lowest element in the set: Black
 Highest element in the set: Yellow
 Subset with elements lower than &quot;Green&quot;: [Black, Blue]
-Subset with elements higher or equal than &quot;Green&quot;: [Green, Red, Yellow]</code></pre></div></div></div></div></div><div class="footer"><div class="footer-navbar"></div><div class="footer-content"><a href="/collections/list">Previous</a><a href="/collections/queue">Next</a></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/collections/set";window.___webpackCompilationHash="18645a3908e322098e43";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-82df740e7cad994d0af0.js"],"app":["/app-28fa38d494eb64b1e03c.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2683bbbd1fae1aa95b63.js"],"component---src-templates-template-js":["/component---src-templates-template-js-30aea6722b43d4902754.js"]};/*]]>*/</script><script src="/polyfill-82df740e7cad994d0af0.js" nomodule=""></script><script src="/component---src-templates-template-js-30aea6722b43d4902754.js" async=""></script><script src="/app-28fa38d494eb64b1e03c.js" async=""></script><script src="/framework-675a07cb9aff63570c38.js" async=""></script><script src="/webpack-runtime-6c7a2254d32896dfa51c.js" async=""></script></body></html>
+Subset with elements higher or equal than &quot;Green&quot;: [Green, Red, Yellow]</code></pre></div>
+<h2 id="exercise-3" style="position:relative;"><a href="#exercise-3" aria-label="exercise 3 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exercise 3</h2>
+<p>Revisit exercise 2 and remove all duplicates from a <code class="language-text">List</code> dogs using a <code class="language-text">Set</code>:</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+  <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+
+  <span class="token keyword">public</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setName</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">setAge</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> age <span class="token operator">></span> <span class="token number">15</span><span class="token punctuation">)</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Invalid age: "</span> <span class="token operator">+</span> age <span class="token operator">+</span> <span class="token string">". Must be 0 &lt;= age &lt;= 15"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token annotation punctuation">@Override</span>
+  <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"("</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">", "</span> <span class="token operator">+</span> age <span class="token operator">+</span> <span class="token char">')'</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">Dog</span> d1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"King"</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Dog</span> d2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"Rex"</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Dog</span> d3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"Boss"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">Dog</span> d4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token string">"Duke"</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Dog</span><span class="token punctuation">></span></span> dogs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dogs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>d4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>dogs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// => [(King, 5), (King, 5), (Rex, 7), (Rex, 7), (Boss, 2), (Boss, 2), (Duke, 11), (Duke, 11)]</span>
+
+    <span class="token comment">//FIX ME</span>
+    
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>dogs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// => [(King, 5), (Rex, 7), (Boss, 2), (Duke, 11)]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div></div></div></div></div><div class="footer"><div class="footer-navbar"></div><div class="footer-content"><a href="/collections/list">Previous</a><a href="/collections/queue">Next</a></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/collections/set";window.___webpackCompilationHash="18645a3908e322098e43";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-82df740e7cad994d0af0.js"],"app":["/app-28fa38d494eb64b1e03c.js"],"component---src-pages-index-js":["/component---src-pages-index-js-2683bbbd1fae1aa95b63.js"],"component---src-templates-template-js":["/component---src-templates-template-js-30aea6722b43d4902754.js"]};/*]]>*/</script><script src="/polyfill-82df740e7cad994d0af0.js" nomodule=""></script><script src="/component---src-templates-template-js-30aea6722b43d4902754.js" async=""></script><script src="/app-28fa38d494eb64b1e03c.js" async=""></script><script src="/framework-675a07cb9aff63570c38.js" async=""></script><script src="/webpack-runtime-6c7a2254d32896dfa51c.js" async=""></script></body></html>
