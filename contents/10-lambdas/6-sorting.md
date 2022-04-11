@@ -7,7 +7,7 @@ subtitle: null
 chapter: 10
 section: 6
 previous: /lambdas/standard
-next: null
+next: /streams/introduction
 ---
 
 Consider the following class (from [this](https://www.programcreek.com/2014/01/why-lambda-java-8/) source)

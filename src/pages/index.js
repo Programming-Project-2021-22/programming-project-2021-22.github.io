@@ -53,15 +53,15 @@ const IndexPage = ({ data }) => {
           <li><a href="https://classroom.github.com/a/BRX-CZUW">Lab 4: Inheritance</a></li>
           <li><a href="https://classroom.github.com/a/XfZI3Iqo">Lab 5: Generics</a></li>
           <li><a href="https://classroom.github.com/a/zdNVjpBg">Lab 6: Collections</a></li>
-          {/* <li><a href="https://classroom.github.com/a/NMYey4_w">Lab 7: Lambdas and Streams</a></li>
-          <li>Lab 8: Maven</li>
+          <li><a href="https://classroom.github.com/a/NMYey4_w">Lab 7: Lambdas and Streams</a></li>
+          {/*<li>Lab 8: Maven</li>
           <li><a href="https://classroom.github.com/a/">Lab 9: Testing</a></li>
           <li>Lab 10: Group Project Lab 2/3</li>
           <li><a href="https://classroom.github.com/a/206iHDIP">Lab 11: Regular Expressions</a></li>
           <li><a href="https://classroom.github.com/a/">Lab 12: I/O</a></li>
           <li><a href="https://classroom.github.com/a/">Lab 13: Multithreading</a></li>
           <li>Lab 14: Group Project Lab 3/3</li>
-          <li><a href="https://classroom.github.com/a/">Lab 14: Design Patterns</a></li> */}
+          <li><a href="https://classroom.github.com/a/">Lab 15: Design Patterns</a></li> */}
         </ul>
         <h3>Course Project</h3>
         <p>Click on the link below to accept the assignment for the course project on Github Classroom.</p>

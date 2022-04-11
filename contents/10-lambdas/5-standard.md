@@ -189,7 +189,7 @@ Using the `Predicate<T>` interface, create a class than offers 3 static methods
 - `exists()`: returns true if at least one element in a collection pass a given test
 - `none()`: returns true if at no element in a collection pass a given test
 
-Your methods should collections holding any type of value.
+Your methods should accept as input collections holding any type of object.
 
 Create a `Main` class in which you test the methods using collections holding different types of objects
 
@@ -449,8 +449,6 @@ public class ListOperations {
   }
 }
 ```
-
-## `BiFunction<T,U,R>`: Solution
 
 ```java
 public class Main {
