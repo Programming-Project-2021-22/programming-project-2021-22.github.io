@@ -7,7 +7,7 @@ subtitle: null
 chapter: 9
 section: 8
 previous: /collections/map
-next: null
+next: /lambdas/introduction
 ---
 
 When you are faced with a programming challenge that requires picking a data structure, how do you decide which one to use?

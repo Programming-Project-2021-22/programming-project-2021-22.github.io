@@ -368,7 +368,6 @@ public class Exercise {
          System.out.println(m.getKey() + " -> "+m.getValue());
    }
 }
-	
 ```
 
 ```output

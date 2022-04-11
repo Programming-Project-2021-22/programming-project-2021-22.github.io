@@ -19,6 +19,7 @@ const SectionLink = ({ page }) => (
 )
 
 const ModuleNavbar = ({ pageGroup }) => {
+  console.log();
   const first = pageGroup.nodes[0].frontmatter
 
   return (
@@ -53,9 +54,11 @@ const Navbar = () => {
     }
   `)
 
+  const groups = data.allMarkdownRemark.group.sort((g1, g2) =>  parseInt(g1.fieldValue) - parseInt(g2.fieldValue));
+
   return (
     <div className="body-navbar-inner">
-      {data.allMarkdownRemark.group.map((group, index) => (
+      {groups.map((group, index) => (
         <ModuleNavbar key={index} pageGroup={group} />
       ))}
     </div>
