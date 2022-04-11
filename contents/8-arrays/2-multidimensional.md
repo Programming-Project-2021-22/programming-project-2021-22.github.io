@@ -12,7 +12,7 @@ next: /arrays/arrays-class
 
 A **multidimensional array** can be simply defined as an array of arrays. 
 
-We declare a **multidimensional array** by using two or more square brackets:
+We declare a such an array by using two or more square brackets:
 
 ```java
 String[][] names;
@@ -47,6 +47,8 @@ cube[0][0][0]
 [Source](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html)
 
 ## Multidimensional arrays in memory
+
+This is what our multidimensional arrays look like in memory:
 
 ![](../../figures/array-java-memory.jpeg)
 
@@ -96,6 +98,39 @@ public class TwoDimensionalArrays {
 
       System.out.println("]");
     }
+  }
+}
+```
+
+## Exercise 3
+
+Lets us revisit exercise 1 with multidimensional arrays. 
+
+Write a second `sum` method that sums all the numbers is a tri-dimensional array.
+
+```java
+public class SummingArrays {
+  public static int sum(int[][][] cube) {
+    // FIX ME
+    return -1;
+  }
+
+  public static void main(String[] args) {
+    int[][][] cube1 = {
+            {{1, 1}, {1, 1}, {1, 1}},
+            {{1, 1}, {1, 1}, {1, 1}},
+            {{1, 1}, {1, 1}, {1, 1}}
+    };
+
+    System.out.println("Should return 18 for cube1 = " + sum(cube1));
+
+    int[][][] cube2 = {
+            {{1, 0}, {1, 0}, {1, 0}},
+            {{1, 0}, {1, 0}, {1, 0}},
+            {{1, 0}, {1, 0}, {1, 0}},
+    };
+
+    System.out.println("Should return 9 for cube2 = " + sum(cube2));
   }
 }
 ```
