@@ -10,16 +10,17 @@ previous: /collections/queue
 next: /collections/map
 ---
 
-The **`Collections`** class consists exclusively of static methods that operate on or return collections.
+The [`Collections`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html) class consists exclusively of static methods that operate on or return collections.
 
 It contains:
 - polymorphic algorithms that operate on collections;
 - "wrappers", which return a new collection backed by a specified collection;
 - a few other odds and ends.
 
-[Source](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Collections.html)
-
 ## `fill()`, `frequency()`
+
+- `static <T> void fill(List<? super T> list, T obj)`: Replaces all of the elements of the specified list with the specified element.
+- `static int frequency(Collection<?> c, Object o)`: Returns the number of elements in the specified collection equal to the specified object.
 
 ```java
 import java.util.ArrayList;
@@ -48,6 +49,10 @@ Frequency of "Mr. Meeseeks": 3
 ```
 
 ## `sort()`, `reverse()`, `shuffle()`
+
+- `static <T extends Comparable<? super T>> void sort(List<T> list)`: Sorts the specified list into ascending order, according to the natural ordering of its elements.
+- `static void reverse(List<?> list)`: Reverses the order of the elements in the specified list.
+- `static void shuffle(List<?> list)`: Randomly permutes the specified list using a default source of randomness.
 
 ```java
 import java.util.ArrayList;
@@ -84,6 +89,9 @@ Shuffled: [Morty, Beth, Rick, Summer]
 
 ## `min()`, `max()`
 
+- `static <T extends Object & Comparable<? super T>> T min(Collection<? extends T> coll)`: Returns the minimum element of the given collection, according to the natural ordering of its elements.
+- `static <T extends Object & Comparable<? super T>> T max(Collection<? extends T> coll)`: Returns the maximum element of the given collection, according to the natural ordering of its elements.
+
 ```java
 public class MinMaxDemo {
 
@@ -113,6 +121,10 @@ Max: Summer
 ```
 
 ## `addAll()`, `copy()`, `disjoint()`
+
+- `static <T> boolean addAll(Collection<? super T> c, T... elements)`: Adds all of the specified elements to the specified collection.
+- `static <T> void copy(List<? super T> dest, List<? extends T> src)`: Copies all of the elements from one list into another.
+- `static boolean disjoint(Collection<?> c1, Collection<?> c2)`: Returns true if the two specified collections have no elements in common.
 
 ```java
 import java.util.ArrayList;
@@ -157,6 +169,11 @@ Is list3 disjoint? false
 
 ## `empty()`
 
+- `static final <T> List<T> emptyList()`: Returns an empty list (immutable).
+- `static final <T> Set<T> emptySet()`: Returns an empty set (immutable).
+- `static <E> SortedSet<E> emptySortedSet()`: Returns an empty sorted set (immutable).
+- `static <T> Iterator<T> emptyIterator()`: Returns an iterator that has no elements.
+
 ```java
 import java.util.*;
 
@@ -194,6 +211,9 @@ Empty list iterator: hasNext()? false
 ```
 
 ## `singleton()`, `singletonList()`
+
+- `static <T> Set<T> singleton(T o)`: Returns an immutable set containing only the specified object.
+- `static <T> List<T> singletonList(T o)`: Returns an immutable list containing only the specified object.
 
 ```java
 import java.util.Collections;

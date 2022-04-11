@@ -32,7 +32,7 @@ Available in two general-purpose implementations:
   - **Vector**
   - **Stack**
 
-[Source](https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/util/List.html)
+See [documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html).
 
 ## Class: `ArrayList<E>`
 
@@ -46,11 +46,11 @@ Main characteristics:
 - Implements all optional `List` methods
 - Not synchronized 
 
-[Source](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/ArrayList.html)
-
-In the following, you will find several code snippets that demonstrate how to use an `ArrayList` object.
+See [documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html).
 
 ### `new ArrayList<>()`
+
+Constructing instances of `ArrayList`:
 
 ```java
 import java.util.*;  
@@ -90,6 +90,10 @@ Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 2 out of b
 
 ### `add()`, `remove()`, `get()`
 
+- `boolean add(E e)`: Appends the specified element to the end of this list.
+- `boolean remove(Object o)`: Removes the first occurrence of the specified element from this list, if it is present.
+- `E get(int index)`: Returns the element at the specified position in this list.
+
 ```java
 import java.util.*;
 public class AddRemoveGet {
@@ -124,6 +128,11 @@ First friend: Monica
 ```
 
 ### `contains()`, `indexOf()`, `clear()`, `size()`
+
+- `boolean contains(Object o)`: Returns true if this list contains the specified element.
+- `int indexOf(Object o)`: Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
+- `void clear()`: Removes all of the elements from this list.
+- `int size()`: Returns the number of elements in this list.
 
 ```java
 import java.util.*;
@@ -160,6 +169,8 @@ Size:0
 
 ### `addAll()`
 
+- `boolean addAll(Collection<? extends E> c)`: Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's Iterator.
+
 ```java
 import java.util.*;
 public class AddAll {
@@ -187,6 +198,8 @@ public class AddAll {
 ```
 
 ### `removeAll()`
+
+- `boolean removeAll(Collection<?> c)`: Removes from this list all of its elements that are contained in the specified collection.
 
 ```java
 import java.util.*;
@@ -216,6 +229,8 @@ public class RemoveAll {
 ```
 
 ### `retainAll()`
+
+- `boolean retainAll(Collection<?> c)`: Retains only the elements in this list that are contained in the specified collection.
 
 ```java
 import java.util.*;
@@ -282,7 +297,9 @@ public class ObjectArrayList {
 ``` -->
 
 
-### `ArrayList<String>`: `sort()`
+### `sort()`
+
+- `default void sort(Comparator<? super E> c)`: Sorts this list according to the order induced by the specified `Comparator` (from [`List`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html)).
 
 ```java
 String[] friendsArray = {"Joey", "Monica", "Phoebe", "Chandler"};
@@ -294,12 +311,10 @@ friends.sort(String::compareToIgnoreCase);
 System.out.println("Sorted: " + friends);
 ```
 
-```
+```output
 Original: [Joey, Monica, Phoebe, Chandler]
 Sorted: [Chandler, Joey, Monica, Phoebe]
 ```
-
-### `ArrayList<Integer>`: `sort()`
 
 ```java
 Integer[] integers = {10, 5, 20, 0};
@@ -316,7 +331,7 @@ Original:[10, 5, 20, 0]
 Sorted: [0, 5, 10, 20]
 ```
 
-### `ArrayList<Person>`: `sort()`
+### Sorting an array of custom objects
 
 ```java
 public class Person implements Comparable<Person>{
@@ -362,14 +377,88 @@ Sorted: [(Davi,0), (Tiago,31), (Camila,33)]
 
 ## Exercise 1
 
-1. Create a `Dog` class containing two fields:
-    - name 
-    - age (e.g. int from 1 to 15)
-1. Create an `ArrayList` of `Dog` and add four dogs to it
-1. Print the `ArrayList`
-1. Use a for-i loop method to print dogs older than 10
-1. Use a for-each loop to calculate the average age of the dogs in an ArrayList
-1. Use an `Iterator` to print dogs older than their average age
+Using the `Dog` class below, do:
+
+1. Create an `ArrayList` of dogs and add four dogs to it.
+1. Print the `ArrayList` of dogs.
+1. Use a for-i loop method to print dogs older than 10.
+1. Use a for-each loop to calculate the average age of the dogs in an ArrayList.
+1. Use an `Iterator` to print dogs older than their average age.
+
+```java
+public class Dog {
+
+  private String name;
+  private int age;
+
+  public Dog(String name, int age) {
+    setName(name);
+    setAge(age);
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    if (age < 0 || age > 15)
+      throw new IllegalArgumentException("Invalid age: " + age + ". Must be 0 <= age <= 15");
+    this.age = age;
+  }
+
+  @Override
+  public String toString() {
+    return "(" + name + ", " + age + ')';
+  }
+}
+```
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Dog> dogs;
+    
+    Dog d1 = new Dog("King", 5);
+    Dog d2 = new Dog("Rex", 7);
+    Dog d3 = new Dog("Boss", 2);
+    Dog d4 = new Dog("Duke", 11);
+
+    //FIX ME
+
+    System.out.println(dogs);
+    // => [(King, 5), (Rex, 7), (Boss, 2), (Duke, 11)]
+    printIfOlderThanTen(dogs);
+    // => Dogs older than 10: 
+    // => (Duke, 11)
+    printIfOlderThanAverage(dogs);
+    // => Dogs older than 6.25 (average): 
+    // => (Rex, 7)
+    // => (Duke, 11)
+  }
+
+  private static void printIfOlderThanTen(ArrayList<Dog> dogs) {
+    //FIX ME
+  }
+
+  private static void printIfOlderThanAverage(ArrayList<Dog> dogs) {
+    //FIX ME
+  }
+
+  private static double getAverage(ArrayList<Dog> dogs) {
+    //FIX ME
+    return 0;
+  }
+}
+
+```
 
 <!-- ## Solution
 
@@ -476,6 +565,42 @@ public class Exercise1 {
 1. Write a method that removes any duplicates from an `ArrayList<E>`:
     - Without using a `Set`
     - Assuming referential equality
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Dog> dogs;
+    
+    Dog d1 = new Dog("King", 5);
+    Dog d2 = new Dog("Rex", 7);
+    Dog d3 = new Dog("Boss", 2);
+    Dog d4 = new Dog("Duke", 11);
+
+    //FIX ME
+
+    dogs.add(d1);
+    dogs.add(d1);
+    dogs.add(d2);
+    dogs.add(d2);
+    dogs.add(d3);
+    dogs.add(d3);
+    dogs.add(d4);
+    dogs.add(d4);
+
+    System.out.println(dogs);
+    // => [(King, 5), (King, 5), (Rex, 7), (Rex, 7), (Boss, 2), (Boss, 2), (Duke, 11), (Duke, 11)]
+
+    removeDuplicates(dogs);
+    System.out.println(dogs);
+    // => [(King, 5), (Rex, 7), (Boss, 2), (Duke, 11)]
+  }
+
+  static void removeDuplicates(ArrayList<Dog> dogs) {
+    //FIX ME
+  }
+
+}
+```
 <!-- 
 ## Solution
 

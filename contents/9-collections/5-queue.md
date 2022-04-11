@@ -250,15 +250,15 @@ A linear collection of data elements, called nodes, each pointing to the next no
 - The last node of a list is its **tail** 
 - Note: the term tail may also refer the rest of the list excluding the head
 
+Here is an example of a linked list with 3 elements:
+
 ![](../../figures/singly-linked-list.png)
 
-## Adding and removing items in a linked list
-
-**Adding to the list:**
+Here is how an element is **added** to a linked list:
 
 ![](../../figures/singly-linked-list-add.png)	
 
-**Removing from the list:**
+Here is how an element is removed from a linked list:
 
 ![](../../figures/singly-linked-list-remove.png)	
 
@@ -279,9 +279,7 @@ A linear collection of data elements, called nodes, each pointing to the next no
 ![](../../figures/circularly-linked-list.png)
 
 
-
-
-The wikipedia article has a nicely detailed description of linked lists: [https://en.wikipedia.org/wiki/Linked_list](https://en.wikipedia.org/wiki/Linked_list)
+This [wikipedia article](https://en.wikipedia.org/wiki/Linked_list) has a nicely detailed description of linked lists.
 
 ## Class: `LinkedList<E>`
 

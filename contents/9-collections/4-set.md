@@ -15,13 +15,12 @@ next: /collections/queue
 ## Interface: `Set<E>`
 
 Set is an **abstract data structure** that:
-- Stores a collection of values 
-- Stores values in **no particular order**
+- Stores a collection of values in **no particular order**
 - Prohibits **repeated values**
 
 It is an implementation of the mathematical concept of a finite set, which is typically used to **test a value for membership**.
 
-Set, as a **Java interface**:
+Set, as a Java interface:
 - Inherits methods from `Collection`
 - Prohibits duplicate elements 
 
@@ -221,3 +220,72 @@ Highest element in the set: Yellow
 Subset with elements lower than "Green": [Black, Blue]
 Subset with elements higher or equal than "Green": [Green, Red, Yellow]
 ``` 
+
+## Exercise 3
+
+Revisit exercise 2 and remove all duplicates from a `List` dogs using a `Set`:
+
+```java
+public class Dog {
+  private String name;
+  private int age;
+
+  public Dog(String name, int age) {
+    setName(name);
+    setAge(age);
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    if (age < 0 || age > 15)
+      throw new IllegalArgumentException("Invalid age: " + age + ". Must be 0 <= age <= 15");
+    this.age = age;
+  }
+
+  @Override
+  public String toString() {
+    return "(" + name + ", " + age + ')';
+  }
+}
+```
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    Dog d1 = new Dog("King", 5);
+    Dog d2 = new Dog("Rex", 7);
+    Dog d3 = new Dog("Boss", 2);
+    Dog d4 = new Dog("Duke", 11);
+
+    
+    List<Dog> dogs = new ArrayList<>();
+    dogs.add(d1);
+    dogs.add(d1);
+    dogs.add(d2);
+    dogs.add(d2);
+    dogs.add(d3);
+    dogs.add(d3);
+    dogs.add(d4);
+    dogs.add(d4);
+
+    System.out.println(dogs);
+    // => [(King, 5), (King, 5), (Rex, 7), (Rex, 7), (Boss, 2), (Boss, 2), (Duke, 11), (Duke, 11)]
+
+    //FIX ME
+    
+    System.out.println(dogs);
+    // => [(King, 5), (Rex, 7), (Boss, 2), (Duke, 11)]
+  }
+}
+```

@@ -39,11 +39,9 @@ For each data structure, the framework provides:
 1. **Interfaces**: 
     - Abstract data structures
     - Allow collections to be manipulated independently of the details of their implementation 
-
 2. **Implementations**:
     - Reusable data structures
     - Concrete implementations of a collection interface(s)
-
 3. **Algorithms**:
     - Methods that perform useful computations on these data structures:
       - Searching
@@ -52,27 +50,32 @@ For each data structure, the framework provides:
 
 Here are two examples:
 
-1. **[List](https://en.wikipedia.org/wiki/List_(abstract_data_type))**
-    - A countable number of ordered values, where the same value may occur more than once
-    - Interface: `List` 
-    - Implementation: `ArrayList<E>` class
-    - Algorithms and methods: 
-      - `add()`
-      - `remove()`
-      - `sort()`
-      - `contains()`
-2. **[Queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))**
-    - A sequence of values that be modified by additions at one end and removals on the other
-    - A **first-in-first-out** data structure
-    - Interface: `Queue` 
-    - Implementation: `PriorityQueue` class
-    - Algorithms and methods: 
-      - `offer()`
-      - `poll()`
-      - `peek()`
+### List
+
+A countable number of ordered values, where the same value may occur more than once (from [Wikipedia](https://en.wikipedia.org/wiki/List_(abstract_data_type))).
+
+- Interface: `List` 
+- Implementation: `ArrayList<E>` class
+- Algorithms and methods: 
+  - `add()`
+  - `remove()`
+  - `sort()`
+  - `contains()`
+
+### Queue
+
+A sequence of values that be modified by additions at one end and removals on the other (from [Wikipedia](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)))
+
+- A **first-in-first-out** data structure
+- Interface: `Queue` 
+- Implementation: `PriorityQueue` class
+- Algorithms and methods: 
+  - `offer()`
+  - `poll()`
+  - `peek()`
 
 
-## Using the `List` data structure
+## Quick demo
 
 ```java
 import java.util.*;

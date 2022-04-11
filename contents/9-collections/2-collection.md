@@ -12,41 +12,37 @@ next: /collections/list
 
 ## Interface: `Collection<E>`
 
-- The **root interface** in the collection hierarchy
+The root interface in the **collection hierarchy**, representing a group of objects, known as its **elements**.
 
-- It represents a group of objects, known as its elements.
+Some collections allow duplicate elements and others do not.
 
-- Some **allow duplicate** elements and others do not
+Some are ordered and others unordered.
 
-- Some are **ordered** and others **unordered**
+The JDK does provide any **direct** implementations of this interface: it provides implementations of more specific subinterfaces, like `Set` and `List`.
 
-- **No direct implementation** of this interface is provided
+This interface is typically used to pass collections around and manipulate them where maximum generality is desired.
 
-- Typically used to pass collections around and manipulate them where **maximum generality is desired**
-
+[Source](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collection.html)
 
 ![](../../figures/collection-hierarchy.png)
 
 
-[Source](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Collection.html)
-
-
 ## Basic operations
 
-Some basic operations you can always perform in a **`Collection<E>`**:
+Some basic operations you can always perform in a `Collection<E>`:
 
-- **`boolean contains​(Object o)`:** Returns true if this collection contains the specified element.
-- **`boolean containsAll​(Collection<?> c)`:** Returns true if this collection contains all of the elements in the specified collection.
-- **`int size()`:** Returns the number of elements in this collection.
+- `boolean contains​(Object o)`: Returns true if this collection contains the specified element.
+- `boolean containsAll​(Collection<?> c)`: Returns true if this collection contains all of the elements in the specified collection.
+- `int size()`: Returns the number of elements in this collection.
 
-But some others you can only perform in a mutable **`Collection<E>`**:
+But some others you can only perform in a mutable `Collection<E>`:
 
-- **`boolean add​(E e)`:** Ensures that this collection contains the specified element (optional operation).
-- **`boolean addAll​(Collection<? extends E> c)`:** Adds all of the elements in the specified collection to this collection (optional operation).
-- **`void clear()`:** Removes all of the elements from this collection (optional operation).
-- **`boolean remove​(Object o)`:** Removes a single instance of the specified element from this collection, if it is present (optional operation).
-- **`boolean removeAll​(Collection<?> c)`:** Removes all of this collection's elements that are also contained in the specified collection (optional operation).
-- **`boolean retainAll​(Collection<?> c)`:** Retains only the elements in this collection that are contained in the specified collection (optional operation).
+- `boolean add​(E e)`: Ensures that this collection contains the specified element (optional operation).
+- `boolean addAll​(Collection<? extends E> c)`: Adds all of the elements in the specified collection to this collection (optional operation).
+- `void clear()`: Removes all of the elements from this collection (optional operation).
+- `boolean remove​(Object o)`: Removes a single instance of the specified element from this collection, if it is present (optional operation).
+- `boolean removeAll​(Collection<?> c)`: Removes all of this collection's elements that are also contained in the specified collection (optional operation).
+- `boolean retainAll​(Collection<?> c)`: Retains only the elements in this collection that are contained in the specified collection (optional operation).
 
 Here is a demo:
 
@@ -189,13 +185,13 @@ class TraversingWithIterator {
 
 **[Iterable](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/Iterable.html)**: A simple representation of a series of elements that can be iterated over
 - Does not have any iteration state, e.g. a "current element"
-- Offers one method that **produces instances of `Iterator`**
+- Offers one method that **produces instances of `Iterator`
 
 **[Iterator](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/Iterator.html)**: An object with an iteration state
-- Can check if it has more elements using **`hasNext()`**
-- Can move to the next element (if any) using **`next()`**
+- Can check if it has more elements using `hasNext()`
+- Can move to the next element (if any) using `next()`
 
-An **`Iterable`** should be able to produce valid instances of **`Iterator`**
+An `Iterable` should be able to produce valid instances of `Iterator`
 
 ## Printing a collection
 
@@ -215,8 +211,10 @@ public class PrintingCollections {
       friends.add("Ross");
       friends.add("Phoebe");
 
+      // Option #1
       System.out.println(friends);
 
+      // Option #2
       String value = "{ " + String.join(" - ", friends) + " } ";
       System.out.println(value);
    }

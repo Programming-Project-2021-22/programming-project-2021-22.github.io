@@ -138,7 +138,7 @@ public class HashMapDemo {
 A map that keeps no particular order: {Sheldon=30, Rajesh=26, Leonard=25}
 ```
 
-## Exercise 3
+## Exercise 4
 
 Write a main method that creates a `HashMap<String,String>` and add the pairs:
 - `"font_face"`: `"Times New Roman"`
@@ -204,13 +204,30 @@ The `equals()` method comes to rescue!
 
 Read [this](https://medium.com/@mr.anmolsehgal/java-hashmap-internal-implementation-21597e1efec3) article for more details.
 
-## Exercise 4
+## Exercise 5
 
-- Create a MyHash class
-	- write the ```public int getHash(String s)``` hash function that maps any String into a number from 0 to 99
-- write the main method to test
-	- different strings
-	- two same strings
+Implement the `getHash(String s)` hash method of the `MyHash` class such that it maps any `String` into a `int`  between `0` to `99`.
+
+```java
+public class MyHash {
+
+  public static int getHash(String s) {
+    // FIX ME
+  }
+
+  public static void main(String[] args) {
+    System.out.println("Java: " + getHash("Java"));
+    System.out.println("Oracle: " + getHash("Oracle"));
+    System.out.println("JDK: " + getHash("JDK"));
+    System.out.println("JVM: " + getHash("JVM"));
+    System.out.println("IntelliJ: " + getHash("IntelliJ"));
+    System.out.println("Eclipse: " + getHash("Eclipse"));
+    System.out.println("Class: " + getHash("Class"));
+    System.out.println("class: " + getHash("class"));
+  }
+
+}
+```
 
 <!-- ## Solution
 
@@ -306,7 +323,7 @@ A map that keeps a natural ordering: {Leonard=25, Rajesh=26, Sheldon=30}
 
 Table from [this](https://stackoverflow.com/questions/2889777/difference-between-hashmap-linkedhashmap-and-treemap) StackOverflow question.
 
-## Exercise 5
+## Exercise 6
 
 - Create a main method with 3 <String,String> maps:
 	- 1 HashMap
