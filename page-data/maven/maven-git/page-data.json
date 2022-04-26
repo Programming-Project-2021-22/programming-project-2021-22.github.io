@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-template-js",
+    "path": "/maven/maven-git",
+    "result": {"data":{"markdownRemark":{"html":"<p>Which Maven files should you commit to your git repository?</p>\n<ul>\n<li>The <strong><code class=\"language-text\">pom.xml</code></strong> file</li>\n<li>(Optionally) The Maven wrapper files:\n<ul>\n<li><strong><code class=\"language-text\">.mvn</code></strong> folder</li>\n<li><strong><code class=\"language-text\">mvnw</code></strong> file</li>\n<li><strong><code class=\"language-text\">mvnw.cmd</code></strong> folder</li>\n</ul>\n</li>\n</ul>\n<p>Which should you ignore?</p>\n<ul>\n<li>The <strong><code class=\"language-text\">target</code></strong> folder</li>\n<li>Everything else that you generate during build</li>\n</ul>","frontmatter":{"slug":"/maven/maven-git","title":"Maven and Git","course":"Programming Project 2021/22","previous":"/maven/concepts","next":"/maven/plugins","chapter":12,"section":5,"module":"Maven","banner":null}}},"pageContext":{"slug":"/maven/maven-git"}},
+    "staticQueryHashes": ["800307450"]}
