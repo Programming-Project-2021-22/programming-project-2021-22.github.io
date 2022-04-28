@@ -476,7 +476,7 @@ To use it, however, the resource being open must implement the [**`AutoCloseable
 - Write the ```Resource1 implements AutoCloseable``` class that prints out something in the `close()` method
 - In the main method, write a try-with-resources code that creates a `Resource1` object and just prints something
 
-. . .
+
 
 ```java
 public class Runner {
