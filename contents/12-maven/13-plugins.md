@@ -7,7 +7,7 @@ subtitle: null
 chapter: 12
 section: 13
 previous: /maven/maven-git
-next: null
+next: /testing/introduction
 ---
 
 ## Clean plugin
