@@ -2,7 +2,7 @@
 slug: /testing/first
 course: Programming Project 2021/22
 module: Testing
-title: FIRST
+title: FIRST Properties of Good Tests
 subtitle: null
 chapter: 13
 section: 9

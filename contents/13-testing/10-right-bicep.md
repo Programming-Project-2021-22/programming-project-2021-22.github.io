@@ -2,12 +2,12 @@
 slug: /testing/right-bicep
 course: Programming Project 2021/22
 module: Testing
-title: Right-BICEP
+title: "What to Test: The Right-BICEP"
 subtitle: null
 chapter: 13
 section: 10
 previous: /testing/first
-next: /regex/introduction
+next: null
 ---
 
 Just as important as knowing how to write tests, is knowing which tests to write.
