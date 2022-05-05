@@ -7,7 +7,7 @@ subtitle: null
 chapter: 11
 section: 5
 previous: /streams/optionals
-next: null
+next: /maven/introduction
 ---
 
 Consider the following class:

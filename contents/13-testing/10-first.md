@@ -5,8 +5,8 @@ module: Testing
 title: FIRST Properties of Good Tests
 subtitle: null
 chapter: 13
-section: 9
-previous: /testing/repeated
+section: 10
+previous: /testing/assertion-libraries
 next: /testing/right-bicep
 ---
 

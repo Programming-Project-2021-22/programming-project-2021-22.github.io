@@ -5,10 +5,15 @@ module: Testing
 title: "What to Test: The Right-BICEP"
 subtitle: null
 chapter: 13
-section: 10
+section: 12
 previous: /testing/first
-next: null
+next: /testing/correct
 ---
+
+In this section, we will discuss the **Right-BICEP** acronym, as proposed by Jeff Langr, Andy Hunt, and Dave Thomas, in **[Pragmatic Unit Testing in Java 8 with JUnit](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260958870001241)**, 2015. 
+
+![](https://images-na.ssl-images-amazon.com/images/I/81EocPQDPiL.jpg)
+
 
 Just as important as knowing how to write tests, is knowing which tests to write.
 
