@@ -5,7 +5,7 @@ module: Testing
 title: "What to Test: The Right-BICEP"
 subtitle: null
 chapter: 13
-section: 12
+section: 11
 previous: /testing/first
 next: /testing/correct
 ---

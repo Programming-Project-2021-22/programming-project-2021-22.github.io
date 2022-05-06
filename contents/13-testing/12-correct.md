@@ -5,9 +5,9 @@ module: Testing
 title: "Boundary Conditions: The CORRECT Way"
 subtitle: null
 chapter: 13
-section: 11
+section: 12
 previous: /testing/right-bicep
-next: /regex/introduction
+next: /regex/string-manipulation
 ---
 
 In this section, we will discuss the **CORRECT** acronym, as proposed by Jeff Langr, Andy Hunt, and Dave Thomas, in **[Pragmatic Unit Testing in Java 8 with JUnit](https://ubz-primo.hosted.exlibrisgroup.com/permalink/f/pok0fm/39UBZ_ALMA_DS51260958870001241)**, 2015. 
