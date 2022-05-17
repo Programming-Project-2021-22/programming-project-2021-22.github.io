@@ -102,9 +102,22 @@ so
 everyone’s
 supposed
 to
-... continues
+sleep
+every
+single
+night
+now?
+You
+realize
+that
+nighttime
+makes
+up
+half
+of
+all
+time?
 ```
-
 
 ## Replacing string segments using regular expressions
 

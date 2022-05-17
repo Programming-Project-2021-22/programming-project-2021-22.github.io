@@ -21,7 +21,7 @@ Let's flip the classroom!
     - *Consequences*: the results and trade-offs of applying the pattern
     - *Demo*: a small application that demonstrates the pattern
 
-You will have 12 minutes to presentation your pattern.
+You will have 30 minutes to presentation your pattern.
 
 **This counts as a graded lab!**
 
@@ -30,7 +30,7 @@ Click [here](https://classroom.github.com/a/gEJEwg4K) to accept your assignment.
 ## Important dates
 
 - **Hands-on lecture**: Friday, 13 May 2022
-- **Presentations**: Wednesday, 24 May, 2022
+- **Presentations**: Tuesday, 24 May, 2022
   - Part 1: Lecture, 08:30 - 10:30
   - Part 2: Lab, 10:30 - 12:30
   

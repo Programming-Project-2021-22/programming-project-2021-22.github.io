@@ -182,7 +182,12 @@ Now that we have seen how these methods work, let us try to solve this challenge
 Here is a possible solution to our challenge:
 
 ```java
-public static List<String> getTitles(String html){
+import java.util.ArrayList;
+import java.util.List;
+
+public class LifeBeforeRegex {
+
+  public static List<String> getTitles(String html){
     String prefix = "title=\"";
     int prefixLength = prefix.length();
     int fromIndex = 0;
@@ -190,46 +195,55 @@ public static List<String> getTitles(String html){
     List<String> titles = new ArrayList<>();
 
     while (true) {
+      // look for the next occurrence of the prefix `title="`
       int prefixStartIndex = html.indexOf(prefix, fromIndex);
 
+      // if we cannot find an occurrence of the prefix, we exit the loop
       if(prefixStartIndex==-1)
-          break;
+        break;
 
+      // otherwise we...
+      // set the start index of the title field value
       int titleStartIndex = prefixStartIndex + prefixLength;
+      // find the index in which the title field value ends (by looking for the index of `"`)
       int titleEndIndex = html.indexOf("\"", titleStartIndex);
 
+      // extract the title field value
       String title = html.substring(titleStartIndex, titleEndIndex);
+      // add it to the list
       titles.add(title);
 
+      // set the index from where to start the next search
       fromIndex = titleEndIndex + 1;
     }
 
     return titles;
-}
-```
+  }
 
-```java
-public static void main(String[] args) {
-   String html = "<p>\n" +
-            "    <i><b>Rick and Morty</b></i>\n" +
-            "    is an American\n" +
-            "    <a href=\"/wiki/Adult_animation\" title=\"Adult animation\">adult animated</a>\n" +
-            "    <a href=\"/wiki/Science_fiction\" title=\"Science fiction\">science fiction</a>\n" +
-            "    <a href=\"/wiki/Animated_sitcom\" title=\"Animated sitcom\">sitcom</a> created by\n" +
-            "    <a href=\"/wiki/Justin_Roiland\" title=\"Justin Roiland\">Justin Roiland</a> and\n" +
-            "    <a href=\"/wiki/Dan_Harmon\" title=\"Dan Harmon\">Dan Harmon</a> for\n" +
-            "    <a href=\"/wiki/Cartoon_Network\" title=\"Cartoon Network\">Cartoon Network</a>'s late-night programming block\n" +
-            "    <a href=\"/wiki/Adult_Swim\" title=\"Adult Swim\">Adult Swim</a>.\n" +
-            "    The series follows the misadventures of cynical\n" +
-            "    <a href=\"/wiki/Mad_scientist\" title=\"Mad scientist\">mad scientist</a>\n" +
-            "    <a href=\"/wiki/Rick_Sanchez_(Rick_and_Morty)\" title=\"Rick Sanchez (Rick and Morty)\">Rick Sanchez</a>\n" +
-            "    and his good-hearted but fretful grandson\n" +
-            "    <a href=\"/wiki/Morty_Smith\" title=\"Morty Smith\">Morty Smith</a>,\n" +
-            "    who split their time between domestic life and interdimensional adventures.\n" +
+  public static void main(String[] args) {
+
+    String html = "<p>\n" +
+            "<i><b>Rick and Morty</b></i>\n" +
+            "is an American\n" +
+            "<a href=\"/wiki/Adult_animation\" title=\"Adult animation\">adult animated</a>\n" +
+            "<a href=\"/wiki/Science_fiction\" title=\"Science fiction\">science fiction</a>\n" +
+            "<a href=\"/wiki/Animated_sitcom\" title=\"Animated sitcom\">sitcom</a> created by\n" +
+            "<a href=\"/wiki/Justin_Roiland\" title=\"Justin Roiland\">Justin Roiland</a> and\n" +
+            "<a href=\"/wiki/Dan_Harmon\" title=\"Dan Harmon\">Dan Harmon</a> for\n" +
+            "<a href=\"/wiki/Cartoon_Network\" title=\"Cartoon Network\">Cartoon Network</a>'s late-night programming block\n" +
+            "<a href=\"/wiki/Adult_Swim\" title=\"Adult Swim\">Adult Swim</a>.\n" +
+            "The series follows the misadventures of cynical\n" +
+            "<a href=\"/wiki/Mad_scientist\" title=\"Mad scientist\">mad scientist</a>\n" +
+            "<a href=\"/wiki/Rick_Sanchez_(Rick_and_Morty)\" title=\"Rick Sanchez (Rick and Morty)\">Rick Sanchez</a>\n" +
+            "and his good-hearted but fretful grandson\n" +
+            "<a href=\"/wiki/Morty_Smith\" title=\"Morty Smith\">Morty Smith</a>,\n" +
+            "who split their time between domestic life and interdimensional adventures.\n" +
             "</p>";
 
-   List<String> titles = getTitles(html);
-   System.out.println(titles);
+    List<String> titles = getTitles(html);
+
+    System.out.println(titles);
+  }
 }
 ```
 

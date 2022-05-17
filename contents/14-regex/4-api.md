@@ -10,8 +10,6 @@ previous: /regex/
 next: /design-patterns/instructions
 ---
 
-## Java Regex API
-
 The [Java Regex API](https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/util/regex/package-summary.html) contains the following elements:
 
 ### Interface Summary
