@@ -7,7 +7,7 @@ subtitle: null
 chapter: 15
 section: 3
 previous: /design-patterns/introduction
-next: /io/
+next: /io/file-manipulation
 ---
 
 Design patterns gained popularity in computer science after the book Design Patterns: Elements of Reusable Object-Oriented Software was published in 1994 by the so-called "Gang of Four" (Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides)

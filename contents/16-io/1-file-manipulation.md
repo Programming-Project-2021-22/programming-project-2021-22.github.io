@@ -1,18 +1,14 @@
 ---
-slug: /io/
+slug: /io/file-manipulation
 course: Programming Project 2021/22
 module: I/O
-title: Introduction
+title: File manipulation
 subtitle: null
 chapter: 16
 section: 1
 previous: /design-patterns/gof
-next: /io/reading-file-reader
+next: /io/streams
 ---
-
-
-
-## File manipulation
 
 Apps often interact with a file system and need to:
 - create files and directories,
@@ -22,32 +18,32 @@ Apps often interact with a file system and need to:
 - alter some of their properties. 
 
 These operations can be performed using:
-- **`java.io.File`**;
-- **`java.nio.Path`** and **`java.nio.Files`**
+- [`java.io.File`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/File.html)
+- [`java.nio.Path`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html) and [`java.nio.Files`](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Files.html)
 
 
 ##  The `File` and `Path` objects
 
-- A **``File``** or a **`Path`** object:
-  - **is NOT the actual file or directory** 
-  - holds information about a file or a directory
-  - does not contain the data that the file holds
-  - holds methods that affect a particular file or directory
-  - works as an interface between a program and the OS functions that do the actual file manipulation
+A ``File`` or a `Path` object:
+- **is NOT the actual file or directory** 
+- holds information about a file or a directory
+- does not contain the data that the file holds
+- holds methods that affect a particular file or directory
+- works as an interface between a program and the OS functions that do the actual file manipulation
 
-- Different operating systems organize their file system in different ways 
-- By using File objects, Java programs can uniformly handle files on all operating systems
-- Your program can invoke a File method, and exactly what needs to be done for the particular OS the program is running on will be done.
+Different operating systems organize their file system in different ways. By using `File` objects, Java programs can uniformly handle files on all operating systems.
+
+Your program can invoke a `File` method, and exactly what needs to be done for the particular OS the program is running on will be done.
 
 ##  Constructing objects
 
-- Creating a `File` object:
+Creating a `File` object:
 
   ```java 
   File file = new File("src/main/resources/names.txt");
   ```
 
-- Creating a `Path` object:
+Creating a `Path` object:
 
   ```java
   Path path1 = Path.of("src/main/resources/names.txt");
@@ -57,43 +53,48 @@ These operations can be performed using:
 
 ## Paths
 
-- A path specifies a unique location in a file system. 
+A path specifies a unique location in a file system. 
 
-- A path points to a file system location by following the directory tree hierarchy expressed in a string of characters in which path components, separated by a delimiting character, represent each directory. 
+A path points to a file system location by following the directory tree hierarchy expressed in a string of characters in which path components, separated by a delimiting character, represent each directory. 
 
-- The delimiting character is most commonly the slash ("/"), the backslash character ("\"), or colon (":"), though some operating systems may use a different delimiter. 
+The delimiting character is most commonly the slash (`/`), the backslash character (`\`), or colon (`:`), though some operating systems may use a different delimiter. 
 
-- **`/Applications/Visual Paradigm/Contents/Resources/app`**
-  - the root directory symbol: **`/`**
-  - directory names: **`Applications`**, **`Visual Paradigm`**, **`Contents`**, **`Resources`**
-  - separator: **`/`**, 
-  - the file or directory name: **`app`**.
+`/Applications/Visual Paradigm/Contents/Resources/app`
+  - the root directory symbol: `/`
+  - directory names: `Applications`, `Visual Paradigm`, `Contents`, `Resources`
+  - separator: `/`, 
+  - the file or directory name: `app`.
 
-- **`C:\Program Files\Visual Paradigm CE 16.1`**
-  - the path with drive specifier: **`C:`**:
-  - the root directory symbol: **`\`**, 
-  - directory names: **`Program`**, 
-  - separator character **`\`**, 
-  - file name **`x.dat`** (although x.dat might refer to a directory). 
+`C:\Program Files\Visual Paradigm CE 16.1`
+  - the path with drive specifier: `C:`:
+  - the root directory symbol: `\`, 
+  - directory names: `Program`, 
+  - separator character `\`, 
+  - file name `x.dat` (although x.dat might refer to a directory). 
   
 ##  Path types
 
-- **Absolute** pathname:
+**Absolute** path:
   - Consists of a complete chain of directories from the root directory to the file
-  - Starts at the root directory (/)
+  - Starts at the root directory (`/`)
   - No other information is required to locate the file/directory that it denotes
 
-- **Relative** pathname:
+**Relative** path:
   - Starts with any directory in the chain and continues to the file
   - Does not start with the root directory symbol; 
   - It’s interpreted via information taken from another path (e.g. the current directory)
 
-- **Canonical** pathname:
+**Canonical** path:
   - An absolute path
-  - Simplest possible (does not contain . or ..)
+  - Simplest possible (does not contain `.` or `..`)
   - Unique for a given file or directory
 
-## Learning about stored abstract paths
+## Manipulating paths
+
+Given a path represented as a `String`, we can use `File` and `Path` to perform some interesting operations, such as:
+- Generating the absolute version of the path
+- Generating the canonical version of the path
+- Verifying if it an absolute path
 
 ```java
 import java.io.File;
@@ -123,37 +124,78 @@ public class PathInfo {
 }
 ```
 
+```output
+Absolute path = /Users/tpsales/Repositories/lecture-io/src/main/../main/resources/names.txt
+Canonical path = /Users/tpsales/Repositories/lecture-io/src/main/resources/names.txt
+File name = names.txt
+Parent directory = src/main/../main/resources
+Is absolute = false
+
+Absolute path = /Users/tpsales/Repositories/lecture-io/src/main/../main/resources/names.txt
+Canonical path = /Users/tpsales/Repositories/lecture-io/src/main/resources/names.txt
+File name = names.txt
+Parent directory = src/main/../main/resources
+Is absolute = false
+```
+
 ## Special paths
 
 Let us now check what output we get if we set the following paths:
-
 - `.` (the current working dir)
 - `""` (the empty path)
 - `/Users/tpsales/` (an absolute path)
 
-  ```java
-  public class SpecialPaths {
+```java
+public class SpecialPaths {
 
-    public static void main(final String[] args) throws IOException {
-      printPathInfo( ".");
-      printPathInfo( "");
-      printPathInfo( "src/..");
-    }
-
-    private static void printPathInfo(String pathname) throws IOException {
-      Path path = Path.of(pathname);
-      System.out.println("Path = " + path);
-      System.out.println("Absolute path = " + path.toAbsolutePath());
-      System.out.println("Canonical path = " + path.toRealPath());
-      System.out.println("File name = " + path.getFileName());
-      System.out.println("Parent directory = " + path.getParent());
-      System.out.println("Is absolute = " + path.isAbsolute());
-      System.out.println("---\n");
-    }
+  public static void main(final String[] args) throws IOException {
+    printPathInfo( ".");
+    printPathInfo( "");
+    printPathInfo( "src/..");
   }
-  ```
+
+  private static void printPathInfo(String pathname) throws IOException {
+    Path path = Path.of(pathname);
+    System.out.println("Path = " + path);
+    System.out.println("Absolute path = " + path.toAbsolutePath());
+    System.out.println("Canonical path = " + path.toRealPath());
+    System.out.println("File name = " + path.getFileName());
+    System.out.println("Parent directory = " + path.getParent());
+    System.out.println("Is absolute = " + path.isAbsolute());
+    System.out.println("---\n");
+  }
+}
+```
+
+```output
+Path = .
+Absolute path = /Users/tpsales/Repositories/lecture-io/.
+Canonical path = /Users/tpsales/Repositories/lecture-io
+File name = .
+Parent directory = null
+Is absolute = false
+---
+
+Path = 
+Absolute path = /Users/tpsales/Repositories/lecture-io
+Canonical path = /Users/tpsales/Repositories/lecture-io
+File name = 
+Parent directory = null
+Is absolute = false
+---
+
+Path = src/..
+Absolute path = /Users/tpsales/Repositories/lecture-io/src/..
+Canonical path = /Users/tpsales/Repositories/lecture-io
+File name = ..
+Parent directory = src
+Is absolute = false
+---
+```
 
 ## Checking if a file exists
+
+Given a path, we can check if it exists:
 
 ```java
 import java.io.File;
@@ -173,7 +215,16 @@ public class FileExists {
 }
 ```
 
+```java
+File 'src/main/resources/names.txt' exists? true
+File 'src/main/resources/names.txt' exists? true
+```
+
 ## Getting metadata about a file/directory
+
+When manipulating a file as a whole, we may need to get its metadata.
+
+In the class below, we will see a number of methods we can use for that:
 
 ```java
 import java.io.File;
@@ -211,14 +262,42 @@ public class FileDirectoryInfo {
 }
 ```
 
+```output
+About `src/main/resources/names.txt` :
+Exists = true
+Is directory = false
+Is file = true
+Is hidden = false
+Is readable = true
+Is writable = true
+Is executable = false
+Last modified = Mon May 17 09:38:12 CEST 2021
+Length = 61 bytes
+
+About `src/main/resources` :
+Exists = true
+Is directory = true
+Is file = false
+Is hidden = false
+Is readable = true
+Is writable = true
+Is executable = true
+Last modified = 2022-05-16T15:37:34.758609564Z
+Length = 480 bytes
+```
+
 ## Listing directory contents: `java.io`
+
+Using the `java.io` package, we can list the contents of a directory with the following code: 
 
 ```java
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.stream.Stream;
 
-public class DirectoryContentsFile {
+public class DirectoryContentsIo {
   public static void main(final String[] args) throws IOException {
     String dir = "src/main/java/file_manipulation";
     String extension = "java";
@@ -229,16 +308,36 @@ public class DirectoryContentsFile {
     System.out.println("Filtering files with extension: " + extension);
 
     FilenameFilter fnf = (File _dir, String name) -> name.endsWith(extension);
-
     File[] files = file.listFiles(fnf);
-    if (files != null)
-      for (File f : files)
-        System.out.println(f.getName());
+
+    Stream.ofNullable(files)
+          .flatMap(Arrays::stream)
+          .forEach(System.out::println);
   }
 }
 ```
 
+```output
+Listing files in directory: /Users/tpsales/Repositories/lecture-io/src/main/java/file_manipulation
+Filtering files with extension: java
+src/main/java/file_manipulation/FileExists.java
+src/main/java/file_manipulation/DeleteIo.java
+src/main/java/file_manipulation/CreateFileDirNio.java
+src/main/java/file_manipulation/CreateFileDirIo.java
+src/main/java/file_manipulation/DeleteNio.java
+src/main/java/file_manipulation/RenameMoveNio.java
+src/main/java/file_manipulation/PathInfo.java
+src/main/java/file_manipulation/RenameMoveIo.java
+src/main/java/file_manipulation/DirectoryContentsNio.java
+src/main/java/file_manipulation/FileDirectoryInfo.java
+src/main/java/file_manipulation/PartitionSpace.java
+src/main/java/file_manipulation/SpecialPaths.java
+src/main/java/file_manipulation/DirectoryContentsIo.java
+src/main/java/file_manipulation/Constructors.java
+```
 ## Listing directory contents: `java.nio`
+
+Alternatively, we can use classes from the `java.nio` package:
 
 ```java
 import java.io.IOException;
@@ -265,6 +364,8 @@ public class DirectoryContentsPath {
 
 ## Creating files and directories: `java.io`
 
+We can create files and directories programmatically:
+
 ```java
 import java.io.*;
 
@@ -287,6 +388,8 @@ public class CreateFileDirIo {
 ```
 
 ## Creating files and directories: `java.nio`
+
+With the `java.nio`, the code would look like this:
 
 ```java
 import java.io.IOException;
@@ -312,6 +415,8 @@ public class CreateFileDirNio {
 ```
 
 ## Renaming and moving files: `java.io`
+
+The code below renames and moves some files:
 
 ```java
 import java.io.*;
@@ -349,6 +454,8 @@ public class RenameMoveIo {
 
 ## Renaming and moving files: `java.nio`
 
+The code below performs equivalent operations with classes from the `java.nio` package:
+
 ```java
 import java.io.IOException;
 import java.nio.file.Files;
@@ -377,6 +484,8 @@ public class RenameMoveNio {
 
 ## Deleting files and directories: `java.io`
 
+We may also need to delete files and folders:
+
 ```java
 import java.io.File;
 
@@ -394,6 +503,8 @@ public class DeleteIo {
 ```
 
 ## Deleting files and directories: `java.nio`
+
+The code below performs equivalent operations with classes from the `java.nio` package:
 
 ```java
 import java.io.IOException;
@@ -413,29 +524,6 @@ public class DeleteNio {
     } catch (IOException e) {
       e.printStackTrace();
     }
-  }
-}
-```
-
-## Obtaining disk space information
-
-```java
-import java.io.*;
-import java.nio.file.*;
-
-public class PartitionSpace {
-  public static void main(String[] args) throws IOException {
-    File root = File.listRoots()[0];
-    System.out.println("Partition: " + root);
-    System.out.println("Usable space on this partition = " + root.getUsableSpace());
-    System.out.println("Total space on this partition = " + root.getTotalSpace());
-    System.out.println("---\n");
-
-    Path path = Path.of("");
-    FileStore fileStore = Files.getFileStore(path);
-    System.out.println(fileStore);
-    System.out.println("Usable space on this partition = " + fileStore.getUsableSpace());
-    System.out.println("Total space on this partition = " + fileStore.getTotalSpace());
   }
 }
 ```

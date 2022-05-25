@@ -2,7 +2,7 @@
 slug: /io/reading-scanner
 course: Programming Project 2021/22
 module: I/O
-title: Scanner
+title: "Reading: Scanner"
 subtitle: null
 chapter: 16
 section: 4
@@ -10,9 +10,6 @@ previous: /io/reading-file-reader
 next: /io/reading-files
 ---
 
-
-
-## `Scanner`
 *The text below was adapted from the [Java SE 17 documentation](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Scanner.html).*
 
 A simple text scanner that can parse primitive types and strings using regular expressions.
@@ -169,168 +166,6 @@ public class ReadIntsFromFileUsingScanner {
 }
 ```
 
-## Exercise 1
+## Exercise 2
 
-The `athletes.data` file contains data about athletes, as shown below:
-
-```output
-RUNNER|name=Mary;age=43;id=47868;injured=false;shoes=Asics
-RUNNER|age=18;name=John;id=47869;injured=true;shoes=Adidas
-SWIMMER|id=47870;name=Mike;injured=false;modality=freestyle
-RUNNER|name=Amy;age=23;id=47871;shoes=Nike;injured=false
-SWIMMER|id=47872;name=Bill;modality=butterfly;injured=false
-SWIMMER|id=47872;modality=backstroke;name=Ryan;injured=true
-```
-
-Write a program that uses a `Scanner` to read such a file and creates objects accordingly. 
-
-Use the 3 domain classes available below: 
-- `Athlete.java`
-- `Runner.java`
-- `Swimmer.java` 
-
-Create a `Main.java` class to demonstrate your solution.
-
-```java
-public abstract class Athlete {
-  String id;
-  String name;
-  int age;
-  boolean injured;
-
-  public Athlete() {
-    id = null;
-    name = null;
-    age = 0;
-    injured = false;
-  }
-
-  public Athlete(String id, String name, int age, boolean injured) {
-    this.id = id;
-    this.name = name;
-    this.age = age;
-    this.injured = injured;
-  }
-
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  public int getAge() {
-    return age;
-  }
-
-  public void setAge(int age) {
-    this.age = age;
-  }
-
-  public boolean isInjured() {
-    return injured;
-  }
-
-  public void setInjured(boolean injured) {
-    this.injured = injured;
-  }
-}
-```
-
-```java
-public class Runner extends Athlete {
-  String shoes;
-
-  public Runner() {
-    super();
-    shoes = null;
-  }
-
-  public Runner(String id, String name, int age, boolean injured, String shoes) {
-    super(id, name, age, injured);
-    this.shoes = shoes;
-  }
-
-  public String getShoes() {
-    return shoes;
-  }
-
-  public void setShoes(String shoes) {
-    this.shoes = shoes;
-  }
-
-  @Override
-  public String toString() {
-    return "Runner {" +
-            id +
-            ", " + name +
-            ", " + age +
-            ", " + injured +
-            ", " + shoes +
-            "}";
-  }
-
-}
-```
-
-```java
-public class Swimmer extends Athlete {
-  String modality;
-
-  public Swimmer() {
-    super();
-    modality = null;
-  }
-
-  public Swimmer(String id, String name, int age, boolean injured, String modality) {
-    super(id, name, age, injured);
-    this.modality = modality;
-  }
-
-  public String getModality() {
-    return modality;
-  }
-
-  public void setModality(String modality) {
-    this.modality = modality;
-  }
-  
-  @Override
-  public String toString() {
-    return "Swimmer {" +
-            id +
-            ", " + name +
-            ", " + age +
-            ", " + injured +
-            ", " + modality +
-            "}";
-  }
-}
-```
-
-```java
-public class Main {
-
-  public static void main(String[] args) {
-    String currentFilename = "src/main/resources/athletes.data";
-    List<Athlete> athletes = readAthletesFromFile(currentFilename);
-    System.out.println("File read.");
-    System.out.println(athletes);
-  }
-
-  public static List<Athlete> readAthletesFromFile(String filename) {
-    // WRITE YOUR CODE HERE
-  }
-
-}
-```
+Let us revisit the previous exercise. This time, read the `athletes.data` file using a `Scanner` instead of a `BufferedReader`.
