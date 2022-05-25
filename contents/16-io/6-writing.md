@@ -7,7 +7,7 @@ subtitle: null
 chapter: 16
 section: 6
 previous: /io/reading-files
-next: null
+next: /serialization/introduction
 ---
 
 In Java, you can write data into a file in multiple ways:
