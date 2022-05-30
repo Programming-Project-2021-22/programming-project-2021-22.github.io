@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
         <p>Click on the links below to accept the assignments on Github Classroom.</p>
         <ul>
           <li><a href="https://classroom.github.com/a/v0IH4i39">Lab 1: Git</a></li>
-          <li><a href="https://classroom.github.com/a/O801GQYH">Lab 2: Exceptions</a> (<a href="https://github.com/UNIBZ-Programming-Project/lab-2-exceptions/tree/solutions">Solutions</a>)</li>
+          <li><a href="https://classroom.github.com/a/O801GQYH">Lab 2: Exceptions</a></li>
           <li>Lab 3: Group Project Lab 1/3</li>
           <li><a href="https://classroom.github.com/a/BRX-CZUW">Lab 4: Inheritance</a></li>
           <li><a href="https://classroom.github.com/a/XfZI3Iqo">Lab 5: Generics</a></li>
@@ -59,7 +59,7 @@ const IndexPage = ({ data }) => {
           <li><a href="https://classroom.github.com/a/Iqtm5I00">Lab 10: Testing</a></li>
           <li><a href="https://classroom.github.com/a/206iHDIP">Lab 11: Regular Expressions</a></li>
           <li><a href="https://classroom.github.com/a/gEJEwg4K">Lab 12: Design Patterns</a></li> 
-          <li>Lab 13: I/O</li>
+          <li><a href="https://classroom.github.com/a/W5dkk3Rb">Lab 13: I/O</a></li> 
           <li>Lab 14: Multithreading</li>
           <li>Lab 15: Group Project Lab 3/3</li>
         </ul>
