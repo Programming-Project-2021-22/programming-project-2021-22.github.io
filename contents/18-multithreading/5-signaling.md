@@ -108,11 +108,11 @@ This is not very efficient because it consumes a lot of CPU time.
 A better solution would be for the `CharacterPrinter` thread to wait until the `CharacterGenerator` creates the data for it.
 
 
-## wait(), notify() and notifyAll()
+## `wait()`, `notify()` and `notifyAll()`
 
 Java has a builtin wait mechanism that enable threads to become inactive while waiting for signals.
 
-```java.lang.Object``` defines three methods, 
+`java.lang.Object` defines three methods, 
 - `wait()`
 - `notify()`
 - `notifyAll()`
@@ -184,7 +184,7 @@ public class Runner {
 }
 ```
 
-## Revisitng the busy wait program
+## Revisiting the busy wait program
 
 ```java
 public class CharacterData {
@@ -580,7 +580,7 @@ class Task2 implements Runnable {
 }
 ```
 
-## Further multithreading/syncronization topics
+## Further multithreading/synchronization topics
 
 We have covered only the basic of multithreading and the issues that arise.
 

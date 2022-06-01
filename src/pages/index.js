@@ -60,7 +60,7 @@ const IndexPage = ({ data }) => {
           <li><a href="https://classroom.github.com/a/206iHDIP">Lab 11: Regular Expressions</a></li>
           <li><a href="https://classroom.github.com/a/gEJEwg4K">Lab 12: Design Patterns</a></li> 
           <li><a href="https://classroom.github.com/a/W5dkk3Rb">Lab 13: I/O</a></li> 
-          <li>Lab 14: Multithreading</li>
+          <li><a href="https://classroom.github.com/a/1-MhKZb8">Lab 14: Multithreading</a></li> 
           <li>Lab 15: Group Project Lab 3/3</li>
         </ul>
         <h3>Course Project</h3>
