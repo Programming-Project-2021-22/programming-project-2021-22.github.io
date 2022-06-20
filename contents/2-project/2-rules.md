@@ -47,7 +47,7 @@ Another **30% of your final grade** (9 out of 30 points) will comes from an **or
 
 ## Peer-review process
 
-You will evaluate each other's projects following the guidelines describe [here]().
+You will evaluate each other's projects following the guidelines describe [here](https://github.com/Programming-Project-2021-22/project-review-form/blob/main/README.md).
 
 Each student will evaluate up to 3 other projects and each project will be evaluated by up to 3 students.
 
